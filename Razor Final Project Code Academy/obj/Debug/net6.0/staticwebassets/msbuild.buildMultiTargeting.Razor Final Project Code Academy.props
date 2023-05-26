@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Razor Final Project Code Academy.props" />
+</Project>

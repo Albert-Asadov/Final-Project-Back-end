@@ -1,0 +1,60 @@
+﻿
+
+
+
+    <section id="accountSettings">
+        <div class="container">
+            <div class="row">
+                <div class="title">
+                    <h1 class="TitleText">
+                        Account Settings
+                    </h1>
+                </div>
+                <ul>
+                    <li class="colorChange"><a href="./accountOrders.html">ORDERS</a></li>
+                    <li class="colorChange"><a href="./accountAdress.html">ADRESSES</a></li>
+                    <li class="colorChange"><a asp-controller="Shop" asp-action="WishList">WISH LISTS</a></li>
+                    <li class="current">ACCOUNT SETTINGS</li>
+                </ul>
+
+                <div class="content">
+                    <form action="">
+                        <div class="row">
+                            <div class="name col-lg-6 col-12">
+                                <label for="name">First Name:</label><br>
+                                <input type="text" name="" id="name">
+                            </div>
+
+                            <div class="lastName col-lg-6 col-12">
+                                <label for="lname">Last Name:</label><br>
+                                <input type="text" name="" id="lname">
+                            </div>
+
+                            <div class="email col-lg-6 col-12">
+                                <label for="email">Email Adress:</label><br>
+                                <input type="text" name="" id="email">
+                            </div>
+
+                            <div class="passwordOld col-lg-6 col-12">
+                                <label for="passOld">Password:</label><br>
+                                <input type="number" name="" id="passOld">
+                            </div>
+
+                            <div class="passwordOld col-lg-6 col-12">
+                                <label for="conf">Confirm Password:</label><br>
+                                <input type="number" name="" id="conf">
+                            </div>
+
+                            <div class="passwordOld col-lg-6 col-12">
+                                <label for="curr">Current Password:</label><br>
+                                <input type="number" name="" id="curr">
+                            </div>
+
+                            <button class="button button--primary">Update Details</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>

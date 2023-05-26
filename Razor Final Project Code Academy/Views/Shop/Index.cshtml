@@ -1,0 +1,164 @@
+﻿@model List<Product>
+
+<section id="shop">
+    <div class="container">
+        <div class="row">
+            <div class="leftSide col-lg-3">
+                <div class="refine">
+                    <div class="title">
+                        <div class="text">
+                            <h5>Refine by</h5>
+                        </div>
+                        <div class="lineOrange">
+                            <p class="line"></p>
+                            <p class="lineSecondary"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="name">
+                        <span>Category</span>
+                    </div>
+                    <form action="">
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">Top 10 Offers</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">Top 10 Offers</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">Top 10 Offers</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">Top 10 Offers</label>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="ram">
+                    <div class="name">
+                        <span>Ram</span>
+                    </div>
+                    <form action="">
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">4 GB</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">6 GB</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">8 GB</label>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="memory">
+                    <div class="name">
+                        <span>Memory</span>
+                    </div>
+                    <form action="">
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">32 GB</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">64 GB</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">128 GB</label>
+                        </div>
+
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">256 GB</label>
+                        </div>
+
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">512 GB</label>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="countDown">
+                    <div class="name">
+                        <span>__countdown</span>
+                    </div>
+                    <form action="">
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">6/12/19</label>
+                        </div>
+                        <div class="inputs">
+                            <input type="checkbox" name="" id="cat1">
+                            <label for="cat1">8/12/19</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="rightSide col-lg-9">
+                <div class="sort">
+                    <div class="name">
+                        SORT BY:
+                    </div>
+                    <form action="">
+                        <select name="" id="">
+                            <option value="">A-Z</option>
+                            <option value="">Z-A</option>
+                            <option value="">Price: Ascending</option>
+                            <option value="">Price: Descending</option>
+
+                        </select>
+                    </form>
+                </div>
+                <div class="mainContent">
+                    <div class="row">
+                        @foreach (var item in Model)
+                        {
+                            <div class="product col-lg-3">
+
+                                <div class="image">
+                                    <a asp-controller="shop" asp-action="detail" asp-route-id="@item.Id">
+                                        <img src="~/assets/images/Product/@item.ProductImages.First().Image" alt="">
+                                    </a>
+                                </div>
+                                <div class="text">
+
+                                    <div class="brand">
+                                        <span>
+                                            @item.Brand.Name
+                                        </span>
+                                    </div>
+
+                                    <div class="name">
+                                        <span>
+                                            @item.Name
+                                        </span>
+                                    </div>
+
+                                    <div class="price">
+                                        <span>$@item.Price</span>
+                                    </div>
+
+                                    <div class="addToCard">
+                                        <a href="">
+                                            Add To Card
+                                        </a>
+                                    </div>
+                                </div>
+                         </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

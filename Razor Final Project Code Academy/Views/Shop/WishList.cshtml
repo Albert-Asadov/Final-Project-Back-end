@@ -1,0 +1,55 @@
+﻿
+
+
+    <section id="accountWishlist">
+        <div class="container">
+            <div class="row">
+                <div class="title">
+                    <h1 class="TitleText">
+                        Wish List
+                    </h1>
+                </div>
+                <ul>
+                    <li class="colorChange"><a href="./accountOrders.html">ORDERS</a></li>
+                    <li class="colorChange"><a href="./accountAdress.html">ADRESSES</a></li>
+                    <li class="current">WISH LISTS</li>
+                    <li class="colorChange"><a asp-controller="Account" asp-action="AccountSetting">ACCOUNT SETTINGS</a></li>
+                </ul>
+
+                <div class="alertMessage">
+                    <div class="alert alert-primary" role="alert">
+                        Youre Wish List is empty!
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="image">
+                        <img class="imageProduct" src="~/assets/images/Product/2__54401.jpg" alt="">
+                        <div class="buttonHover">
+                            <a class="AddToCart" href="./cart.html">
+                                ADD TO CART
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ProductInfo">
+                        <div class="name">
+                            <h4>Apple Watch</h4>
+                        </div>
+                        <div class="price">
+                            <div class="discount">
+                                <span>
+                                    $1000
+                                </span>
+                            </div>
+                            <div class="newPrice">
+                                <span>
+                                    $800
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>

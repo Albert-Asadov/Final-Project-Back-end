@@ -1,0 +1,73 @@
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/appsettings.Development.json
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/appsettings.json
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Razor Final Project Code Academy.staticwebassets.runtime.json
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Razor Final Project Code Academy
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Razor Final Project Code Academy.deps.json
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Razor Final Project Code Academy.runtimeconfig.json
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Razor Final Project Code Academy.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Razor Final Project Code Academy.pdb
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Humanizer.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.Data.SqlClient.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.Extensions.Identity.Core.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.Extensions.Identity.Stores.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.Identity.Client.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/System.Configuration.ConfigurationManager.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/System.Drawing.Common.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/System.Runtime.Caching.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/System.Security.Cryptography.ProtectedData.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/System.Security.Permissions.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/System.Windows.Extensions.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/Razor Final Project Code Academy.csproj.AssemblyReference.cache
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/Razor Final Project Code Academy.GeneratedMSBuildEditorConfig.editorconfig
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/Razor Final Project Code Academy.AssemblyInfoInputs.cache
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/Razor Final Project Code Academy.AssemblyInfo.cs
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/Razor Final Project Code Academy.csproj.CoreCompileInputs.cache
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/Razor Final Project Code Academy.MvcApplicationPartsAssemblyInfo.cache
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/Razor Final Project Code Academy.RazorAssemblyInfo.cache
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/Razor Final Project Code Academy.RazorAssemblyInfo.cs
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/staticwebassets/msbuild.Razor Final Project Code Academy.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/staticwebassets/msbuild.build.Razor Final Project Code Academy.props
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.Razor Final Project Code Academy.props
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.Razor Final Project Code Academy.props
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/staticwebassets.pack.json
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/staticwebassets.build.json
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/staticwebassets.development.json
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/scopedcss/bundle/Razor Final Project Code Academy.styles.css
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/scopedcss/projectbundle/Razor Final Project Code Academy.bundle.scp.css
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/Razor Final Project Code Academy.csproj.CopyComplete
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/Razor Final Project Code Academy.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/refint/Razor Final Project Code Academy.dll
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/Razor Final Project Code Academy.pdb
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/Razor Final Project Code Academy.genruntimeconfig.cache
+/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/obj/Debug/net6.0/ref/Razor Final Project Code Academy.dll

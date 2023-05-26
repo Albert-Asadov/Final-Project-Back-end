@@ -1,0 +1,547 @@
+﻿@model Product
+
+<section id="detail">
+    <div class="container">
+        <div class="row">
+            <div class="leftside col-lg-3">
+                <div class="category">
+
+                    <div class="title">
+                        <div class="text">
+                            <h5>Categories</h5>
+                        </div>
+                        <div class="lineOrange">
+                            <p class="line"></p>
+                            <p class="lineSecondary"></p>
+                        </div>
+                    </div>
+
+                    <div class="categoryList">
+                        <ul>
+                            <li><a href="">Electronic & Digital</a></li>
+                            <li><a href="">Fashion & Clothing</a></li>
+                            <li><a href="">Top 10 Offers</a></li>
+                            <li><a href="">Deal The Week</a></li>
+                            <li><a href="">Smartphones & Tablets</a></li>
+                            <li><a href="">Audio Music</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="bestSellers">
+                    <div class="title">
+                        <div class="text">
+                            <h5>Best Sellers</h5>
+                        </div>
+                        <div class="lineOrange">
+                            <p class="line"></p>
+                            <p class="lineSecondary"></p>
+                        </div>
+                    </div>
+                    <div class="responsive">
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <div class="image">
+                                            <img src="~/assets/images/Product/20__64971.jpg" alt="">
+                                        </div>
+                                        <div class="text-price">
+                                            <div class="text">
+                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
+                                            </div>
+                                            <div class="price">
+                                                <span>$49.50</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="image">
+                                            <img src="~/assets/images/Product/2__54401.jpg" alt="">
+                                        </div>
+                                        <div class="text-price">
+                                            <div class="text">
+                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
+                                            </div>
+                                            <div class="price">
+                                                <span>$49.50</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="image">
+                                            <img src="~/assets/images/Product/26-26__83504.jpg" alt="">
+                                        </div>
+                                        <div class="text-price">
+                                            <div class="text">
+                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
+                                            </div>
+                                            <div class="price">
+                                                <span>$49.50</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <div class="image">
+                                            <img src="~/assets/images/Product/20__64971.jpg" alt="">
+                                        </div>
+                                        <div class="text-price">
+                                            <div class="text">
+                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
+                                            </div>
+                                            <div class="price">
+                                                <span>$49.50</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="image">
+                                            <img src="~/assets/images/Product/2__54401.jpg" alt="">
+                                        </div>
+                                        <div class="text-price">
+                                            <div class="text">
+                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
+                                            </div>
+                                            <div class="price">
+                                                <span>$49.50</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="image">
+                                            <img src="~/assets/images/Product/26-26__83504.jpg" alt="">
+                                        </div>
+                                        <div class="text-price">
+                                            <div class="text">
+                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
+                                            </div>
+                                            <div class="price">
+                                                <span>$49.50</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightSide col-lg-9">
+                <div class="mainDetail">
+                    <div class="aboutProduct">
+                        <div class="photo">
+
+                            <div class="mainImage">
+                                <img src="~/assets/images/Product/@Model.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
+                            </div>
+
+                            <div class="smallImages">
+                                @foreach (var item in Model.ProductImages)
+                                {
+                                    <div class="images">
+                                        <img src="~/assets/images/Product/@item.Image" alt="">
+                                    </div>
+                                }
+                            </div>
+
+                        </div>
+                        <div class="titleMain">
+                            <div class="name">
+                                <h1>vulputate velit2 esse molestie consequat</h1>
+                            </div>
+
+
+                            <div class="accordion" id="accordionExample">
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree"
+                                                style="color: #999;">
+                                            Write a Review
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                         data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <form action="">
+                                                <label for="name">Name:</label><br>
+                                                <input type="text" id="name" placeholder="Write youre name"><br>
+
+                                                <label for="email">Email:</label><br>
+                                                <input type="email" id="email"
+                                                       placeholder="Write youre email"><br>
+
+
+                                                <label for="subject">Review Subject</label><br>
+                                                <input type="text" name="" id="subject"
+                                                       placeholder="Write youre review subject"><br>
+
+                                                <label for="comment">Comment</label><br>
+                                                <input type="text" name="" id="comment"
+                                                       placeholder="Write youre comment">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            @if (Model.DiscountPrice == 0)
+                            {
+
+                                <div class="prices">
+                                    <div class="realPrice">
+                                        <span>@Model.Price</span>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="prices">
+                                    <div class="discountPrice">
+                                        <span>@Model.DiscountPrice</span>
+                                    </div>
+                                    <div class="realPrice">
+                                        <span>@Model.Price</span>
+                                    </div>
+                                </div>
+                            }
+                            <div class="about">
+                                <ul>
+                                    <li>Brand:</li>
+                                    <li>SKU:</li>
+                                    <li>__countdown:</li>
+                                </ul>
+                                <ul class="right">
+                                    <li><a href="">@Model.Brand.Name</a></li>
+                                    <li>@Model.SKU</li>
+                                    <li>Date</li>
+                                </ul>
+                            </div>
+                            <div class="inputs">
+
+                                <div class="ram">
+                                    <label for="">Ram:</label> <br>
+                                    <select name="" id="">
+                                        <option value="">4</option>
+                                        <option value="">6</option>
+                                    </select>
+                                </div>
+
+                                <div class="memory">
+                                    <label for="">Memory:</label> <br>
+                                    <select name="" id="">
+                                        <option value="">32</option>
+                                        <option value="">64</option>
+                                    </select>
+                                </div>
+
+                                <div class="input">
+                                    <div class="mainInput">
+                                        <label for="count">Quantity:</label><br>
+                                        <input type="number" value="1" class="quantityInput" name="" id="count">
+                                    </div>
+                                    <div class="chevrons">
+                                        <button onclick="handleIncreaseQuantity()">
+                                            <i class="fa-solid fa-chevron-up"></i>
+                                        </button>
+                                        <button onclick="handleDEcreaseQuantity()">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="addToCard">
+                                <div class="add">
+                                    <a href="" class="addToCard">
+                                        ADD TO CARD
+                                    </a>
+                                </div>
+                                <div class="wishlist">
+
+                                    <div class="icon">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                    <div class="text">
+                                        <span>
+                                            Add To Wish List
+                                        </span>
+                                    </div>
+
+                                    <div class="panelWish">
+                                        <div class="addToWishlist">
+                                            <a href="">
+                                                <p>Add To My Wish List</p>
+                                            </a>
+                                        </div>
+                                        <div class="deleteFromWishlist">
+                                            <a href="">
+                                                <p>Remove From Wish List</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <div class="text">
+                                <h5>Description</h5>
+                            </div>
+                            <div class="lineOrange">
+                                <p class="line"></p>
+                                <p class="lineSecondary"></p>
+                            </div>
+                        </div>
+                        <div class="mainDescr">
+                            <p>
+                               @Model.Descr
+                            </p>
+                        </div>
+                    </div>
+                    <div class="customersAlso">
+                        <div class="title">
+                            <div class="text">
+                                <h5>Customers Also Viewed</h5>
+                            </div>
+                            <div class="lineOrange">
+                                <p class="firstOfFirst"></p>
+                                <p class="line"></p>
+                                <p class="lineSecondary"></p>
+                            </div>
+                        </div>
+
+                        <div class="products">
+                            <ul class="col-lg-3">
+                                <li>
+                                    <div class="image">
+                                        <a href="">
+                                            <img src="~/assets/images/Product/13__93391.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="brand">
+                                            <span>
+                                                Brand name here
+                                            </span>
+                                        </div>
+                                        <div class="name">
+                                            <span>
+                                                Product Name Here
+                                            </span>
+                                        </div>
+                                        <div class="price">
+                                            <span>$119</span>
+                                        </div>
+                                        <div class="addToCard">
+                                            <a href="">
+                                                Add To Card
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="col-lg-3">
+                                <li>
+                                    <div class="image">
+                                        <a href="">
+                                            <img src="~/assets/images/Product/13__93391.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="brand">
+                                            <span>
+                                                Brand name here
+                                            </span>
+                                        </div>
+                                        <div class="name">
+                                            <span>
+                                                Product Name Here
+                                            </span>
+                                        </div>
+                                        <div class="price">
+                                            <span>$119</span>
+                                        </div>
+                                        <div class="addToCard">
+                                            <a href="">
+                                                Add To Card
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="col-lg-3">
+                                <li>
+                                    <div class="image">
+                                        <a href="">
+                                            <img src="~/assets/images/Product/13__93391.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="brand">
+                                            <span>
+                                                Brand name here
+                                            </span>
+                                        </div>
+                                        <div class="name">
+                                            <span>
+                                                Product Name Here
+                                            </span>
+                                        </div>
+                                        <div class="price">
+                                            <span>$119</span>
+                                        </div>
+                                        <div class="addToCard">
+                                            <a href="">
+                                                Add To Card
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="col-lg-3">
+                                <li>
+                                    <div class="image">
+                                        <a href="">
+                                            <img src="~/assets/images/Product/13__93391.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="brand">
+                                            <span>
+                                                Brand name here
+                                            </span>
+                                        </div>
+                                        <div class="name">
+                                            <span>
+                                                Product Name Here
+                                            </span>
+                                        </div>
+                                        <div class="price">
+                                            <span>$119</span>
+                                        </div>
+                                        <div class="addToCard">
+                                            <a href="">
+                                                Add To Card
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="col-lg-3">
+                                <li>
+                                    <div class="image">
+                                        <a href="">
+                                            <img src="~/assets/images/Product/13__93391.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="brand">
+                                            <span>
+                                                Brand name here
+                                            </span>
+                                        </div>
+                                        <div class="name">
+                                            <span>
+                                                Product Name Here
+                                            </span>
+                                        </div>
+                                        <div class="price">
+                                            <span>$119</span>
+                                        </div>
+                                        <div class="addToCard">
+                                            <a href="">
+                                                Add To Card
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="col-lg-3">
+                                <li>
+                                    <div class="image">
+                                        <a href="">
+                                            <img src="~/assets/images/Product/13__93391.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="brand">
+                                            <span>
+                                                Brand name here
+                                            </span>
+                                        </div>
+                                        <div class="name">
+                                            <span>
+                                                Product Name Here
+                                            </span>
+                                        </div>
+                                        <div class="price">
+                                            <span>$119</span>
+                                        </div>
+                                        <div class="addToCard">
+                                            <a href="">
+                                                Add To Card
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                        <div class="title">
+                            <div class="text">
+                                <h5>Reviews</h5>
+                            </div>
+                            <div class="lineOrange">
+                                <p class="firstOfFirst"></p>
+                                <p class="line"></p>
+                                <p class="lineSecondary"></p>
+                            </div>
+                        </div>
+
+                        <div class="main">
+                            <div class="name">
+                                <p>Name</p>
+                            </div>
+                            <div class="email">
+                                <p>Email</p>
+                            </div>
+                            <div class="subject">
+                                <p>Subject</p>
+                            </div>
+                            <div class="comment">
+                                <p>Comment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Script{
+
+    <script src="~/assets/js/detail.js"></script>
+}

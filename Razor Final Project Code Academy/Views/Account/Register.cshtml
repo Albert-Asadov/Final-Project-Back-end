@@ -1,0 +1,79 @@
+﻿
+
+@model RegisterVM
+
+
+        <section id="register">
+            <div class="container">
+                <div class="title">
+                    <h3>New Account</h3>
+                </div>
+                <form asp-controller="Account" asp-action="Register" method="post" class="col-lg-12">
+                    <div class="row">
+
+                        <div class="firstname col-lg-6 col-12">
+                            <label asp-for="FirstName">First Name:</label><br>
+                            <input asp-for="FirstName">
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+
+                        <div class="lastname col-lg-6 col-12">
+                            <label asp-for="LastNAme">Last Name:</label><br>
+                            <input asp-for="LastNAme">
+                            <span asp-validation-for="LastNAme" class="text-danger"></span>
+                        </div>
+
+                        <div class="adress col-lg-6 col-12">
+                            <label asp-for="UserName">Username</label><br>
+                            <input asp-for="UserName">
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+
+                        <div class="Email col-lg-6 col-12">
+                            <label asp-for="Email">Email:</label><br>
+                            <input asp-for="Email">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="password col-lg-6 col-12">
+                            <label asp-for="Password">Password:</label><br>
+                            <input asp-for="Password">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="confirmpassword col-lg-6 col-12">
+                            <label asp-for="ConfirmPassword">Confrim Password:</label><br>
+                            <input asp-for="ConfirmPassword">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="confirmpassword col-lg-6 col-12" style="display: flex; justify-content: start; align-items: center;">
+                            <label asp-for="Terms">Confirm Registration:</label><br>
+                            <input asp-for="Terms" style="width: 15px; margin-left:15px;" >
+                            <span asp-validation-for="Terms" class="text-danger"></span>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="button">
+                        <button type="submit" style="width: 160px;
+                            height: 35px;
+                            border-radius: 20px;
+                            font-size: 13px;
+                            border: none;
+                            background-color: #444;
+                border-color: #444;
+                color: #fff;">
+                            CREATE ACCOUNT
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+   
+
+    @section Script{
+
+    <script src="~/assets/js/register.js"></script>
+     }
