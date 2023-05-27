@@ -9,6 +9,458 @@
       "PackagePath": "staticwebassets/.DS_Store"
     },
     {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/css/maps/style.css.map",
+      "PackagePath": "staticwebassets/Admin/assets/css/maps/style.css.map"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/css/style.css",
+      "PackagePath": "staticwebassets/Admin/assets/css/style.css"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Black.eot",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Black.eot"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Black.ttf",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Black.ttf"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Black.woff",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Black.woff"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Black.woff2",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Black.woff2"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Bold.eot",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Bold.eot"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Bold.ttf",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Bold.ttf"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Bold.woff",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Bold.woff"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Bold.woff2",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Bold.woff2"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Light.eot",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Light.eot"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Light.ttf",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Light.ttf"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Light.woff",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Light.woff"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Light.woff2",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Light.woff2"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Medium.eot",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Medium.eot"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Medium.ttf",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Medium.ttf"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Medium.woff",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Medium.woff"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Medium.woff2",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Medium.woff2"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Regular.eot",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Regular.eot"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Regular.ttf",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Regular.ttf"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Regular.woff",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Regular.woff"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/fonts/Roboto/Roboto-Regular.woff2",
+      "PackagePath": "staticwebassets/Admin/assets/fonts/Roboto/Roboto-Regular.woff2"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/images/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/auth/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/images/auth/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/auth/lockscreen-bg.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/auth/lockscreen-bg.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/auth/login-bg.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/auth/login-bg.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/auth/register-bg.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/auth/register-bg.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face1.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face1.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face10.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face10.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face11.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face11.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face12.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face12.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face13.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face13.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face14.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face14.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face15.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face15.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face16.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face16.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face17.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face17.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face18.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face18.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face19.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face19.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face2.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face2.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face20.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face20.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face21.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face21.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face22.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face22.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face23.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face23.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face24.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face24.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face25.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face25.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face26.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face26.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face27.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face27.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face3.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face3.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face4.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face4.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face5.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face5.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face6.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face6.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face7.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face7.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face8.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face8.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/faces/face9.jpg",
+      "PackagePath": "staticwebassets/Admin/assets/images/faces/face9.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/favicon.ico",
+      "PackagePath": "staticwebassets/Admin/assets/images/favicon.ico"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/favicon.png",
+      "PackagePath": "staticwebassets/Admin/assets/images/favicon.png"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/logo-mini.svg",
+      "PackagePath": "staticwebassets/Admin/assets/images/logo-mini.svg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/images/logo.svg",
+      "PackagePath": "staticwebassets/Admin/assets/images/logo.svg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/js/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/Chart.min.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/Chart.min.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/chart.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/chart.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/dashboard.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/dashboard.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/data-table.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/data-table.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/dataTables.bootstrap4.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/dataTables.bootstrap4.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/documentation.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/documentation.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/file-upload.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/file-upload.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/hoverable-collapse.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/hoverable-collapse.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/jquery.cookie.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/jquery.cookie.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/jquery.dataTables.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/jquery.dataTables.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/off-canvas.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/off-canvas.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/tabs.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/tabs.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/js/template.js",
+      "PackagePath": "staticwebassets/Admin/assets/js/template.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/pages/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/charts/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/pages/charts/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/charts/chartjs.html",
+      "PackagePath": "staticwebassets/Admin/assets/pages/charts/chartjs.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/forms/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/pages/forms/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/forms/basic_elements.html",
+      "PackagePath": "staticwebassets/Admin/assets/pages/forms/basic_elements.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/icons/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/pages/icons/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/icons/mdi.html",
+      "PackagePath": "staticwebassets/Admin/assets/pages/icons/mdi.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/samples/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/pages/samples/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/samples/lock-screen.html",
+      "PackagePath": "staticwebassets/Admin/assets/pages/samples/lock-screen.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/samples/login-2.html",
+      "PackagePath": "staticwebassets/Admin/assets/pages/samples/login-2.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/samples/login.html",
+      "PackagePath": "staticwebassets/Admin/assets/pages/samples/login.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/samples/register-2.html",
+      "PackagePath": "staticwebassets/Admin/assets/pages/samples/register-2.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/samples/register.html",
+      "PackagePath": "staticwebassets/Admin/assets/pages/samples/register.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/tables/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/pages/tables/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/tables/basic-table.html",
+      "PackagePath": "staticwebassets/Admin/assets/pages/tables/basic-table.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/ui-features/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/pages/ui-features/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/ui-features/buttons.html",
+      "PackagePath": "staticwebassets/Admin/assets/pages/ui-features/buttons.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/pages/ui-features/typography.html",
+      "PackagePath": "staticwebassets/Admin/assets/pages/ui-features/typography.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/partials/_footer.html",
+      "PackagePath": "staticwebassets/Admin/assets/partials/_footer.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/partials/_navbar.html",
+      "PackagePath": "staticwebassets/Admin/assets/partials/_navbar.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/partials/_settings-panel.html",
+      "PackagePath": "staticwebassets/Admin/assets/partials/_settings-panel.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/partials/_sidebar.html",
+      "PackagePath": "staticwebassets/Admin/assets/partials/_sidebar.html"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/.DS_Store",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/base/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/base/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/base/vendor.bundle.base.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/base/vendor.bundle.base.css"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/base/vendor.bundle.base.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/base/vendor.bundle.base.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/chart.js/Chart.min.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/chart.js/Chart.min.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/datatables.net/jquery.dataTables.js",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/datatables.net/jquery.dataTables.js"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/mdi/css/materialdesignicons.min.css",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/mdi/css/materialdesignicons.min.css"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/mdi/css/materialdesignicons.min.css.map",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/mdi/css/materialdesignicons.min.css.map"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/mdi/fonts/materialdesignicons-webfont.eot",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/mdi/fonts/materialdesignicons-webfont.eot"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/mdi/fonts/materialdesignicons-webfont.ttf",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/mdi/fonts/materialdesignicons-webfont.ttf"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/mdi/fonts/materialdesignicons-webfont.woff",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/mdi/fonts/materialdesignicons-webfont.woff"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/Admin/assets/vendors/mdi/fonts/materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets/Admin/assets/vendors/mdi/fonts/materialdesignicons-webfont.woff2"
+    },
+    {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/.DS_Store",
       "PackagePath": "staticwebassets/assets/.DS_Store"
     },
@@ -45,6 +497,10 @@
       "PackagePath": "staticwebassets/assets/images/More/quocte.png"
     },
     {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/.DS_Store",
+      "PackagePath": "staticwebassets/assets/images/Product/.DS_Store"
+    },
+    {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/13__93391.jpg",
       "PackagePath": "staticwebassets/assets/images/Product/13__93391.jpg"
     },
@@ -69,6 +525,18 @@
       "PackagePath": "staticwebassets/assets/images/Product/9__34422.jpg"
     },
     {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/SliderImages/471apple-watch-ultra-1.jpg",
+      "PackagePath": "staticwebassets/assets/images/SliderImages/471apple-watch-ultra-1.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/SliderImages/538iphone-14-pro_overview__e414c54gtu6a_og.png",
+      "PackagePath": "staticwebassets/assets/images/SliderImages/538iphone-14-pro_overview__e414c54gtu6a_og.png"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/SliderImages/7samsung-galaxy-fold-15.webp",
+      "PackagePath": "staticwebassets/assets/images/SliderImages/7samsung-galaxy-fold-15.webp"
+    },
+    {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/SliderImages/slide_show1.jpg",
       "PackagePath": "staticwebassets/assets/images/SliderImages/slide_show1.jpg"
     },
@@ -79,6 +547,10 @@
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/SliderImages/slide_show3.jpg",
       "PackagePath": "staticwebassets/assets/images/SliderImages/slide_show3.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/SliderImages/test1.jpg",
+      "PackagePath": "staticwebassets/assets/images/SliderImages/test1.jpg"
     },
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/advertising/54aab90ceab8eaa72b8dcf51.webp",
@@ -197,8 +669,16 @@
       "PackagePath": "staticwebassets/assets/js/welcome.js"
     },
     {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/scss/.DS_Store",
+      "PackagePath": "staticwebassets/assets/scss/.DS_Store"
+    },
+    {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/scss/main.scss",
       "PackagePath": "staticwebassets/assets/scss/main.scss"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/scss/page/.DS_Store",
+      "PackagePath": "staticwebassets/assets/scss/page/.DS_Store"
     },
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/scss/page/_accountAdress.scss",

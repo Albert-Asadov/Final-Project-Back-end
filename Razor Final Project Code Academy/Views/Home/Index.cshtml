@@ -7,19 +7,16 @@
                 <div class="col-lg-9 col-12">
                     <div class="slide">
                         <div class="owl-carousel owl-theme">
-                            <div class="item">
-                                <img src="~/assets/images/SliderImages/slide_show1.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="~/assets/images/SliderImages/slide_show2.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img src="~/assets/images/SliderImages/slide_show3.jpg" alt="">
-                            </div>
+                            @foreach (var item in ViewBag.Slider)
+                            {
+                                <div class="item">
+                                    <img style="object-fit: cover !important; object-position: center" src="~/assets/images/SliderImages/@item.Path" alt="">
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-3 col-12">
                     <div class="advertising">
                         <div class="first">
                             <img src="~/assets/images/advertising/banner3.jpg" alt="">

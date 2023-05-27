@@ -1,6 +1,6 @@
 ﻿using System;
-using Final_Project_Razor.DAL;
-using Final_Project_Razor.Entities;
+using Razor_Final_Project_Code_Academy.DAL;
+using Razor_Final_Project_Code_Academy.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

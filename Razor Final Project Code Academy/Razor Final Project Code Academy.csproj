@@ -18,8 +18,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Service\" />
+    <None Remove="Utilities\" />
+    <None Remove="Areas\" />
+    <None Remove="Areas\RazorAdmin\" />
+    <None Remove="Areas\RazorAdmin\Views\" />
+    <None Remove="Areas\RazorAdmin\Views\Category\" />
+    <None Remove="Areas\RazorAdmin\Views\Slider\" />
+    <None Remove="Utilities\ExtensionMethods\" />
+    <None Remove="Areas\RazorAdmin\Views\Brand\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\RazorAdmin\" />
+    <Folder Include="Areas\RazorAdmin\Views\" />
+    <Folder Include="Areas\RazorAdmin\Views\Category\" />
+    <Folder Include="Areas\RazorAdmin\Views\Slider\" />
+    <Folder Include="Utilities\ExtensionMethods\" />
+    <Folder Include="Areas\RazorAdmin\Views\Brand\" />
   </ItemGroup>
 </Project>

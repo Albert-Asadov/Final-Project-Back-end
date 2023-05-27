@@ -1,11 +1,10 @@
 ﻿using System;
-using Final_Project_Razor.Entities;
+using Razor_Final_Project_Code_Academy.Entities;
 using Microsoft.AspNetCore.Identity;
 using System.Net;
 using System.Net.Mail;
 using Microsoft.AspNetCore.Mvc;
-using Final_Project_Razor.ViewModel;
-using Razor_Final_Project_Code_Academy.Entities;
+using Razor_Final_Project_Code_Academy.ViewModel;
 
 
 namespace Final_Project_Razor.Controllers

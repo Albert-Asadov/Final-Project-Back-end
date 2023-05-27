@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Final_Project_Razor.Controllers
+namespace Razor_Final_Project_Code_Academy.Controllers
 {
 	public class WelcomeController:Controller
 	{

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Final_Project_Razor.Entities
+namespace Razor_Final_Project_Code_Academy.Entities
 {
 	public class Brand:BaseEntity
 	{

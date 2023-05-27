@@ -10117,9 +10117,23 @@ body {
 #slider .slide {
   width: 100%;
 }
+#slider .slide .owl-carousel .owl-stage-outer {
+  height: 520px;
+}
 #slider .slide .owl-carousel .owl-stage-outer .owl-stage .owl-item .item img {
-  object-fit: contain;
+  object-position: center;
+  object-fit: cover;
   width: 100%;
+}
+@media only screen and (max-width: 821px) {
+  #slider .slide .owl-carousel .owl-stage-outer {
+    height: 368px;
+  }
+}
+@media only screen and (max-width: 391px) {
+  #slider .slide .owl-carousel .owl-stage-outer {
+    height: 198px;
+  }
 }
 #slider .slide .owl-carousel .owl-nav .owl-prev {
   color: white;
@@ -10161,7 +10175,7 @@ body {
   color: #8f8f8f;
   position: absolute;
   top: 50%;
-  right: 1px;
+  right: 13px;
   z-index: 5;
   font-size: 35px;
 }
@@ -10182,6 +10196,11 @@ body {
 #slider .advertising .second,
 #slider .advertising .third {
   margin-top: 20px;
+}
+@media only screen and (max-width: 821px) {
+  #slider .advertising {
+    padding-top: 15px;
+  }
 }
 @media only screen and (max-width: 821px) {
   #slider .advertising div img {
@@ -10758,6 +10777,27 @@ body {
 #main .rightSide .mainContent .adverstingMainPage .secondImage img {
   object-fit: contain;
   width: 97%;
+}
+@media only screen and (max-width: 821px) {
+  #main .rightSide .mainContent .firstImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #main .rightSide .mainContent .firstImage img {
+    margin: 0 auto;
+  }
+  #main .rightSide .mainContent .secondImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    text-align: center;
+  }
+  #main .rightSide .mainContent .secondImage img {
+    margin: 0 auto;
+  }
 }
 #main .rightSide .mainContent .adverstingMainPageSecond {
   padding-top: 40px;

@@ -1,17 +1,28 @@
 ﻿using System;
+using Razor_Final_Project_Code_Academy.DAL;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Final_Project_Razor.Controllers
 {
 	public class HomeController:Controller
 	{
-		public HomeController()
+        private readonly RazorDbContext _context;
+
+        public HomeController(RazorDbContext context)
 		{
-		}
+            _context = context;
+        }
 
 		public IActionResult Index()
 		{
-			return View();
+
+            ViewBag.Slider = _context.Sliders.ToList();
+
+            ViewBag.Watch = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
+            ViewBag.Phone = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
+
+            return View();
 		}
 	}
 }

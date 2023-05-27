@@ -1,11 +1,10 @@
 ﻿using System;
-using Final_Project_Razor.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Razor_Final_Project_Code_Academy.Entities;
 
-namespace Final_Project_Razor.DAL
+namespace Razor_Final_Project_Code_Academy.DAL
 {
     public class RazorDbContext : IdentityDbContext<User>
     {
@@ -19,6 +18,11 @@ namespace Final_Project_Razor.DAL
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<Accessory> Accessories { get; set; }
+        public DbSet<AccessoryImage> AccessoryImages { get; set; }
+        public DbSet<Slider> Sliders { get; set; }
+        public DbSet<AccessoryCategory> AccessoryCategories { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

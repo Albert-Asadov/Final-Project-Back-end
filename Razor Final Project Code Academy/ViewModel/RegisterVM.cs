@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Final_Project_Razor.ViewModel
+namespace Razor_Final_Project_Code_Academy.ViewModel
 {
 	public class RegisterVM
 	{

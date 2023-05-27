@@ -1,9 +1,8 @@
 ﻿using System;
-using Final_Project_Razor.Entities;
-using System.ComponentModel.DataAnnotations;
 using Razor_Final_Project_Code_Academy.Entities;
+using System.ComponentModel.DataAnnotations;
 
-namespace Final_Project_Razor.ViewModel
+namespace Razor_Final_Project_Code_Academy.ViewModel
 {
 	public class ForgotVM
 	{
