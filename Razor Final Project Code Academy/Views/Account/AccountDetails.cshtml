@@ -1,6 +1,5 @@
-﻿@model User
-
-
+﻿
+@model AccountSettingVM
 
     <section id="accountSettings">
         <div class="container">
@@ -21,36 +20,33 @@
                     <form action="">
                         <div class="row">
                             <div class="name col-lg-6 col-12">
-                                <label for="name">First Name:</label><br>
-                                <input type="text" name="" id="name" value="">
-                            </div>
-
-                            <div class="lastName col-lg-6 col-12">
-                                <label for="lname">Last Name:</label><br>
-                                <input type="text" name="" id="lname">
+                                <label asp-for="UserName" >User Name:</label><br>
+                                <input asp-for="UserName" value="@Model.UserName">
                             </div>
 
                             <div class="email col-lg-6 col-12">
-                                <label for="email">Email Adress:</label><br>
-                                <input type="text" name="" id="email" value="@Model.Email">
+                                <label asp-for="Email" >Email Adress:</label><br>
+                                <input asp-for="Email" value="@Model.Email" readonly>
                             </div>
 
                             <div class="passwordOld col-lg-6 col-12">
-                                <label for="passOld">Password:</label><br>
-                                <input type="number" name="" id="passOld" value="@Model.PasswordHash">
+                                <label asp-for="CurrentPassword" >Current Password:</label><br>
+                                <input asp-for="CurrentPassword">
                             </div>
 
                             <div class="passwordOld col-lg-6 col-12">
-                                <label for="conf">Confirm Password:</label><br>
-                                <input type="number" name="" id="conf" value="">
+                                <label  asp-for="NewPassword">Password:</label><br>
+                                <input asp-for="NewPassword">
                             </div>
 
-                            <div class="passwordOld col-lg-6 col-12">
-                                <label for="curr">Current Password:</label><br>
-                                <input type="number" name="" id="curr">
+                            <div class="passwordOld col-lg-12 col-12">
+                                <label  asp-for="ConfirmNewPassword">Confirm Password:</label><br>
+                                <input  asp-for="ConfirmNewPassword">
                             </div>
 
-                            <button class="button button--primary">Update Details</button>
+
+
+                            <button type="submit" class="button button--primary">Update Details</button>
                         </div>
 
                     </form>
