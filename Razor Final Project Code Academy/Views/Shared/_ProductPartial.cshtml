@@ -1,0 +1,37 @@
+﻿@model List<Product>
+
+@foreach (var item in Model)
+{
+    <div class="product col-lg-3 col-12" style=" height: 300px; width: 247px ;">
+
+        <div class="image">
+            <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@item.Id">
+                <img style="width:150px; height:150px; object-fit:contain;" src="~/assets/images/Product/@item.ProductImages.First().Image" alt="">
+            </a>
+        </div>
+        <div class="text">
+
+            <div class="brand">
+                <span>
+                    @item.Brand.Name
+                </span>
+            </div>
+
+            <div class="name">
+                <span>
+                    @item.Name
+                </span>
+            </div>
+
+            <div class="price">
+                <span>$@item.Price</span>
+            </div>
+
+            <div class="addToCard">
+                <a href="">
+                    Add To Card
+                </a>
+            </div>
+        </div>
+    </div>
+}

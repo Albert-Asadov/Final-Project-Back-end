@@ -1,10 +1,11 @@
-﻿@model List<Product>
+﻿@model Tuple<List<Product>, List<Accessory>>
 
 @{
     List<Ram> ram = ViewBag.Ram;
     List<Memory> memory = ViewBag.Memory;
     List<Color> color = ViewBag.Color;
     List<Category> category = ViewBag.Category;
+    List<Brand> brands = ViewBag.Brand;
 }
 <section id="shop">
     <div class="container">
@@ -21,121 +22,132 @@
                         </div>
                     </div>
                 </div>
-                <div class="category">
-                    <div class="name">
-                        <span>Category</span>
-                    </div>
-                    <form action="">
+                <form asp-controller="Shop" asp-action="Index" method="post">
+                    <div class="category">
+                        <div class="name">
+                            <span>Category</span>
+                        </div>
+
                         @foreach (var item in category)
                         {
                             <div class="inputs">
-                                <input type="checkbox" name="" id="cat1">
+                                <input type="checkbox" name="CategoryIds" value="@item.Id" id="cat1">
                                 <label for="cat1">@item.Name</label>
                             </div>
                         }
-                    </form>
-                </div>
 
-                <div class="ram">
-                    <div class="name">
-                        <span>Ram</span>
                     </div>
-                    <form action="">
+
+
+                    @*<div class="category">
+                        <div class="name">
+                            <span>Brand</span>
+                        </div>
+
+                        @foreach (var item in brands)
+                        {
+                            <div class="inputs">
+                                <input type="checkbox" name="BrandIds" value="@item.Id" id="cat1">
+                                <label for="cat1">@item.Name</label>
+                            </div>
+                        }
+
+                    </div>*@
+
+                    <div class="ram">
+                        <div class="name">
+                            <span>Ram</span>
+                        </div>
+
                         @foreach (var item in ram)
                         {
                             <div class="inputs">
-                                <input type="checkbox" name="" id="cat1">
+                                <input type="checkbox" name="RamIds" value="@item.Id" id="cat1">
                                 <label for="cat1">@item.RamName GB</label>
                             </div>
                         }
-                    </form>
-                </div>
 
-                <div class="memory">
-                    <div class="name">
-                        <span>Memory</span>
                     </div>
-                    <form action="">
+
+                    <div class="memory">
+                        <div class="name">
+                            <span>Memory</span>
+                        </div>
+
                         @foreach (var item in memory)
                         {
                             <div class="inputs">
-                                <input type="checkbox" name="" id="cat1">
+                                <input type="checkbox" name="MemoryIds" value="@item.Id" id="cat1">
                                 <label for="cat1">@item.MemoryName GB</label>
                             </div>
                         }
-                    </form>
-                </div>
 
-                <div class="countDown">
-                    <div class="name">
-                        <span>Color</span>
                     </div>
-                    <form action="">
+
+                    <div class="countDown">
+                        <div class="name">
+                            <span>Watches Color</span>
+                        </div>
+
                         @foreach (var item in color)
                         {
                             <div class="inputs">
-                                <input type="checkbox" name="" id="cat1">
+                                <input type="checkbox" name="ColorIds" value="@item.Id" id="cat1">
                                 <label for="cat1">@item.ColorName</label>
                             </div>
                         }
-                    </form>
-                </div>
+
+                    </div>
+                    <div>
+                        <button style="width: 88px;
+                                height: 35px;
+                                border-radius: 20px;
+                                font-size: 13px;
+                                border: none;
+                                background-color: #444;
+                                border-color: #444;
+                                color: #fff;
+                                margin-top: 20px;" type="submit">
+                            Filter
+                        </button>
+                    </div>
+                </form>
             </div>
             <div class="rightSide col-lg-9">
                 <div class="sort">
                     <div class="name">
                         SORT BY:
                     </div>
-                    <form action="">
-                        <select name="" id="">
-                            <option value="">A-Z</option>
-                            <option value="">Z-A</option>
-                            <option value="">Price: Ascending</option>
-                            <option value="">Price: Descending</option>
-
+                    <form  method="post">
+                        <select name="sortOrder" id="sortOrder">
+                            <option value="A-Z">A-Z</option>
+                            <option value="Z-A">Z-A</option>
+                            <option value="PriceAscending">Price: Ascending</option>
+                            <option value="PriceDescending">Price: Descending</option>
                         </select>
                     </form>
                 </div>
                 <div class="mainContent">
                     <div class="row">
-                        @foreach (var item in Model)
-                        {
-                            <div class="product col-lg-3">
 
-                                <div class="image">
-                                    <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@item.Id">
-                                        <img src="~/assets/images/Product/@item.ProductImages.First().Image" alt="">
-                                    </a>
-                                </div>
-                                <div class="text">
+                        @await Html.PartialAsync("_ProductPartial", Model.Item1)
 
-                                    <div class="brand">
-                                        <span>
-                                            @item.Brand.Name
-                                        </span>
-                                    </div>
 
-                                    <div class="name">
-                                        <span>
-                                            @item.Name
-                                        </span>
-                                    </div>
+                        @await Html.PartialAsync("_AccessuarPartial", Model.Item2)
 
-                                    <div class="price">
-                                        <span>$@item.Price</span>
-                                    </div>
-
-                                    <div class="addToCard">
-                                        <a href="">
-                                            Add To Card
-                                        </a>
-                                    </div>
-                                </div>
-                         </div>
-                        }
                     </div>
                 </div>
             </div>
-            </div>
         </div>
+    </div>
+
 </section>
+
+<div class="listing-show-more-wrap d-flex mt-4 mt-md-6 justify-content-center align-items-start">
+    <ul class="pagination mt-0">
+        @for (int i = 1; i <= ViewBag.TotalPage; i++)
+        {
+            <li class="@(i==ViewBag.CurrentPage ? "active" : "")"><a asp-action="Index" asp-route-page="@i">@i</a></li>
+        }
+    </ul>
+</div>

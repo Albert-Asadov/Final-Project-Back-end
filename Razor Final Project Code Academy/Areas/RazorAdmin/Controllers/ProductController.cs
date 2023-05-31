@@ -27,8 +27,8 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
 
             IEnumerable<Product> products = _context.Products.Include(p => p.ProductImages).Include(x=>x.Brand)
                                                         .Include(p => p.ProductRamMemories).ThenInclude(p => p.Ram)
-                                                        .Include(p => p.ProductRamMemories).ThenInclude(p => p.Memory)
-                                                         .AsNoTracking().Skip((page - 1) * 5).Take(5).AsEnumerable();
+                                                        .Include(p => p.ProductRamMemories).ThenInclude(p => p.Memory).
+                                                         OrderByDescending(x => x.Id).AsNoTracking().Skip((page - 1) * 5).Take(5).AsEnumerable();
             return View(products);
         }
 

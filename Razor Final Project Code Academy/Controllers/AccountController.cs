@@ -96,12 +96,13 @@ namespace Final_Project_Razor.Controllers
             if (!ModelState.IsValid) return View();
 
             User user = await _userManager.FindByNameAsync(login.Username);
-            IList<string> roles = await _userManager.GetRolesAsync(user);
             if (user is null)
             {
                 ModelState.AddModelError("", "Username or password is incorrect");
                 return View();
             }
+            IList<string> roles = await _userManager.GetRolesAsync(user);
+          
             Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, login.Password, login.RememberMe, true);
             if (!result.Succeeded)
             {
@@ -184,13 +185,62 @@ namespace Final_Project_Razor.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public async Task<IActionResult> AccountSetting()
+        public async Task<IActionResult> AccountDetails()
+		{
+			User user = await _userManager.FindByNameAsync(User.Identity.Name);
+			if (user is null)
+			{
+				return RedirectToAction(nameof(Login));
+			}
+			AccountSettingVM accountSettingVM = new()
+			{
+				Email = user.Email,
+				UserName = user.UserName,
+			};
+
+			return View(accountSettingVM);
+		}
+
+        [HttpPost]
+        public async Task<IActionResult> AccountDetails(AccountSettingVM accountSettingVM)
         {
-            User user = await _userManager.FindByNameAsync(User.Identity.Name);
-            return View(user);
+            if (!ModelState.IsValid) return View();
 
+            User member = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            if (!string.IsNullOrWhiteSpace(accountSettingVM.ConfirmNewPassword) && !string.IsNullOrWhiteSpace(accountSettingVM.NewPassword))
+            {
+                var passwordChangeResult = await _userManager.ChangePasswordAsync(member, accountSettingVM.CurrentPassword, accountSettingVM.NewPassword);
+
+                if (!passwordChangeResult.Succeeded)
+                {
+                    foreach (var item in passwordChangeResult.Errors)
+                    {
+                        ModelState.AddModelError("", item.Description);
+                    }
+
+                    return View();
+                }
+            }
+            if (member.Email != accountSettingVM.Email && _userManager.Users.Any(x => x.NormalizedEmail == accountSettingVM.Email.ToUpper()))
+            {
+                ModelState.AddModelError("Email", "This email has already been taken");
+                return View();
+            }
+            member.Email = accountSettingVM.Email;
+            member.UserName = accountSettingVM.UserName;
+            var result = await _userManager.UpdateAsync(member);
+            if (!result.Succeeded)
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError("", item.Description);
+                }
+                return View();
+            }
+            await _signInManager.SignOutAsync();
+            return RedirectToAction(nameof(Login));
         }
-
 
     }
 }

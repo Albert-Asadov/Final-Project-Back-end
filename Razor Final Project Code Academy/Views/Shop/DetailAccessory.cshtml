@@ -18,12 +18,10 @@
 
                     <div class="categoryList">
                         <ul>
-                            <li><a href="">Electronic & Digital</a></li>
-                            <li><a href="">Fashion & Clothing</a></li>
-                            <li><a href="">Top 10 Offers</a></li>
-                            <li><a href="">Deal The Week</a></li>
-                            <li><a href="">Smartphones & Tablets</a></li>
-                            <li><a href="">Audio Music</a></li>
+                            @foreach (var item in ViewBag.Category)
+                            {
+                                <li><a href="">@item.Name</a></li>
+                            }
                         </ul>
                     </div>
 
@@ -161,7 +159,7 @@
                             </div>
 
                         </div>
-                        <div class="titleMain">
+                        <div class="titleMain" style="width: 100%;">
                             <div class="name">
                                 <h1>@Model.Name</h1>
                             </div>

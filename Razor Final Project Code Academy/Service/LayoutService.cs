@@ -21,6 +21,13 @@ namespace Razor_Final_Project_Code_Academy.Service
 
             return categories;
         }
+
+        public List<Brand> AllBrands()
+        {
+            List<Brand> Brands = _context.Brands.ToList();
+
+            return Brands;
+        }
     }
 }
 

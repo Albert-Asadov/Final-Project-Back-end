@@ -5110,6 +5110,11 @@ body {
 #detail .rightSide .mainDetail .aboutProduct .photo .mainImage img {
   width: 520px;
 }
+@media only screen and (max-width: 391px) {
+  #detail .rightSide .mainDetail .aboutProduct .photo .mainImage img {
+    width: 348px;
+  }
+}
 #detail .rightSide .mainDetail .aboutProduct .photo .smallImages {
   display: flex;
 }
@@ -5360,6 +5365,32 @@ body {
 #detail .rightSide .mainDetail .aboutProduct .titleMain .addToCard .wishlist .panelWish .deleteFromWishlist a {
   text-decoration: none;
   color: #666;
+}
+@media only screen and (max-width: 821px) {
+  #detail .rightSide .mainDetail .aboutProduct .titleMain {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 391px) {
+  #detail .rightSide .mainDetail .aboutProduct .titleMain {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 821px) {
+  #detail .rightSide .mainDetail .aboutProduct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 391px) {
+  #detail .rightSide .mainDetail .aboutProduct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 #detail .rightSide .mainDetail .description {
   padding-top: 40px;

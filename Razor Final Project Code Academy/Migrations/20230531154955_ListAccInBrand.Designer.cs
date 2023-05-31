@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Razor_Final_Project_Code_Academy.DAL;
 
@@ -11,9 +12,10 @@ using Razor_Final_Project_Code_Academy.DAL;
 namespace Razor_Final_Project_Code_Academy.Migrations
 {
     [DbContext(typeof(RazorDbContext))]
-    partial class RazorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230531154955_ListAccInBrand")]
+    partial class ListAccInBrand
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -709,7 +711,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                         .IsRequired();
 
                     b.HasOne("Razor_Final_Project_Code_Academy.Entities.Category", "Category")
-                        .WithMany("accessoryCategories")
+                        .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -852,8 +854,6 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Category", b =>
                 {
-                    b.Navigation("accessoryCategories");
-
                     b.Navigation("productCategories");
                 });
 

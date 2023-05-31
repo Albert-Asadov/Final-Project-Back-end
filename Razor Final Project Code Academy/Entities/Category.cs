@@ -9,9 +9,14 @@ namespace Razor_Final_Project_Code_Academy.Entities
 
         public List<ProductCategory> productCategories { get; set; }
 
+        public List<AccessoryCategory> accessoryCategories { get; set; }
+
+
         public Category()
         {
             productCategories = new();
+
+            accessoryCategories = new();
         }
     }
 }

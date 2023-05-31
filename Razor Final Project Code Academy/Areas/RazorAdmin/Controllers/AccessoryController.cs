@@ -131,7 +131,7 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
 
             _context.Accessories.Add(accessory);
             _context.SaveChanges();
-            return RedirectToAction("Index", "Product");
+            return RedirectToAction("Index", "Accessory");
         }
 
         public IActionResult Edit(int id)
