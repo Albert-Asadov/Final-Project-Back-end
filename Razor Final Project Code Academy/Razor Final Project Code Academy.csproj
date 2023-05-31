@@ -26,6 +26,13 @@
     <None Remove="Areas\RazorAdmin\Views\Slider\" />
     <None Remove="Utilities\ExtensionMethods\" />
     <None Remove="Areas\RazorAdmin\Views\Brand\" />
+    <None Remove="Views\Page\" />
+    <None Remove="Areas\RazorAdmin\Views\Setting\" />
+    <None Remove="Areas\RazorAdmin\Views\Memory\" />
+    <None Remove="Areas\RazorAdmin\Views\Ram\" />
+    <None Remove="Areas\RazorAdmin\Views\Product\" />
+    <None Remove="Areas\RazorAdmin\Views\Color\" />
+    <None Remove="Areas\RazorAdmin\Views\Accessory\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
@@ -37,5 +44,12 @@
     <Folder Include="Areas\RazorAdmin\Views\Slider\" />
     <Folder Include="Utilities\ExtensionMethods\" />
     <Folder Include="Areas\RazorAdmin\Views\Brand\" />
+    <Folder Include="Views\Page\" />
+    <Folder Include="Areas\RazorAdmin\Views\Setting\" />
+    <Folder Include="Areas\RazorAdmin\Views\Memory\" />
+    <Folder Include="Areas\RazorAdmin\Views\Ram\" />
+    <Folder Include="Areas\RazorAdmin\Views\Product\" />
+    <Folder Include="Areas\RazorAdmin\Views\Color\" />
+    <Folder Include="Areas\RazorAdmin\Views\Accessory\" />
   </ItemGroup>
 </Project>

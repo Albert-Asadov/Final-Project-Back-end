@@ -1,0 +1,117 @@
+﻿@model ProductVM
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MainPhoto" class="control-label"></label>
+                <input asp-for="MainPhoto" class="form-control" / accept="image/*">
+                <span asp-validation-for="MainPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Images" class="control-label"></label>
+                <input asp-for="Images" class="form-control" / accept="image/*">
+                <span asp-validation-for="Images" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Discount" class="control-label"></label>
+                <input asp-for="Discount" class="form-control" />
+                <span asp-validation-for="Discount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SKU" class="control-label"></label>
+                <input asp-for="SKU" class="form-control" />
+                <span asp-validation-for="SKU" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label">Brands</label>
+                <select asp-for="BrandId" asp-items="@(new SelectList(ViewBag.Brand,"Id","Name"))" class="form-control">
+                </select>
+                <span asp-validation-for="BrandId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desc" class="control-label"></label>
+                <input asp-for="Desc" class="form-control" />
+                <span asp-validation-for="Desc" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Categories</label>
+                <select asp-for="CategoryIds" asp-items="@(new SelectList(ViewBag.Categories,"Id","Name"))" class="form-control"></select>
+                <span asp-validation-for="CategoryIds" class="text-danger"></span>
+            </div>
+
+            <div class="mt-5 form-group">
+                <label class="control-label">Ram,Memory and Quantity</label>
+                <div class="d-flex">
+                    <select class="form-control rams" asp-items="@(new SelectList(ViewBag.Rams,"Id","RamName"))"></select>
+                    <select class="form-control memories" asp-items="@(new SelectList(ViewBag.Memories, "Id", "MemoryName"))"></select>
+                    <input class="form-control quantity" type="number" value="1" class="mt-4 " placeholder="How much this plant?" />
+                </div>
+                <button class="btn btn-success add-buttons" type="button">+</button>
+                <button class="btnSubmit btn btn-danger" type="button">Submit</button>
+
+                <input type="hidden" id="plant-data" name="ProductRamMemory" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Script{
+    <script>var button = document.querySelector(".btnSubmit");
+        button.addEventListener("click", function () {
+            var sizes = document.querySelectorAll(".rams");
+            var colors = document.querySelectorAll(".memories");
+            var quantities = document.querySelectorAll(".quantity");
+            var hiddenInput = document.getElementById("plant-data");
+            var data = [];
+
+            for (var i = 0; i < sizes.length; i++) {
+                var sizeId = sizes[i].value;
+                var colorId = colors[i].value;
+                var quantity = quantities[i].value.trim();
+
+                if (quantity === '') {
+                    quantity = '1';
+                }
+
+                if (quantity <= 0) {
+                    return;
+                }
+
+                data.push(sizeId + "-" + colorId + "-" + quantity);
+            }
+            hiddenInput.value = data.join(",");
+
+            console.log(hiddenInput);
+        });
+
+        var addButton = document.querySelector(".add-buttons");
+        addButton.addEventListener("click", function () {
+            var parentDiv = this.previousElementSibling;
+            var newDiv = parentDiv.cloneNode(true);
+            parentDiv.after(newDiv);
+        });</script>
+}

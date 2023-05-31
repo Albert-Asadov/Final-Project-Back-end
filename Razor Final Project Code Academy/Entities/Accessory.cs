@@ -15,7 +15,7 @@ namespace Razor_Final_Project_Code_Academy.Entities
 
 		public string SKU { get; set; }
 
-		public int Quantity { get; set; }
+		public bool InStock { get; set; }
 
 		public int Count { get; set; }
 
@@ -28,6 +28,18 @@ namespace Razor_Final_Project_Code_Academy.Entities
 		public Brand Brand { get; set; }
 
 		public int BrandId { get; set; }
-	}
+
+        public List<Comment> AccessoryComments { get; set; }
+
+        public List<AccessoryColor> accessoryColors { get; set; }
+
+        public Accessory()
+		{
+			AccessoryImages = new();
+            accessoryColors = new();
+            AccessoryComments = new();
+			AccessoryCategories = new();
+        }
+    }
 }
 

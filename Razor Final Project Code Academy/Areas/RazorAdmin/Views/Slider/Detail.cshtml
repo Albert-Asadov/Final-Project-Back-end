@@ -5,10 +5,10 @@
     ViewData["Title"] = "Detail";
 }
 
-<div>
-    <img src="~/assets/images/SliderImages/@Model.Path" /><br />
+<div style="display:flex; justify-content:center; align-items:center; padding:20px;">
+    <img style="width:700px;" src="~/assets/images/SliderImages/@Model.Path" /><br />
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+<div style="padding: 20px;">
+    <a style="text-decoration:none; color:black;" asp-action="Index">Back to List</a>
 </div>

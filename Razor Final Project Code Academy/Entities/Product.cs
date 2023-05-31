@@ -13,7 +13,7 @@ namespace Razor_Final_Project_Code_Academy.Entities
 
 		public string SKU { get; set; }
 
-		public int Quantity { get; set; }
+		public bool InStock { get; set; }
 
 		public int Count { get; set; }
 
@@ -26,6 +26,21 @@ namespace Razor_Final_Project_Code_Academy.Entities
 		public Brand Brand { get; set; }
 
 		public int BrandId { get; set; }
+
+		public List<Comment> ProductComments { get; set; }
+
+        public List<ProductRamMemory> ProductRamMemories { get; set; }
+
+        public Product()
+		{
+            ProductRamMemories = new();
+
+			ProductComments = new();
+
+			productCategories = new();
+
+			ProductImages = new();
+		}
 	}
 }
 

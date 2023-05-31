@@ -5537,10 +5537,13 @@ body {
   height: 3px;
   background-color: #ebebeb;
 }
-#detail .rightSide .mainDetail .reviews .main div p {
+#detail .rightSide .mainDetail .reviews .main .comments div p {
   font-size: 15px;
   color: #666;
   font-family: "Rubik", sans-serif;
+}
+#detail .rightSide .mainDetail .reviews .main .comments div p .OrangeColor {
+  color: #ff7e00;
 }
 
 input[type=number]::-webkit-inner-spin-button {
@@ -10585,6 +10588,7 @@ body {
 }
 #main .rightSide .mainContent .deals ul li .textDeal .price {
   padding-top: 10px;
+  font-family: "Rubik", sans-serif;
 }
 #main .rightSide .mainContent .deals ul li .textDeal .price ul {
   display: flex;
@@ -10608,6 +10612,7 @@ body {
   padding-top: 20px;
 }
 #main .rightSide .mainContent .deals ul li .textDeal .addToCard a {
+  font-family: "Rubik", sans-serif;
   padding: 3px 0 6px 0;
   border-radius: 20px;
   display: inline-block;
@@ -10630,6 +10635,7 @@ body {
 }
 #main .rightSide .mainContent .productFirst .title .upperLine,
 #main .rightSide .mainContent .productSecond .title .upperLine {
+  font-family: "Rubik", sans-serif;
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
@@ -10643,12 +10649,14 @@ body {
 }
 #main .rightSide .mainContent .productFirst .title .upperLine ul li,
 #main .rightSide .mainContent .productSecond .title .upperLine ul li {
+  font-family: "Rubik", sans-serif;
   font-size: 14px;
   margin-right: 20px;
   list-style: none;
 }
 #main .rightSide .mainContent .productFirst .title .upperLine ul li a,
 #main .rightSide .mainContent .productSecond .title .upperLine ul li a {
+  font-family: "Rubik", sans-serif;
   color: #93979c;
   text-decoration: none;
 }
@@ -10721,6 +10729,7 @@ body {
 }
 #main .rightSide .mainContent .productFirst .products ul li .text,
 #main .rightSide .mainContent .productSecond .products ul li .text {
+  font-family: "Rubik", sans-serif;
   text-align: center;
 }
 #main .rightSide .mainContent .productFirst .products ul li .text:hover .addToCard,
@@ -10729,6 +10738,7 @@ body {
 }
 #main .rightSide .mainContent .productFirst .products ul li .text .brand,
 #main .rightSide .mainContent .productSecond .products ul li .text .brand {
+  font-family: "Rubik", sans-serif;
   margin-top: 10px;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -10737,12 +10747,27 @@ body {
 }
 #main .rightSide .mainContent .productFirst .products ul li .text .name,
 #main .rightSide .mainContent .productSecond .products ul li .text .name {
+  font-family: "Rubik", sans-serif;
   color: #4f4f4f;
   font-size: 15px;
 }
 #main .rightSide .mainContent .productFirst .products ul li .text .price,
 #main .rightSide .mainContent .productSecond .products ul li .text .price {
+  font-family: "Rubik", sans-serif;
   margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main .rightSide .mainContent .productFirst .products ul li .text .price .discountPrice,
+#main .rightSide .mainContent .productSecond .products ul li .text .price .discountPrice {
+  color: #999;
+  font-size: 14px;
+  text-decoration-line: line-through;
+}
+#main .rightSide .mainContent .productFirst .products ul li .text .price .realPrice,
+#main .rightSide .mainContent .productSecond .products ul li .text .price .realPrice {
+  margin-left: 10px;
   font-size: 16px;
   color: #ff7e00;
 }
@@ -11798,4 +11823,32 @@ footer .bottomLine .paymant ul li {
 }
 footer .bottomLine .paymant ul li i {
   font-size: 25px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.upperSendEmail {
+  height: 150px;
+  background-color: #ff7e00;
+}
+
+.titleSendEmail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 427px;
+  background-color: rgba(35, 47, 63, 0.9333333333);
+  color: white;
+}
+.titleSendEmail h1 {
+  font-family: "Rubik", sans-serif;
+}
+
+.bottomSendEmail {
+  height: 150px;
+  background-color: #ff7e00;
 }/*# sourceMappingURL=main.css.map */

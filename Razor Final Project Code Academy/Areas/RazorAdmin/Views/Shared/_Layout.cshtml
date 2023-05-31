@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="~/admin/assets/css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
-    @RenderSection("CSS", false)
+    @RenderSection("Css", false)
 </head>
 <body>
     <div class="container-scroller">
@@ -208,9 +208,9 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Tag" asp-action="Index">
+                        <a class="nav-link" asp-controller="Ram" asp-action="Index">
                             <i class="mdi mdi-view-headline menu-icon"></i>
-                            <span class="menu-title">Tags</span>
+                            <span class="menu-title">Rams</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -233,9 +233,9 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Size" asp-action="Index">
+                        <a class="nav-link" asp-controller="Memory" asp-action="Index">
                             <i class="mdi mdi-emoticon menu-icon"></i>
-                            <span class="menu-title">Size</span>
+                            <span class="menu-title">Memory</span>
                         </a>
                     </li>
 
@@ -300,6 +300,7 @@
     <script src="~/admin/assets/js/dataTables.bootstrap4.js"></script>
     <!-- End custom js for this page-->
     @RenderSection("Scripts", false)
+    @RenderSection("Script", false)
     <script src="~/admin/assets/js/jquery.cookie.js" type="text/javascript"></script>
 </body>
 

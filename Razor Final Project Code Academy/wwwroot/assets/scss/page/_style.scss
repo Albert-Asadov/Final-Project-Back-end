@@ -1155,7 +1155,7 @@ body {
 
                             .price {
                                 padding-top: 10px;
-
+                                font-family: 'Rubik', sans-serif;
                                 ul {
                                     display: flex;
                                     padding: 0;
@@ -1183,6 +1183,7 @@ body {
                                 padding-top: 20px;
 
                                 a {
+                                    font-family: 'Rubik', sans-serif;
                                     padding: 3px 0 6px 0;
                                     border-radius: 20px;
                                     display: inline-block;
@@ -1212,6 +1213,7 @@ body {
 
                 .title {
                     .upperLine {
+                        font-family: 'Rubik', sans-serif;
                         padding-bottom: 10px;
                         display: flex;
                         justify-content: space-between;
@@ -1223,11 +1225,13 @@ body {
                             margin: 0;
 
                             li {
+                                font-family: 'Rubik', sans-serif;
                                 font-size: 14px;
                                 margin-right: 20px;
                                 list-style: none;
 
                                 a {
+                                    font-family: 'Rubik', sans-serif;
                                     color: #93979c;
                                     text-decoration: none;
                                 }
@@ -1303,6 +1307,7 @@ body {
                             }
 
                             .text {
+                                font-family: 'Rubik', sans-serif;
                                 &:hover .addToCard {
                                     display: block;
                                 }
@@ -1310,6 +1315,7 @@ body {
                                 text-align: center;
 
                                 .brand {
+                                    font-family: 'Rubik', sans-serif;
                                     margin-top: 10px;
                                     margin-bottom: 10px;
                                     text-transform: uppercase;
@@ -1318,14 +1324,27 @@ body {
                                 }
 
                                 .name {
+                                    font-family: 'Rubik', sans-serif;
                                     color: #4f4f4f;
                                     font-size: 15px;
                                 }
 
                                 .price {
+                                    font-family: 'Rubik', sans-serif;
                                     margin-top: 15px;
-                                    font-size: 16px;
-                                    color: #ff7e00;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    .discountPrice{
+                                        color: #999;
+                                        font-size: 14px;
+                                        text-decoration-line: line-through;
+                                    }
+                                    .realPrice{
+                                        margin-left: 10px;
+                                        font-size: 16px;
+                                        color: #ff7e00;
+                                    }
                                 }
 
                                 .addToCard {

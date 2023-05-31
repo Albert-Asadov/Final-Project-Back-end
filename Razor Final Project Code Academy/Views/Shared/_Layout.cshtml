@@ -51,7 +51,7 @@
 
                                             <li><a href="./accountOrders.html">Orders</a></li>
                                             <li><a href="./accountAdress.html">Adress</a></li>
-                                            <li><a href="./accountSetting.html">Account Settings</a></li>
+                                            <li><a asp-controller="account" asp-action="AccountSetting">Account Settings</a></li>
                                             <li>
                                                 <a asp-controller="Account" asp-action="LogOut">
                                                     <div class="SignOut">
@@ -134,7 +134,7 @@
                                         {
                                             <li><a href="./accountOrders.html">Orders</a></li>
                                             <li><a href="./accountAdress.html">Adress</a></li>
-                                            <li><a href="./accountSetting.html">Account Settings</a></li>
+                                            <li><a asp-controller="account" asp-action="AccountSetting">Account Settings</a></li>
                                             <li>
                                                 <a asp-controller="Account" asp-action="LogOut">
                                                     <div class="SignOut">
@@ -238,7 +238,7 @@
                     <nav class="col-lg-8">
                         <ul>
                             <li><a href="./index.html">HOME</a></li>
-                            <li><a href="./pages.html">PAGES</a></li>
+                            <li><a asp-controller="Page" asp-action="Index">PAGES</a></li>
                             <li><a href="./contactUs.html">CONTACT US</a></li>
                         </ul>
                     </nav>
@@ -336,7 +336,7 @@
                             </div>
                             <div class="nav">
                                 <ul>
-                                    <li><a href="">Pages</a></li>
+                                    <li><a asp-controller="Page" asp-action="Index">Pages</a></li>
                                     <li><a asp-controller="Contact" asp-action="Index">Contact Us</a></li>
                                     <li><a href="">Sitemap</a></li>
                                 </ul>

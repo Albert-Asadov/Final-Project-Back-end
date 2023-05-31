@@ -1,5 +1,11 @@
 ﻿@model List<Product>
 
+@{
+    List<Ram> ram = ViewBag.Ram;
+    List<Memory> memory = ViewBag.Memory;
+    List<Color> color = ViewBag.Color;
+    List<Category> category = ViewBag.Category;
+}
 <section id="shop">
     <div class="container">
         <div class="row">
@@ -20,22 +26,13 @@
                         <span>Category</span>
                     </div>
                     <form action="">
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">Top 10 Offers</label>
-                        </div>
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">Top 10 Offers</label>
-                        </div>
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">Top 10 Offers</label>
-                        </div>
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">Top 10 Offers</label>
-                        </div>
+                        @foreach (var item in category)
+                        {
+                            <div class="inputs">
+                                <input type="checkbox" name="" id="cat1">
+                                <label for="cat1">@item.Name</label>
+                            </div>
+                        }
                     </form>
                 </div>
 
@@ -44,18 +41,13 @@
                         <span>Ram</span>
                     </div>
                     <form action="">
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">4 GB</label>
-                        </div>
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">6 GB</label>
-                        </div>
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">8 GB</label>
-                        </div>
+                        @foreach (var item in ram)
+                        {
+                            <div class="inputs">
+                                <input type="checkbox" name="" id="cat1">
+                                <label for="cat1">@item.RamName GB</label>
+                            </div>
+                        }
                     </form>
                 </div>
 
@@ -64,44 +56,28 @@
                         <span>Memory</span>
                     </div>
                     <form action="">
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">32 GB</label>
-                        </div>
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">64 GB</label>
-                        </div>
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">128 GB</label>
-                        </div>
-
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">256 GB</label>
-                        </div>
-
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">512 GB</label>
-                        </div>
+                        @foreach (var item in memory)
+                        {
+                            <div class="inputs">
+                                <input type="checkbox" name="" id="cat1">
+                                <label for="cat1">@item.MemoryName GB</label>
+                            </div>
+                        }
                     </form>
                 </div>
 
                 <div class="countDown">
                     <div class="name">
-                        <span>__countdown</span>
+                        <span>Color</span>
                     </div>
                     <form action="">
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">6/12/19</label>
-                        </div>
-                        <div class="inputs">
-                            <input type="checkbox" name="" id="cat1">
-                            <label for="cat1">8/12/19</label>
-                        </div>
+                        @foreach (var item in color)
+                        {
+                            <div class="inputs">
+                                <input type="checkbox" name="" id="cat1">
+                                <label for="cat1">@item.ColorName</label>
+                            </div>
+                        }
                     </form>
                 </div>
             </div>
@@ -127,7 +103,7 @@
                             <div class="product col-lg-3">
 
                                 <div class="image">
-                                    <a asp-controller="shop" asp-action="detail" asp-route-id="@item.Id">
+                                    <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@item.Id">
                                         <img src="~/assets/images/Product/@item.ProductImages.First().Image" alt="">
                                     </a>
                                 </div>
@@ -159,6 +135,7 @@
                         }
                     </div>
                 </div>
+            </div>
             </div>
         </div>
 </section>

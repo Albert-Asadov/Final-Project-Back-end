@@ -13,10 +13,12 @@
                             <div class="email">
                                 <label asp-for="Username">Username:</label><br>
                                 <input asp-for="Username">
+                                <span asp-validation-for="Username" class="text-danger"></span>
                             </div>
                             <div class="password">
                                 <label asp-for="Password">Password:</label><br>
                                 <input asp-for="Password">
+                                <span asp-validation-for="Password" class="text-danger"></span>
                             </div>
                             <div class="remember" style="display: flex; ">
                                 <label style="color: #666;

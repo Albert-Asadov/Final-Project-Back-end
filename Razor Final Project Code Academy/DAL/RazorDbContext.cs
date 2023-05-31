@@ -22,10 +22,23 @@ namespace Razor_Final_Project_Code_Academy.DAL
         public DbSet<AccessoryImage> AccessoryImages { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<AccessoryCategory> AccessoryCategories { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        public DbSet<Ram> Rams { get; set; }
+        public DbSet<Memory> Memories { get; set; }
+        public DbSet<ProductRamMemory> ProductRamMemories { get; set; }
+        public DbSet<Color> Colors { get; set; }
+        public DbSet<AccessoryColor> AccessoryColors { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Setting>().HasIndex(s => s.Key).IsUnique();
+
+            modelBuilder.Entity<Category>().HasIndex(c => c.Name).IsUnique();
+            modelBuilder.Entity<Brand>().HasIndex(c => c.Name).IsUnique();
+
             base.OnModelCreating(modelBuilder);
 
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())

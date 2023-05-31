@@ -5,7 +5,10 @@ namespace Razor_Final_Project_Code_Academy.Entities
 {
 	public class AccessoryCategory:BaseEntity
 	{
+
         public Accessory Accessory { get; set; }
+
+        public int CategoryId { get; set; }
 
         public Category Category { get; set; }
     }

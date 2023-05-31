@@ -1,0 +1,77 @@
+﻿@model AccessoryVM
+@{
+    Brand brand = ViewBag.Brand;
+}
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ProductVM</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Images
+        </dt>
+        <dd class="col-sm-10">
+            <div class="row images my-4">
+                @foreach (var image in Model.AllImages)
+                {
+                    <div class="col-2">
+                        <div class="card" style="width:152px">
+                            <img style="width:150px;height:150px;object-fit:contain" src="~/assets/images/Product/@image.Image" class="card-img-top @(image.IsMain == true ? "main" : "")" />
+                        </div>
+                        <input type="text" name="ImagesId" value="@image.Id" />
+                    </div>
+                }
+
+            </div>
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DiscountPrice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DiscountPrice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SKU)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SKU)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BrandId)
+        </dt>
+        <dd class="col-sm-10">
+            @brand.Name
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desc)
+        </dd>
+
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -18,13 +18,14 @@
 
                     <div class="categoryList">
                         <ul>
-                            <li><a href="">Electronic & Digital</a></li>
-                            <li><a href="">Fashion & Clothing</a></li>
-                            <li><a href="">Top 10 Offers</a></li>
-                            <li><a href="">Deal The Week</a></li>
-                            <li><a href="">Smartphones & Tablets</a></li>
-                            <li><a href="">Audio Music</a></li>
+                            <li><a href="">phone</a></li>
+                            <li><a href="">phone</a></li>
+                            <li><a href="">phone</a></li>
+                            <li><a href="">phone</a></li>
+                            <li><a href="">phone</a></li>
+                            <li><a href="">phone</a></li>
                         </ul>
+
                     </div>
 
                 </div>
@@ -148,14 +149,14 @@
                         <div class="photo">
 
                             <div class="mainImage">
-                                <img src="~/assets/images/Product/@Model.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
+                                <img style="height:520px; object-fit:contain;" src="~/assets/images/Product/@Model.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
                             </div>
 
-                            <div class="smallImages">
+                            <div class="smallImages" style="padding-top:10px;">
                                 @foreach (var item in Model.ProductImages)
                                 {
                                     <div class="images">
-                                        <img src="~/assets/images/Product/@item.Image" alt="">
+                                        <img style="height:100%" src="~/assets/images/Product/@item.Image" alt="">
                                     </div>
                                 }
                             </div>
@@ -163,7 +164,7 @@
                         </div>
                         <div class="titleMain">
                             <div class="name">
-                                <h1>vulputate velit2 esse molestie consequat</h1>
+                                <h1>@Model.Name</h1>
                             </div>
 
 
@@ -181,22 +182,27 @@
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                          data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <form action="">
+                                            <form asp-action="AddCommentProduct" method="post" asp-route-id="@Model.Id">
                                                 <label for="name">Name:</label><br>
-                                                <input type="text" id="name" placeholder="Write youre name"><br>
+                                                <input asp-for="ProductComments.FirstOrDefault(cm => cm.Product.Id == Model.Id).Name" type="text" id="name" placeholder="Write youre name"><br>
 
                                                 <label for="email">Email:</label><br>
-                                                <input type="email" id="email"
+                                                <input asp-for="ProductComments.FirstOrDefault(cm => cm.Product.Id == Model.Id).Email" type="email" id="email"
                                                        placeholder="Write youre email"><br>
 
 
                                                 <label for="subject">Review Subject</label><br>
-                                                <input type="text" name="" id="subject"
+                                                <input asp-for="ProductComments.FirstOrDefault(cm => cm.Product.Id == Model.Id).Title" type="text" id="subject"
                                                        placeholder="Write youre review subject"><br>
 
                                                 <label for="comment">Comment</label><br>
-                                                <input type="text" name="" id="comment"
+                                                <input asp-for="ProductComments.FirstOrDefault(cm => cm.Product.Id == Model.Id).Text" type="text"id="comment"
                                                        placeholder="Write youre comment">
+
+
+                                                <button type="submit" style="font-size: 13px; padding-top: 0px; border-radius: 25px; text-align: center; display: inline-block; text-decoration: none; background-color: #232f3fee; color: white; width: 140px; height: 36px; border:none; margin-top:10px;">
+                                                    Add Comment
+                                                </button>
                                             </form>
                                         </div>
                                     </div>
@@ -204,7 +210,7 @@
                             </div>
 
 
-                            @if (Model.DiscountPrice == 0)
+                            @if (Model.DiscountPrice == 0 || Model.Discount == 0)
                             {
 
                                 <div class="prices">
@@ -336,7 +342,7 @@
                                 <li>
                                     <div class="image">
                                         <a href="">
-                                            <img src="~/assets/images/Product/13__93391.jpg" alt="">
+                                            <img src="~/assets/images/Product/iphone-14-pro-MainPhoto-finish-select-202209-6-1inch-gold.jpeg" alt="">
                                         </a>
                                     </div>
                                     <div class="text">
@@ -521,23 +527,38 @@
                         </div>
 
                         <div class="main">
-                            <div class="name">
-                                <p>Name</p>
+                            <div class="row gy-2 gx-2">
+                                @foreach (var item in Model.ProductComments)
+                                {
+                                    <div class="col-lg-4 col-12">
+                                        <div class="comments" style="padding-left: 0px; border: 1px solid rgba(208, 215, 222, 0.8392156863); padding: 5px; height: 275px; ">
+
+                                            <div class="name">
+                                                <p>@item.CreationTime</p>
+                                            </div>
+
+                                            <div class="name">
+                                                <p><span style="margin-right:10px;" class="OrangeColor">Name:</span>@item.Name</p>
+                                            </div>
+                                            <div class="email">
+                                                <p><span style="margin-right:10px;" class="OrangeColor">Email:</span>@item.Email</p>
+                                            </div>
+                                            <div class="subject">
+                                                <p><span style="margin-right:10px;" class="OrangeColor">Subject:</span>@item.Title</p>
+                                            </div>
+                                            <div class="comment">
+                                                <p><span style="margin-right:10px;" class="OrangeColor">Comment:</span>@item.Text</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
                             </div>
-                            <div class="email">
-                                <p>Email</p>
-                            </div>
-                            <div class="subject">
-                                <p>Subject</p>
-                            </div>
-                            <div class="comment">
-                                <p>Comment</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 

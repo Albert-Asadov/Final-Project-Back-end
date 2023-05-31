@@ -1,4 +1,4 @@
-﻿
+﻿@model User
 
 
 
@@ -22,7 +22,7 @@
                         <div class="row">
                             <div class="name col-lg-6 col-12">
                                 <label for="name">First Name:</label><br>
-                                <input type="text" name="" id="name">
+                                <input type="text" name="" id="name" value="">
                             </div>
 
                             <div class="lastName col-lg-6 col-12">
@@ -32,17 +32,17 @@
 
                             <div class="email col-lg-6 col-12">
                                 <label for="email">Email Adress:</label><br>
-                                <input type="text" name="" id="email">
+                                <input type="text" name="" id="email" value="@Model.Email">
                             </div>
 
                             <div class="passwordOld col-lg-6 col-12">
                                 <label for="passOld">Password:</label><br>
-                                <input type="number" name="" id="passOld">
+                                <input type="number" name="" id="passOld" value="@Model.PasswordHash">
                             </div>
 
                             <div class="passwordOld col-lg-6 col-12">
                                 <label for="conf">Confirm Password:</label><br>
-                                <input type="number" name="" id="conf">
+                                <input type="number" name="" id="conf" value="">
                             </div>
 
                             <div class="passwordOld col-lg-6 col-12">

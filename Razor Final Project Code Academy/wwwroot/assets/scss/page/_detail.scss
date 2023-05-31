@@ -1324,13 +1324,18 @@ body {
                     }
                 }
                 .main{
+                   .comments{
                     div{
                         p{
                             font-size: 15px;
                             color: #666;
                             font-family: 'Rubik', sans-serif;
+                            .OrangeColor{
+                                color:  #ff7e00;
+                            }
                         }
                     }
+                   }
                 }
             }
         }

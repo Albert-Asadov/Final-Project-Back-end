@@ -1,5 +1,9 @@
 ﻿
+@{
+    List<Accessory> accessories = ViewBag.Watch;
 
+    List<Product> phones = ViewBag.Phone;
+}
 <main>
     <section id="slider">
         <div class="container">
@@ -496,122 +500,56 @@
                                 </div>
                             </div>
                             <div class="products">
-                                <ul>
-                                    <li>
-                                        <div class="image">
-                                            <a href="">
-                                                <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <div class="brand">
-                                                <span>
-                                                    Brand name here
-                                                </span>
-                                            </div>
-                                            <div class="name">
-                                                <span>
-                                                    Product Name Here
-                                                </span>
-                                            </div>
-                                            <div class="price">
-                                                <span>$119</span>
-                                            </div>
-                                            <div class="addToCard">
-                                                <a href="">
-                                                    Add To Card
+
+                                @foreach (var item in phones)
+                                {
+                                    <ul>
+                                        <li>
+                                            <div class="image">
+                                                <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@item.Id" >
+                                                    <img style="height:240px; object-fit:contain;" src="~/assets/images/Product/@item.ProductImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
                                                 </a>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <div class="image">
-                                            <a href="">
-                                                <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <div class="brand">
-                                                <span>
-                                                    Brand name here
-                                                </span>
+                                            <div class="text">
+                                                <div class="brand">
+                                                    <span>
+                                                        @item.Brand.Name
+                                                    </span>
+                                                </div>
+                                                <div class="name">
+                                                    <span>
+                                                        @item.Name
+                                                    </span>
+                                                </div>
+                                                @if (item.DiscountPrice == 0)
+                                                {
+                                                    <div class="price">
+                                                        <div class="realPrice">
+                                                            <span>$@item.Price</span>
+                                                        </div>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="price">
+                                                        <div class="discountPrice">
+                                                            <span>$@item.Price</span>
+                                                        </div>
+                                                        <div class="realPrice">
+                                                            <span>$@item.DiscountPrice</span>
+                                                        </div>
+                                                    </div>
+                                                }
+
+                                                <div class="addToCard">
+                                                    <a href="">
+                                                        Add To Card
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="name">
-                                                <span>
-                                                    Product Name Here
-                                                </span>
-                                            </div>
-                                            <div class="price">
-                                                <span>$119</span>
-                                            </div>
-                                            <div class="addToCard">
-                                                <a href="">
-                                                    Add To Card
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <div class="image">
-                                            <a href="">
-                                                <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <div class="brand">
-                                                <span>
-                                                    Brand name here
-                                                </span>
-                                            </div>
-                                            <div class="name">
-                                                <span>
-                                                    Product Name Here
-                                                </span>
-                                            </div>
-                                            <div class="price">
-                                                <span>$119</span>
-                                            </div>
-                                            <div class="addToCard">
-                                                <a href="">
-                                                    Add To Card
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <div class="image">
-                                            <a href="">
-                                                <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <div class="brand">
-                                                <span>
-                                                    Brand name here
-                                                </span>
-                                            </div>
-                                            <div class="name">
-                                                <span>
-                                                    Product Name Here
-                                                </span>
-                                            </div>
-                                            <div class="price">
-                                                <span>$119</span>
-                                            </div>
-                                            <div class="addToCard">
-                                                <a href="">
-                                                    Add To Card
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                }
                             </div>
                         </div>
 
@@ -643,122 +581,56 @@
                                 </div>
                             </div>
                             <div class="products">
-                                <ul>
-                                    <li>
-                                        <div class="image">
-                                            <a href="">
-                                                <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <div class="brand">
-                                                <span>
-                                                    Brand name here
-                                                </span>
-                                            </div>
-                                            <div class="name">
-                                                <span>
-                                                    Product Name Here
-                                                </span>
-                                            </div>
-                                            <div class="price">
-                                                <span>$119</span>
-                                            </div>
-                                            <div class="addToCard">
-                                                <a href="">
-                                                    Add To Card
+
+                                @foreach (var item in accessories)
+                                {
+                                    <ul>
+                                        <li>
+                                            <div class="image">
+                                                <a asp-controller="Shop" asp-action="DetailAccessory" asp-route-id="@item.Id">
+                                                    <img style="height:240px; object-fit:contain;" src="~/assets/images/Product/@item.AccessoryImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
                                                 </a>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <div class="image">
-                                            <a href="">
-                                                <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <div class="brand">
-                                                <span>
-                                                    Brand name here
-                                                </span>
+                                            <div class="text">
+                                                <div class="brand">
+                                                    <span>
+                                                        @item.Brand.Name
+                                                    </span>
+                                                </div>
+                                                <div class="name">
+                                                    <span>
+                                                        @item.Name
+                                                    </span>
+                                                </div>
+                                                @if (item.DiscountPrice == 0)
+                                                {
+                                                    <div class="price">
+                                                        <div class="realPrice">
+                                                            <span>$@item.Price</span>
+                                                        </div>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="price">
+                                                        <div class="discountPrice">
+                                                            <span>$@item.Price</span>
+                                                        </div>
+                                                        <div class="realPrice">
+                                                            <span>$@item.DiscountPrice</span>
+                                                        </div>
+                                                    </div>
+                                                }
+                                                <div class="addToCard">
+                                                    <a href="">
+                                                        Add To Card
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="name">
-                                                <span>
-                                                    Product Name Here
-                                                </span>
-                                            </div>
-                                            <div class="price">
-                                                <span>$119</span>
-                                            </div>
-                                            <div class="addToCard">
-                                                <a href="">
-                                                    Add To Card
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <div class="image">
-                                            <a href="">
-                                                <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <div class="brand">
-                                                <span>
-                                                    Brand name here
-                                                </span>
-                                            </div>
-                                            <div class="name">
-                                                <span>
-                                                    Product Name Here
-                                                </span>
-                                            </div>
-                                            <div class="price">
-                                                <span>$119</span>
-                                            </div>
-                                            <div class="addToCard">
-                                                <a href="">
-                                                    Add To Card
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <div class="image">
-                                            <a href="">
-                                                <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <div class="brand">
-                                                <span>
-                                                    Brand name here
-                                                </span>
-                                            </div>
-                                            <div class="name">
-                                                <span>
-                                                    Product Name Here
-                                                </span>
-                                            </div>
-                                            <div class="price">
-                                                <span>$119</span>
-                                            </div>
-                                            <div class="addToCard">
-                                                <a href="">
-                                                    Add To Card
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                }
+
                             </div>
                         </div>
 

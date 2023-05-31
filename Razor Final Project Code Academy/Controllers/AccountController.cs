@@ -184,10 +184,13 @@ namespace Final_Project_Razor.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public IActionResult AccountSetting()
+        public async Task<IActionResult> AccountSetting()
         {
-            return View();
+            User user = await _userManager.FindByNameAsync(User.Identity.Name);
+            return View(user);
+
         }
+
 
     }
 }

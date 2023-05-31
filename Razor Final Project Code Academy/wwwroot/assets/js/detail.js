@@ -79,9 +79,15 @@ $('.responsive').slick({
   var WishlistPanel = document.querySelector(".panelWish");
   var wishlistButton = document.querySelector(".wishlist");
 
-  wishlistButton.addEventListener("click",function(){
+wishlistButton.addEventListener("click", function (e) {
+    e.stopPropagation();
     WishlistPanel.style.display = "block";
-  })
+})
+
+window.addEventListener("click", function (e) {
+    e.stopPropagation();
+    WishlistPanel.style.display = "none";
+})
 
 
   let input = document.querySelector(".quantityInput")
@@ -116,14 +122,14 @@ function MainImageFunction(){
           Image.className = "images active"
         }
 
-        Image.onmouseover = function(){
-          [...FalseImages].forEach(falseImg =>{
-            falseImg.className = "images"
-          })
-          let src = Image.getAttribute("src");
-          MainImage.src = src;
-          Image.className = "images active"
-        }
+        //Image.onmouseover = function(){
+        //  [...FalseImages].forEach(falseImg =>{
+        //    falseImg.className = "images"
+        //  })
+        //  let src = Image.getAttribute("src");
+        //  MainImage.src = src;
+        //  Image.className = "images active"
+        //}
 
 
     })
