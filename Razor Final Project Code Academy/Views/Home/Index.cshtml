@@ -413,72 +413,87 @@
                             </div>
 
                             <div class="deals">
-                                <ul>
-                                    <li>
-                                        <div class="image col-lg-5">
-                                            <a href="">
-                                                <img src="~/assets/images/Product/9__34422.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="textDeal col-lg-7">
-                                            <div class="title">
-                                                <a href="">
-                                                    <h4>[Sample] Dustpan & Brush diam nonumy eirmod</h4>
-                                                </a>
-                                            </div>
-                                            <div class="price">
-                                                <ul>
-                                                    <li class="old">$689</li>
-                                                    <li class="new">$550</li>
-                                                </ul>
-                                            </div>
-                                            <div class="textContent">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                                    Deserunt illo sequi reprehenderit, quae non fugit!
-                                                </p>
-                                            </div>
-                                            <div class="addToCard">
-                                                <a href="">
-                                                    Add To Card
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <div class="image col-lg-5">
-                                            <a href="">
-                                                <img src="~/assets/images/Product/9__34422.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="textDeal col-lg-7">
-                                            <div class="title">
-                                                <a href="">
-                                                    <h4>[Sample] Dustpan & Brush diam nonumy eirmod</h4>
-                                                </a>
-                                            </div>
-                                            <div class="price">
-                                                <ul>
-                                                    <li class="old">$689</li>
-                                                    <li class="new">$550</li>
-                                                </ul>
-                                            </div>
-                                            <div class="textContent">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                                    Deserunt illo sequi reprehenderit, quae non fugit!
-                                                </p>
-                                            </div>
-                                            <div class="addToCard">
-                                                <a href="">
-                                                    Add To Card
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+
+                                @foreach (var item in accessories)
+                                {
+                                    @if (item.Discount >= 50)
+                                    {
+                                        <ul>
+                                            <li>
+                                                <div class="image col-lg-5">
+                                                    <a href="">
+                                                        <img style="height:240px; object-fit:contain;" src="~/assets/images/Product/@item.AccessoryImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="textDeal col-lg-7">
+                                                    <div class="title">
+                                                        <a href="">
+                                                            <h4>@item.Name</h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price">
+                                                        <ul>
+                                                            <li class="old">$@item.Price</li>
+                                                            <li class="new">$@item.DiscountPrice</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="textContent">
+                                                        <p>
+                                                            @item.Descr
+                                                        </p>
+                                                    </div>
+                                                    <div class="addToCard">
+                                                        <a href="">
+                                                            Add To Card
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    }
+
+                                }
+
+
+                                @foreach (var item in phones)
+                                {
+                                    @if (item.Discount >= 50)
+                                    {
+                                        <ul>
+                                            <li>
+                                                <div class="image col-lg-5">
+                                                    <a href="">
+                                                        <img style="height:240px; object-fit:contain;" src="~/assets/images/Product/@item.ProductImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="textDeal col-lg-7">
+                                                    <div class="title">
+                                                        <a href="">
+                                                            <h4> @item.Name</h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="price">
+                                                        <ul>
+                                                            <li class="old">$@item.Price</li>
+                                                            <li class="new">$@item.DiscountPrice</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="textContent">
+                                                        <p>
+                                                            @item.Descr
+                                                        </p>
+                                                    </div>
+                                                    <div class="addToCard">
+                                                        <a asp-controller="Basket" asp-action="Addbaskets" asp-route-productId="@item.Id">
+                                                            Add To Card
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    }
+
+                                }
                             </div>
                         </div>
 
@@ -521,7 +536,7 @@
                                                         @item.Name
                                                     </span>
                                                 </div>
-                                                @if (item.DiscountPrice == 0)
+                                                @if (item.Discount == 0 )
                                                 {
                                                     <div class="price">
                                                         <div class="realPrice">
@@ -602,7 +617,7 @@
                                                         @item.Name
                                                     </span>
                                                 </div>
-                                                @if (item.DiscountPrice == 0)
+                                                @if (item.Discount == 0)
                                                 {
                                                     <div class="price">
                                                         <div class="realPrice">

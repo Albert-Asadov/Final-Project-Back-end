@@ -1,5 +1,7 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using Razor_Final_Project_Code_Academy.Entities;
+using Razor_Final_Project_Code_Academy.ViewModel;
 
 namespace Razor_Final_Project_Code_Academy.Entities
 {
@@ -32,6 +34,10 @@ namespace Razor_Final_Project_Code_Academy.Entities
         public List<Comment> AccessoryComments { get; set; }
 
         public List<AccessoryColor> accessoryColors { get; set; }
+
+        [NotMapped]
+        public BasketAcc Adding { get; set; }
+
 
         public Accessory()
 		{

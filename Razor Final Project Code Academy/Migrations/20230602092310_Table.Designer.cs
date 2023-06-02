@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Razor_Final_Project_Code_Academy.DAL;
 
@@ -11,9 +12,10 @@ using Razor_Final_Project_Code_Academy.DAL;
 namespace Razor_Final_Project_Code_Academy.Migrations
 {
     [DbContext(typeof(RazorDbContext))]
-    partial class RazorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230602092310_Table")]
+    partial class Table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -309,9 +311,6 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.Property<int>("BasketId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("IsAccessuar")
-                        .HasColumnType("bit");
-
                     b.Property<int?>("ProductRamMemoryId")
                         .HasColumnType("int");
 
@@ -448,90 +447,6 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Memories");
-                });
-
-            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Order", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)");
-
-                    b.Property<int>("BasketId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("Note")
-                        .HasMaxLength(400)
-                        .HasColumnType("nvarchar(400)");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("TotalPrice")
-                        .HasColumnType("decimal(6,2)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BasketId");
-
-                    b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.OrderItem", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int?>("AccessoryColorId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ProductRamMemoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SaleQuantity")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("UnitPrice")
-                        .HasColumnType("decimal(6,2)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AccessoryColorId");
-
-                    b.HasIndex("OrderId");
-
-                    b.HasIndex("ProductRamMemoryId");
-
-                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Product", b =>
@@ -941,40 +856,6 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Order", b =>
-                {
-                    b.HasOne("Razor_Final_Project_Code_Academy.Entities.Basket", "Basket")
-                        .WithMany()
-                        .HasForeignKey("BasketId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Basket");
-                });
-
-            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.OrderItem", b =>
-                {
-                    b.HasOne("Razor_Final_Project_Code_Academy.Entities.AccessoryColor", "AccessoryColor")
-                        .WithMany()
-                        .HasForeignKey("AccessoryColorId");
-
-                    b.HasOne("Razor_Final_Project_Code_Academy.Entities.Order", "Order")
-                        .WithMany("OrderItems")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Razor_Final_Project_Code_Academy.Entities.ProductRamMemory", "ProductRamMemory")
-                        .WithMany()
-                        .HasForeignKey("ProductRamMemoryId");
-
-                    b.Navigation("AccessoryColor");
-
-                    b.Navigation("Order");
-
-                    b.Navigation("ProductRamMemory");
-                });
-
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Product", b =>
                 {
                     b.HasOne("Razor_Final_Project_Code_Academy.Entities.Brand", "Brand")
@@ -1086,11 +967,6 @@ namespace Razor_Final_Project_Code_Academy.Migrations
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Memory", b =>
                 {
                     b.Navigation("ProductRamMemories");
-                });
-
-            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Order", b =>
-                {
-                    b.Navigation("OrderItems");
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Product", b =>

@@ -1,4 +1,7 @@
 ﻿using System;
+using Razor_Final_Project_Code_Academy.ViewModel;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Razor_Final_Project_Code_Academy.Entities
 {
 	public class Product:BaseEntity
@@ -30,6 +33,9 @@ namespace Razor_Final_Project_Code_Academy.Entities
 		public List<Comment> ProductComments { get; set; }
 
         public List<ProductRamMemory> ProductRamMemories { get; set; }
+
+        [NotMapped]
+        public AddCartVM AddCart { get; set; }
 
         public Product()
 		{

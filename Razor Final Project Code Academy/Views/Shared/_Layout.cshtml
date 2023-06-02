@@ -3,6 +3,10 @@
 @{
     List<Category> categories = _layoutServices.AllCategories();
     List<Brand> Brands = _layoutServices.AllBrands();
+    User user = _layoutServices.AllUsers();
+    List<BasketItem> basketItem = _layoutServices.BaskeItem();
+    List<Accessory> accessories = _layoutServices.Accessories();
+    List<Product> products = _layoutServices.Products();
 }
 
 <!DOCTYPE html>
@@ -52,7 +56,7 @@
 
                                             <li><a href="./accountOrders.html">Orders</a></li>
                                             <li><a href="./accountAdress.html">Adress</a></li>
-                                            <li><a asp-controller="account" asp-action="AccountSetting">Account Settings</a></li>
+                                            <li><a asp-controller="account" asp-action="AccountDetails">Account Settings</a></li>
                                             <li>
                                                 <a asp-controller="Account" asp-action="LogOut">
                                                     <div class="SignOut">
@@ -78,7 +82,7 @@
 
                                 </div>
                             </li>
-                            <li><a asp-controller="Shop" asp-action="WishList">Wish List</a></li>
+                            <li><a asp-controller="Wishlist" asp-action="Index">Wish List</a></li>
                             <li><a href="./order.html">Check out</a></li>
                             <li class="price">
                                 <div class="usd">
@@ -119,14 +123,22 @@
                                     <i class="fa-solid fa-user"></i>
                                 </div>
                                 <div class="text">
-                                    <div class="signOut">
-                                        <span class="hello">Hello, Sign In</span>
-                                        <span class="account">My Account</span>
-                                    </div>
-                                    <div class="signIn d-none">
-                                        <span class="hello">Welcome Back</span>
-                                        <span class="account">User Name</span>
-                                    </div>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <div class="signIn">
+                                            <span class="hello">Welcome Dear</span>
+                                            <span class="account">@user.UserName</span>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="signOut">
+                                            <span class="hello">Hello, Sign In</span>
+                                            <span class="account">My Account</span>
+                                        </div>
+                                    }
+
+
                                 </div>
 
                                 <div class="panelMyAcc d-none">
@@ -135,7 +147,7 @@
                                         {
                                             <li><a href="./accountOrders.html">Orders</a></li>
                                             <li><a href="./accountAdress.html">Adress</a></li>
-                                            <li><a asp-controller="account" asp-action="AccountSetting">Account Settings</a></li>
+                                            <li><a asp-controller="account" asp-action="AccountDetails">Account Settings</a></li>
                                             <li>
                                                 <a asp-controller="Account" asp-action="LogOut">
                                                     <div class="SignOut">
@@ -168,38 +180,78 @@
                                 </div>
                                 <div class="text">
                                     <span class="cards">My Card</span>
-                                    <span class="item">0 items - $ 0.00</span>
+                                    <span class="item">@basketItem.Count- items - $ @(basketItem.Sum(x=>x.SaleQuantity * x.UnitPrice))</span>
                                 </div>
 
                                 <div class="panelBasketItems d-none">
-                                    <ul>
-                                        <li>
-                                            <div class="product">
-                                                <div class="image">
-                                                    <img src="~/assets/images/Product/2__54401.jpg" alt="">
-                                                </div>
-                                                <div class="about">
-                                                    <div class="name">
-                                                        <a href="">Apple Watch</a>
+                                    @foreach (var item in basketItem.Where(x=>x.IsAccessuar==false))
+                                    {
+                                        Product? product = products.FirstOrDefault(x => x.Id == item.ProductRamMemory.ProductId);
+                                        <ul>
+                                            <li>
+                                                <div class="product">
+                                                    <div class="image">
+                                                        <img src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
                                                     </div>
-                                                    <div class="priceCount">
-                                                        <span class="">
-                                                            1 x $800
-                                                        </span>
+                                                    <div class="about">
+                                                        <div class="name">
+                                                            <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@product.Id">@product.Name</a>
+                                                        </div>
+                                                        <div class="priceCount">
+                                                            <span class="">
+                                                                @item.SaleQuantity x $@item.UnitPrice
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </li>
+                                                    <div class="iconDelete" style="font-size: 14px;margin-left: 35px;">
 
-                                    </ul>
+                                                        <a asp-controller="Basket" asp-action="DeletBasketItem" asp-route-basketItemId="@item.Id" style="text-decoration:none; color: #666;">
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    }
+                                    @foreach (var item in basketItem.Where(x=>x.IsAccessuar==true))
+                                    {
+                                        Accessory? product = accessories.FirstOrDefault(x => x.Id == item.AccessoryColor.AccessoryId);
+                                        <ul>
+                                            <li>
+                                                <div class="product">
+                                                    <div class="image">
+                                                        <img src="~/assets/images/Product/@product.AccessoryImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
+                                                    </div>
+                                                    <div class="about">
+                                                        <div class="name">
+                                                            <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@product.Id">@product.Name</a>
+                                                        </div>
+                                                        <div class="priceCount">
+                                                            <span class="">
+                                                                @item.SaleQuantity x $@item.UnitPrice
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="iconDelete" style="font-size: 14px;margin-left: 35px;">
+
+                                                        <a asp-controller="Basket" asp-action="DeletBasketItem" asp-route-basketItemId="@item.Id" style="text-decoration:none; color: #666;">
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    }
                                     <div class="buttons">
                                         <div class="goOrder">
-                                            <a href="./order.html">
+                                            <a asp-controller="Order" asp-action="Index">
                                                 CHECK OUT NOW
                                             </a>
                                         </div>
                                         <div class="goCart">
-                                            <a href="./cart.html">
+                                            <a asp-controller="Basket" asp-action="BasketCart">
                                                 VIEW CART
                                             </a>
                                         </div>
@@ -356,7 +408,7 @@
                                 <ul>
                                     @foreach (var item in Brands)
                                     {
-                                        <li><a href="">@item.Name</a></li>
+                                        <li><a asp-controller="Shop" asp-action="Index">@item.Name</a></li>
                                     }
                                 </ul>
                             </div>

@@ -240,34 +240,33 @@
                                     <li>Date</li>
                                 </ul>
                             </div>
-                            <div class="inputs">
+                        <form asp-controller="Basket" asp-action="Addbaskets" asp-route-productId="@Model.Id" method="post">
+                                    <div class="inputs">
 
                                 <div class="ram">
                                     <label for="">Ram:</label> <br>
-                                    <select name="" id="">
-                                        <option value="">4</option>
-                                        <option value="">6</option>
+                                    <select asp-for="AddCart.RamId" asp-items="@(new SelectList(ViewBag.Ram,"Id","RamName"))">
+       
                                     </select>
                                 </div>
 
                                 <div class="memory">
                                     <label for="">Memory:</label> <br>
-                                    <select name="" id="">
-                                        <option value="">32</option>
-                                        <option value="">64</option>
+                                    <select asp-for="AddCart.MemoryId" asp-items="@(new SelectList(ViewBag.Memory,"Id","MemoryName"))">
+                                      
                                     </select>
                                 </div>
 
                                 <div class="input">
                                     <div class="mainInput">
                                         <label for="count">Quantity:</label><br>
-                                        <input type="number" value="1" class="quantityInput" name="" id="count">
+                                        <input type="number" value="1" class="quantityInput" asp-for="AddCart.Quantity" id="count">
                                     </div>
                                     <div class="chevrons">
-                                        <button onclick="handleIncreaseQuantity()">
+                                        <button type="button" onclick="handleIncreaseQuantity()">
                                             <i class="fa-solid fa-chevron-up"></i>
                                         </button>
-                                        <button onclick="handleDEcreaseQuantity()">
+                                        <button type="button" onclick="handleDEcreaseQuantity()">
                                             <i class="fa-solid fa-chevron-down"></i>
                                         </button>
                                     </div>
@@ -276,9 +275,9 @@
 
                             <div class="addToCard">
                                 <div class="add">
-                                    <a href="" class="addToCard">
+                                    <button type="submit" class="addToCard">
                                         ADD TO CARD
-                                    </a>
+                                    </button>
                                 </div>
                                 <div class="wishlist">
 
@@ -305,6 +304,7 @@
                                     </div>
                                 </div>
                             </div>
+                        </form>
                         </div>
                     </div>
                     <div class="description">
@@ -559,6 +559,7 @@
     </div>
     </div>
 </section>
+
 
 @section Script{
 

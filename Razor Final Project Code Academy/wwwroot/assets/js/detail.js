@@ -92,11 +92,11 @@ window.addEventListener("click", function (e) {
 
   let input = document.querySelector(".quantityInput")
 
-  function handleIncreaseQuantity(){
-        input.value++
+function handleIncreaseQuantity() {
+      input.value++
+     
   }
   function handleDEcreaseQuantity(){
-    
     if(input.value <=1){
       
     }

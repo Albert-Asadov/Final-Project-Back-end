@@ -13,6 +13,14 @@ namespace Razor_Final_Project_Code_Academy.Entities
 		public Memory Memory { get; set; }
 
 		public byte Quantity { get; set; }
-	}
+
+        public List<BasketItem>? BasketItems { get; set; }
+
+		public ProductRamMemory()
+		{
+			BasketItems = new();
+
+        }
+    }
 }
 

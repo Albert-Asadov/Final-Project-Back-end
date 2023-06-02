@@ -7179,14 +7179,24 @@ footer .bottomLine .paymant ul li i {
 }
 .order .aboutUser .shippingInfo .text .descr {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 30px;
 }
-.order .aboutUser .shippingInfo .text .descr ul {
-  padding: 0;
-  margin: 0;
+.order .aboutUser .shippingInfo .text .descr .input input {
+  font-family: "Rubik", sans-serif;
+  height: 35px;
+  width: 100%;
 }
-.order .aboutUser .shippingInfo .text .descr ul li {
-  list-style: none;
+.order .aboutUser .shippingInfo .text .descr .input input::placeholder {
+  padding: 4px;
+}
+.order .aboutUser .shippingInfo .text .descr .input label {
+  color: #666;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.order .aboutUser .shippingInfo .text .descr .adress, .order .aboutUser .shippingInfo .text .descr .note {
+  margin-top: 20px;
 }
 .order .aboutUser .button {
   display: flex;
@@ -7210,7 +7220,7 @@ footer .bottomLine .paymant ul li i {
   font-family: "Rubik", sans-serif;
   margin: 0 auto;
   width: 400px;
-  height: 402px;
+  height: 442px;
   border: 1px solid #ddd;
 }
 .order .orderInfo .mainContent .title {
@@ -7248,6 +7258,12 @@ footer .bottomLine .paymant ul li i {
 .order .orderInfo .mainContent .main .content .product .image img {
   width: 75px;
 }
+.order .orderInfo .mainContent .main .content .product .text {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 .order .orderInfo .mainContent .main .content .product .text p {
   padding: 0;
   margin: 0;
@@ -7260,21 +7276,34 @@ footer .bottomLine .paymant ul li i {
   font-size: 14px;
   color: #333;
 }
+@media only screen and (max-width: 821px) {
+  .order .orderInfo .mainContent .main .content .price {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 391px) {
+  .order .orderInfo .mainContent .main .content .price {
+    margin-left: 10px;
+  }
+}
 .order .orderInfo .mainContent .subtotal_And_Tax {
   border-bottom: 1px solid #ddd;
 }
-.order .orderInfo .mainContent .subtotal_And_Tax .subtotal, .order .orderInfo .mainContent .subtotal_And_Tax .tax {
+.order .orderInfo .mainContent .subtotal_And_Tax .subtotal,
+.order .orderInfo .mainContent .subtotal_And_Tax .tax {
   padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.order .orderInfo .mainContent .subtotal_And_Tax .subtotal h6, .order .orderInfo .mainContent .subtotal_And_Tax .tax h6 {
+.order .orderInfo .mainContent .subtotal_And_Tax .subtotal h6,
+.order .orderInfo .mainContent .subtotal_And_Tax .tax h6 {
   color: #333;
   font-size: 14px;
   font-weight: 600;
 }
 .order .orderInfo .mainContent .total {
+  height: 140px;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -7283,6 +7312,16 @@ footer .bottomLine .paymant ul li i {
 .order .orderInfo .mainContent .total h5 {
   font-size: 35px;
   font-weight: 700;
+}
+@media only screen and (max-width: 821px) {
+  .order .orderInfo .mainContent {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 391px) {
+  .order .orderInfo .mainContent {
+    width: 100%;
+  }
 }
 
 footer {

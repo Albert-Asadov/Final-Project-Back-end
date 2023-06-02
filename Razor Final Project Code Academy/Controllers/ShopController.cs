@@ -77,7 +77,7 @@ namespace Final_Project_Razor.Controllers
             ViewBag.TotalPage = Math.Max(totalProductPages, totalAccessoryPages);
 
             ViewBag.CurrentPage = page;
-
+            var brands = _context.Brands.ToList();
             var rams = _context.Rams.ToList();
             var memories = _context.Memories.ToList();
             var colors = _context.Colors.ToList();
@@ -106,14 +106,28 @@ namespace Final_Project_Razor.Controllers
             ViewBag.Memory = memories;
             ViewBag.Color = colors;
             ViewBag.Category = categories;
+            ViewBag.Brand = brands;
 
             return View(model);
-
-
         }
         public IActionResult DetailPhone(int id)
 		{
+            ViewBag.Ram = _context.ProductRamMemories
+                             .Where(psc => psc.ProductId == id)
+                             .Select(psc => psc.Ram)
+                             .Distinct()
+                             .Select(s => new { s.Id, s.RamName })
+                             .ToList();
+
+            ViewBag.Memory = _context.ProductRamMemories
+                             .Where(psc => psc.ProductId == id)
+                             .Select(psc => psc.Memory)
+                             .Distinct()
+                             .Select(s => new { s.Id, s.MemoryName })
+                             .ToList();
+
             ViewBag.category = _context.Categories.ToList();
+
 			if (id == 0) return BadRequest();
             Product? products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x=>x.ProductComments).Include(x => x.Brand).FirstOrDefault(x=>x.Id == id);
 			if (products is null) return NotFound();
@@ -122,6 +136,12 @@ namespace Final_Project_Razor.Controllers
 
         public IActionResult DetailAccessory(int id)
         {
+            ViewBag.Color = _context.AccessoryColors
+                            .Where(psc => psc.AccessoryId == id)
+                            .Select(psc => psc.Color)
+                            .Distinct()
+                            .Select(s => new { s.Id, s.ColorName })
+                            .ToList();
             ViewBag.category = _context.Categories.ToList();
             if (id == 0) return BadRequest();
             Accessory? accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x=>x.AccessoryComments).Include(x => x.Brand).FirstOrDefault(x => x.Id == id);
@@ -142,7 +162,6 @@ namespace Final_Project_Razor.Controllers
 
                 Comment newcomment = new Comment()
                 {
-
                     Title = comment.Title,
                     Text = comment.Text,
                     CreationTime = DateTime.UtcNow,
@@ -171,14 +190,12 @@ namespace Final_Project_Razor.Controllers
 
                 Comment newcomment = new Comment()
                 {
-
                     Title = comment.Title,
                     Text = comment.Text,
                     CreationTime = DateTime.UtcNow,
                     Accessory = accessory,
                     Name = comment.Name,
                     Email = comment.Email
-
                 };
                 accessory.AccessoryComments.Add(newcomment);
                 await _context.Comments.AddAsync(newcomment);
@@ -194,7 +211,8 @@ namespace Final_Project_Razor.Controllers
             ViewBag.Memory = _context.Memories.ToList();
             ViewBag.Color = _context.Colors.ToList();
             ViewBag.Category = _context.Categories.ToList();
-            //ViewBag.Brand = _context.Brands.ToList();
+            ViewBag.Brand = _context.Brands.ToList();
+
             IQueryable<Product> products = _context.Products
                 .Include(x => x.ProductImages)
                 .Include(x => x.productCategories)
@@ -214,12 +232,11 @@ namespace Final_Project_Razor.Controllers
                 products = products.Where(p => p.productCategories.Any(pc => CategoryIds.Contains(pc.CategoryId)));
                 accessories = accessories.Where(p => p.AccessoryCategories.Any(pc => CategoryIds.Contains(pc.CategoryId)));
             }
-            //if (BrandIds.Length > 0)
-            //{
-            //    products = products.Where(p => p.Brand.Products.Any(pc => BrandIds.Contains(pc.BrandId)));
-
-            //    accessories = accessories.Where(p => p.Brand.accessories.Any(pc => BrandIds.Contains(pc.BrandId)));
-            //}
+            if (BrandIds.Length > 0)
+            {
+                products = products.Where(p => BrandIds.Any(x=>x.Equals(p.BrandId)));
+                accessories = accessories.Where(p => BrandIds.Any(x => x.Equals(p.BrandId)));
+            }
             if (RamIds.Length > 0)
             {
                 products = products.Where(p => p.ProductRamMemories.Any(pc => RamIds.Contains(pc.RamId)));
@@ -240,10 +257,7 @@ namespace Final_Project_Razor.Controllers
         }
 
 
-        public IActionResult WishList()
-		{
-			return View();
-		}
+       
 
 
 	}

@@ -1,4 +1,17 @@
 
+var THead = document.querySelector(".tableH");
+var TBody = document.querySelector(".tableB");
+var message = document.querySelector(".alertMessage");
+
+if (!TBody || TBody.children.length === 0) {
+  THead.setAttribute("style","display:none !important")
+  message.style.display = "block";
+} else {
+  THead.style.display = "block";
+  message.style.display = "none";
+}
+
+
 let input = document.querySelector(".quantityInput")
 
 
@@ -123,3 +136,4 @@ window.addEventListener("scroll", function () {
     i.style.opacity = "0";
   }
 });
+

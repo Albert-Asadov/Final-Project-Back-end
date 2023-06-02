@@ -4,7 +4,7 @@
 
 namespace Razor_Final_Project_Code_Academy.Migrations
 {
-    public partial class ListAccCategoryInCategoryTable : Migration
+    public partial class Bool : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

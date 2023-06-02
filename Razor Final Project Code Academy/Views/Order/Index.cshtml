@@ -1,0 +1,162 @@
+﻿
+@inject Razor_Final_Project_Code_Academy.Service.LayoutService _layoutService
+@model CheckOutVM
+@{
+    List<BasketItem> basketItem = _layoutService.BaskeItem();
+    List<Product> products = ViewBag.Product;
+    List<Accessory> accessories = ViewBag.Acc;
+}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="order">
+                <div class="col-lg-6 col-12">
+                    <div class="aboutUser">
+                        <div class="customerEmail">
+                            <div class="title">
+                                <h3>Customer</h3>
+                            </div>
+                            <div class="email">
+                                <span>example.com</span>
+                            </div>
+                        </div>
+                        <form asp-controller="Order" asp-action="Index">
+
+                            <div class="shippingInfo">
+                                <div class="title">
+                                    <h3>Shipping</h3>
+                                </div>
+                                <div class="text">
+                                    <div class="name">
+                                        <h3>Shipping Address</h3>
+                                    </div>
+                                    <div class="descr">
+                                        <div class="row">
+                                            <div class="input fullname col-lg-6">
+                                                <label asp-for="FullName">Full Name:</label><br>
+                                                <input asp-for="FullName" placeholder="FullName"><br>
+                                            </div>
+                                            <div class="input email col-lg-6">
+                                                <label asp-for="Email">Email:</label><br>
+                                                <input asp-for="Email" placeholder="Email"><br>
+                                            </div>
+
+                                            <div class="input adress col-lg-6">
+                                                <label asp-for="Address">Adress:</label><br>
+                                                <input asp-for="Address" placeholder="Adress"><br>
+                                            </div>
+
+                                            <div class="input note col-lg-6">
+                                                <label asp-for="Note">Note:</label><br>
+                                                <input asp-for="Note" placeholder="Note">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button type="submit">
+                                    ORDER
+                                </button>
+                            </div>
+                            @foreach (var item in Model.BasketItems)
+                            {
+                                <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].BasketId" value="@item.BasketId" />
+                                <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].ProductRamMemoryId" value="@item.ProductRamMemoryId" />
+                                <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].SaleQuantity" value="@item.SaleQuantity" />
+                                <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].UnitPrice" value="@item.UnitPrice" />
+                                <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].IsAccessuar" value="@item.IsAccessuar" />
+
+                            }
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="orderInfo">
+                        <div class="mainContent" style="overflow-y:scroll;">
+                            <div class="title">
+                                <span>Order Summary</span>
+                                <span>
+                                    <a asp-controller="Basket" asp-action="BasketCart">
+                                        Edit Cart
+                                    </a>
+                                </span>
+                            </div>
+                          
+                            <div class="main">
+                                <div class="content">
+                                    <div class="count">
+                                        <span>@basketItem.Count items</span>
+                                    </div>
+                                    @foreach (var item in basketItem.Where(x => x.IsAccessuar == false))
+                                    {
+                                        Product product = products.FirstOrDefault(x => x.Id == item.ProductRamMemory.ProductId);
+                                        <div class="product">
+                                            <div class="image col-lg-4">
+                                                <img src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x => x.IsMain == true)?.Image" alt="">
+                                            </div>
+                                            <div class="text col-lg-4">
+                                                <p> @item.SaleQuantity x @product.Name</p>
+                                            </div>
+                                            <div class="price col-lg-4">
+                                                <span>
+                                                    $@product.Price
+                                                </span>
+                                            </div>
+                                        </div>
+                                    }
+                                    @foreach (var item in basketItem.Where(x => x.IsAccessuar == true))
+                                    {
+                                        Accessory accessory = accessories.FirstOrDefault(x => x.Id == item.AccessoryColor.AccessoryId);
+                                        <div class="product">
+                                            <div class="image col-lg-4">
+                                                <img src="~/assets/images/Product/@accessory.AccessoryImages.FirstOrDefault(x => x.IsMain == true)?.Image" alt="">
+                                            </div>
+                                            <div class="text col-lg-4">
+                                                <p> @item.SaleQuantity x @accessory.Name</p>
+                                            </div>
+                                            <div class="price col-lg-4">
+                                                <span>
+                                                    $@accessory.Price
+                                                </span>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="subtotal_And_Tax">
+                                    <div class="subtotal">
+                                        <h6>Subtotal</h6>
+                                        <span>    $@basketItem.Sum(x => x.UnitPrice * x.SaleQuantity)</span>
+                                    </div>
+                                    <div class="tax">
+                                        <h6>
+                                            Tax
+                                        </h6>
+                                        <span>
+                                            $0.00
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="total">
+                                    <h6>
+                                        Total (USD)
+                                    </h6>
+                                    <h5>
+                                        $@basketItem.Sum(x => x.UnitPrice * x.SaleQuantity)
+                                    </h5>
+                                </div>
+                                
+
+                            </div>
+                                    
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+    </div>
+        </div>
+</section>

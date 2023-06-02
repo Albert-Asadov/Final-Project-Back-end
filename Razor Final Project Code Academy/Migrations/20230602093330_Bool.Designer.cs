@@ -12,8 +12,8 @@ using Razor_Final_Project_Code_Academy.DAL;
 namespace Razor_Final_Project_Code_Academy.Migrations
 {
     [DbContext(typeof(RazorDbContext))]
-    [Migration("20230531162509_ListAccCategoryInCategoryTable")]
-    partial class ListAccCategoryInCategoryTable
+    [Migration("20230602093330_Bool")]
+    partial class Bool
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -274,6 +274,64 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.HasIndex("AccessoryId");
 
                     b.ToTable("AccessoryImages");
+                });
+
+            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Basket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("float");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Baskets");
+                });
+
+            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.BasketItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("BasketId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductRamMemoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SaleQuantity")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(6,2)");
+
+                    b.Property<int?>("accessoryColorId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketId");
+
+                    b.HasIndex("ProductRamMemoryId");
+
+                    b.HasIndex("accessoryColorId");
+
+                    b.ToTable("BasketItems");
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Brand", b =>
@@ -751,6 +809,38 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.Navigation("Accessory");
                 });
 
+            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Basket", b =>
+                {
+                    b.HasOne("Razor_Final_Project_Code_Academy.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.BasketItem", b =>
+                {
+                    b.HasOne("Razor_Final_Project_Code_Academy.Entities.Basket", "Basket")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("BasketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Razor_Final_Project_Code_Academy.Entities.ProductRamMemory", "ProductRamMemory")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("ProductRamMemoryId");
+
+                    b.HasOne("Razor_Final_Project_Code_Academy.Entities.AccessoryColor", "AccessoryColor")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("accessoryColorId");
+
+                    b.Navigation("AccessoryColor");
+
+                    b.Navigation("Basket");
+
+                    b.Navigation("ProductRamMemory");
+                });
+
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Comment", b =>
                 {
                     b.HasOne("Razor_Final_Project_Code_Academy.Entities.Accessory", "Accessory")
@@ -845,6 +935,16 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.Navigation("accessoryColors");
                 });
 
+            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.AccessoryColor", b =>
+                {
+                    b.Navigation("BasketItems");
+                });
+
+            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Basket", b =>
+                {
+                    b.Navigation("BasketItems");
+                });
+
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Brand", b =>
                 {
                     b.Navigation("Products");
@@ -878,6 +978,11 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.Navigation("ProductRamMemories");
 
                     b.Navigation("productCategories");
+                });
+
+            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.ProductRamMemory", b =>
+                {
+                    b.Navigation("BasketItems");
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Ram", b =>
