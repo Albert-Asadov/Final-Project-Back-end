@@ -8,12 +8,13 @@ namespace Razor_Final_Project_Code_Academy.ViewModel
 	public class AccessoryVM
 	{
         public int Id { get; set; }
-        [StringLength(maximumLength: 20)]
+        [StringLength(maximumLength: 100)]
         public string Name { get; set; }
         public decimal Price { get; set; }
         public decimal? Discount { get; set; }
         public decimal? DiscountPrice { get; set; }
         public string SKU { get; set; }
+        [StringLength(maximumLength: 500)]
         public string Desc { get; set; }
         public int BrandId { get; set; }
         [NotMapped]

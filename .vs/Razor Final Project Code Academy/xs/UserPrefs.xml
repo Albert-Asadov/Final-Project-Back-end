@@ -1,22 +1,16 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{08D1FEEE-4871-4F44-A826-4781606F3463}|Default">
-  <MonoDevelop.Ide.ItemProperties.Razor_220Final_220Project_220Code_220Academy PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Razor Final Project Code Academy/Entities/BasketItem.cs">
+﻿<Properties StartupConfiguration="{08D1FEEE-4871-4F44-A826-4781606F3463}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Razor Final Project Code Academy/Views/Shop/DetailPhone.cshtml">
     <Files>
-      <File FileName="Razor Final Project Code Academy/Service/LayoutService.cs" Line="59" Column="51" IsPinned="True" />
-      <File FileName="Razor Final Project Code Academy/Controllers/BasketController.cs" />
-      <File FileName="Razor Final Project Code Academy/Views/Shop/DetailAccessory.cshtml" />
-      <File FileName="Razor Final Project Code Academy/Views/Shop/DetailPhone.cshtml" />
-      <File FileName="Razor Final Project Code Academy/Entities/Accessory.cs" />
-      <File FileName="Razor Final Project Code Academy/Controllers/ShopController.cs" />
-      <File FileName="Razor Final Project Code Academy/ViewModel/AddCartVM.cs" />
-      <File FileName="Razor Final Project Code Academy/DAL/RazorDbContext.cs" />
-      <File FileName="Razor Final Project Code Academy/ViewModel/BasketAcc.cs" />
-      <File FileName="Razor Final Project Code Academy/ViewModel/BrandVM.cs" />
-      <File FileName="Razor Final Project Code Academy/Views/Shared/_Layout.cshtml" />
-      <File FileName="Razor Final Project Code Academy/Entities/BasketItem.cs" Line="22" Column="1" />
-      <File FileName="Razor Final Project Code Academy/Views/Basket/BasketCart.cshtml" />
-      <File FileName="Razor Final Project Code Academy/Entities/Basket.cs" />
-      <File FileName="Razor Final Project Code Academy/Program.cs" />
+      <File FileName="Razor Final Project Code Academy/Views/Shop/DetailAccessory.cshtml" Line="210" Column="61" />
+      <File FileName="Razor Final Project Code Academy/Views/Shop/DetailPhone.cshtml" Line="240" Column="45" />
+      <File FileName="Razor Final Project Code Academy/Views/Home/Index.cshtml" Line="585" Column="54" />
+      <File FileName="Razor Final Project Code Academy/Entities/Product.cs" Line="10" Column="9" />
+      <File FileName="Razor Final Project Code Academy/ViewModel/ProductVM.cs" Line="11" Column="9" />
+      <File FileName="Razor Final Project Code Academy/Entities/OrderItem.cs" Line="1" Column="1" />
+      <File FileName="Razor Final Project Code Academy/Entities/Accessory.cs" Line="20" Column="34" />
+      <File FileName="Razor Final Project Code Academy/ViewModel/AccessoryVM.cs" Line="17" Column="43" />
+      <File FileName="Razor Final Project Code Academy/Views/Account/AccountDetails.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,9 +19,7 @@
             <Node name="Razor Final Project Code Academy" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="DAL" expanded="True" />
-              <Node name="Entities" expanded="True">
-                <Node name="BasketItem.cs" selected="True" />
-              </Node>
+              <Node name="Entities" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Service" expanded="True" />
               <Node name="ViewModel" expanded="True" />
@@ -35,8 +27,12 @@
                 <Node name="Account" expanded="True" />
                 <Node name="Basket" expanded="True" />
                 <Node name="Home" expanded="True" />
+                <Node name="Order" expanded="True" />
+                <Node name="Page" expanded="True" />
                 <Node name="Shared" expanded="True" />
-                <Node name="Shop" expanded="True" />
+                <Node name="Shop" expanded="True">
+                  <Node name="DetailPhone.cshtml" selected="True" />
+                </Node>
                 <Node name="Wishlist" expanded="True" />
               </Node>
             </Node>
@@ -45,10 +41,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Razor_220Final_220Project_220Code_220Academy PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

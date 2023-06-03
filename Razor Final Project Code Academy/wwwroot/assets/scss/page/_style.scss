@@ -948,7 +948,13 @@ body {
                                     }
 
                                     .price {
-                                        span {
+                                        display: flex;
+                                        .discountPrice{
+                                            color: #999;
+                                            font-size: 14px;
+                                            text-decoration-line: line-through;
+                                        }
+                                        .RealPrice{ margin-left: 10px;
                                             color: #ff7e00;
                                         }
                                     }

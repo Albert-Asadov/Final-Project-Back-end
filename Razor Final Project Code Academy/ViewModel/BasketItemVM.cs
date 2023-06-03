@@ -10,7 +10,8 @@ namespace Razor_Final_Project_Code_Academy.ViewModel
 		public int Quantity { get; set; }
 
 		public int ProductRamMemoryId { get; set; }
-		public bool IsAccs { get; set; }
+
+        public bool IsAccs { get; set; }
 
 	}
 }

@@ -1,11 +1,13 @@
 ﻿using System;
 using Razor_Final_Project_Code_Academy.ViewModel;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace Razor_Final_Project_Code_Academy.Entities
 {
 	public class Product:BaseEntity
 	{
+        [StringLength(maximumLength: 100)]
         public string Name { get; set; }
 
 		public decimal Price { get; set; }
@@ -19,8 +21,8 @@ namespace Razor_Final_Project_Code_Academy.Entities
 		public bool InStock { get; set; }
 
 		public int Count { get; set; }
-
-		public string Descr { get; set; }
+        [StringLength(maximumLength: 500)]
+        public string Descr { get; set; }
 
 		public List<ProductImage> ProductImages { get; set; }
 

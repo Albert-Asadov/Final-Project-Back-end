@@ -38,7 +38,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
             checkoutVM.BasketItems = _context.BasketItems
                 .Include(x => x.ProductRamMemory.Product)
-                .Where(x => x.Basket.User.Id == user.Id && x.IsAccessuar==false)
+                .Where(x => x.Basket.User.Id == user.Id && x.IsAccessuar == false)
                 .ToList();
 
             decimal totalPrice = 0;
@@ -143,7 +143,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
                     if (accessoryColor == null)
                     {
-                        ModelState.AddModelError("productRamMemory", "Product Ram Memory does not exist.");
+                        ModelState.AddModelError("productColor", "Product Ram Memory does not exist.");
                         return View(model);
                     }
 
@@ -159,6 +159,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                         UnitPrice = (decimal)accessoryColor.Accessory.DiscountPrice,
                         AccessoryColorId = basketItem.accessoryColorId,
                         AccessoryColor = accessoryColor,
+                        
                     };
 
                     order.OrderItems.Add(orderItem);

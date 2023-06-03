@@ -1,5 +1,9 @@
 ﻿@model Product
 
+@{
+    List<Accessory> accessories =ViewBag.Accessory;
+    List<Product> products = ViewBag.Product;
+}
 <section id="detail">
     <div class="container">
         <div class="row">
@@ -41,100 +45,14 @@
                     <div class="responsive">
                         <div>
                             <ul>
-                                <li>
-                                    <a href="">
-                                        <div class="image">
-                                            <img src="~/assets/images/Product/20__64971.jpg" alt="">
-                                        </div>
-                                        <div class="text-price">
-                                            <div class="text">
-                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$49.50</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="image">
-                                            <img src="~/assets/images/Product/2__54401.jpg" alt="">
-                                        </div>
-                                        <div class="text-price">
-                                            <div class="text">
-                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$49.50</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="image">
-                                            <img src="~/assets/images/Product/26-26__83504.jpg" alt="">
-                                        </div>
-                                        <div class="text-price">
-                                            <div class="text">
-                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$49.50</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
+                                @await Html.PartialAsync("_BestSellersProductPartial", products)
+
                             </ul>
                         </div>
                         <div>
                             <ul>
-                                <li>
-                                    <a href="">
-                                        <div class="image">
-                                            <img src="~/assets/images/Product/20__64971.jpg" alt="">
-                                        </div>
-                                        <div class="text-price">
-                                            <div class="text">
-                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$49.50</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="image">
-                                            <img src="~/assets/images/Product/2__54401.jpg" alt="">
-                                        </div>
-                                        <div class="text-price">
-                                            <div class="text">
-                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$49.50</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="image">
-                                            <img src="~/assets/images/Product/26-26__83504.jpg" alt="">
-                                        </div>
-                                        <div class="text-price">
-                                            <div class="text">
-                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$49.50</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
+                                @await Html.PartialAsync("_BestSellerAccessoryPartial", accessories)
+
                             </ul>
                         </div>
                     </div>

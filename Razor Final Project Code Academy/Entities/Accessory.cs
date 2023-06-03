@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Razor_Final_Project_Code_Academy.Entities;
 using Razor_Final_Project_Code_Academy.ViewModel;
@@ -7,7 +8,8 @@ namespace Razor_Final_Project_Code_Academy.Entities
 {
 	public class Accessory:BaseEntity
 	{
-		public string Name { get; set; }
+        [StringLength(maximumLength: 100)]
+        public string Name { get; set; }
 
 		public decimal Price { get; set; }
 
@@ -21,7 +23,8 @@ namespace Razor_Final_Project_Code_Academy.Entities
 
 		public int Count { get; set; }
 
-		public string Descr { get; set; }
+        [StringLength(maximumLength: 500)]
+        public string Descr { get; set; }
 
 		public List<AccessoryImage> AccessoryImages { get; set; }
 

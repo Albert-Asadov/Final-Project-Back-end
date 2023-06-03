@@ -1,5 +1,9 @@
 ﻿@model Accessory
 
+@{
+    List<Accessory> accessories = ViewBag.Accessory;
+    List<Product> products = ViewBag.Product;
+}
 <section id="detail">
     <div class="container">
         <div class="row">
@@ -40,100 +44,14 @@
                     <div class="responsive">
                         <div>
                             <ul>
-                                <li>
-                                    <a href="">
-                                        <div class="image">
-                                            <img src="~/assets/images/Product/20__64971.jpg" alt="">
-                                        </div>
-                                        <div class="text-price">
-                                            <div class="text">
-                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$49.50</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="image">
-                                            <img src="~/assets/images/Product/2__54401.jpg" alt="">
-                                        </div>
-                                        <div class="text-price">
-                                            <div class="text">
-                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$49.50</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="image">
-                                            <img src="~/assets/images/Product/26-26__83504.jpg" alt="">
-                                        </div>
-                                        <div class="text-price">
-                                            <div class="text">
-                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$49.50</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
+                                @await Html.PartialAsync("_BestSellersProductPartial", products)
+
                             </ul>
                         </div>
                         <div>
                             <ul>
-                                <li>
-                                    <a href="">
-                                        <div class="image">
-                                            <img src="~/assets/images/Product/20__64971.jpg" alt="">
-                                        </div>
-                                        <div class="text-price">
-                                            <div class="text">
-                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$49.50</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="image">
-                                            <img src="~/assets/images/Product/2__54401.jpg" alt="">
-                                        </div>
-                                        <div class="text-price">
-                                            <div class="text">
-                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$49.50</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="image">
-                                            <img src="~/assets/images/Product/26-26__83504.jpg" alt="">
-                                        </div>
-                                        <div class="text-price">
-                                            <div class="text">
-                                                <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                            </div>
-                                            <div class="price">
-                                                <span>$49.50</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
+                                @await Html.PartialAsync("_BestSellerAccessoryPartial", accessories)
+
                             </ul>
                         </div>
                     </div>
@@ -245,14 +163,13 @@
                                     <div class="ram">
                                         <label for="">Color:</label> <br>
                                         <select asp-for="Adding.ColorId" asp-items="@(new SelectList(ViewBag.Color,"Id","ColorName"))" style=" width: 75px;">
-                         
                                         </select>
                                     </div>
 
                                     <div class="input">
                                         <div class="mainInput">
                                             <label for="count">Quantity:</label><br>
-                                            <input type="number" value="1" class="quantityInput"  asp-for="Adding.Quantity" id="count">
+                                            <input type="number" value="1" class="quantityInput" asp-for="Adding.Quantity" id="count">
                                         </div>
                                         <div class="chevrons">
                                             <button type="button" onclick="handleIncreaseQuantity()">
@@ -296,7 +213,7 @@
                                         </div>
                                     </div>
                                 </div>
-                             </form>
+                            </form>
                         </div>
                     </div>
                     <div class="description">
@@ -517,7 +434,7 @@
                         </div>
 
                         <div class="main">
-                            
+
                             <div class="row gy-2 gx-2">
                                 @foreach (var item in Model.AccessoryComments)
                                 {

@@ -8,7 +8,7 @@ namespace Razor_Final_Project_Code_Academy.ViewModel
 	public class ProductVM
 	{
         public int Id { get; set; }
-        [StringLength(maximumLength: 20)]
+        [StringLength(maximumLength: 100)]
         public string Name { get; set; }
         public decimal Price { get; set; }
         public decimal? Discount { get; set; }

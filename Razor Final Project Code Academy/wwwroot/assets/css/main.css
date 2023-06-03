@@ -10495,8 +10495,19 @@ body {
 #main .leftSide .newProduct .responsive div ul li a .text-price .text p:hover {
   color: #ff7e00;
 }
-#main .leftSide .bestSellers .responsive div ul li a .text-price .price span,
-#main .leftSide .newProduct .responsive div ul li a .text-price .price span {
+#main .leftSide .bestSellers .responsive div ul li a .text-price .price,
+#main .leftSide .newProduct .responsive div ul li a .text-price .price {
+  display: flex;
+}
+#main .leftSide .bestSellers .responsive div ul li a .text-price .price .discountPrice,
+#main .leftSide .newProduct .responsive div ul li a .text-price .price .discountPrice {
+  color: #999;
+  font-size: 14px;
+  text-decoration-line: line-through;
+}
+#main .leftSide .bestSellers .responsive div ul li a .text-price .price .RealPrice,
+#main .leftSide .newProduct .responsive div ul li a .text-price .price .RealPrice {
+  margin-left: 10px;
   color: #ff7e00;
 }
 #main .leftSide .advertisingWatch {

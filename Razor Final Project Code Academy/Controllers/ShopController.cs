@@ -130,7 +130,10 @@ namespace Final_Project_Razor.Controllers
 
 			if (id == 0) return BadRequest();
             Product? products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x=>x.ProductComments).Include(x => x.Brand).FirstOrDefault(x=>x.Id == id);
-			if (products is null) return NotFound();
+            ViewBag.Accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
+            ViewBag.Product = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
+
+            if (products is null) return NotFound();
             return View(products);
 		}
 
@@ -145,6 +148,9 @@ namespace Final_Project_Razor.Controllers
             ViewBag.category = _context.Categories.ToList();
             if (id == 0) return BadRequest();
             Accessory? accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x=>x.AccessoryComments).Include(x => x.Brand).FirstOrDefault(x => x.Id == id);
+            ViewBag.Accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
+            ViewBag.Product = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
+
             if (accessory is null) return NotFound();
             return View(accessory);
         }

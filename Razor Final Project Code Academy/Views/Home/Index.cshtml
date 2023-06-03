@@ -136,100 +136,13 @@
                             <div class="responsive">
                                 <div>
                                     <ul>
-                                        <li>
-                                            <a href="">
-                                                <div class="image">
-                                                    <img src="~/assets/images/Product/20__64971.jpg" alt="">
-                                                </div>
-                                                <div class="text-price">
-                                                    <div class="text">
-                                                        <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                                    </div>
-                                                    <div class="price">
-                                                        <span>$49.50</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                <div class="image">
-                                                    <img src="~/assets/images/Product/2__54401.jpg" alt="">
-                                                </div>
-                                                <div class="text-price">
-                                                    <div class="text">
-                                                        <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                                    </div>
-                                                    <div class="price">
-                                                        <span>$49.50</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                <div class="image">
-                                                    <img src="~/assets/images/Product/26-26__83504.jpg" alt="">
-                                                </div>
-                                                <div class="text-price">
-                                                    <div class="text">
-                                                        <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                                    </div>
-                                                    <div class="price">
-                                                        <span>$49.50</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
+                                        @await Html.PartialAsync("_BestSellersProductPartial", phones)
                                     </ul>
                                 </div>
                                 <div>
                                     <ul>
-                                        <li>
-                                            <a href="">
-                                                <div class="image">
-                                                    <img src="~/assets/images/Product/20__64971.jpg" alt="">
-                                                </div>
-                                                <div class="text-price">
-                                                    <div class="text">
-                                                        <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                                    </div>
-                                                    <div class="price">
-                                                        <span>$49.50</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                <div class="image">
-                                                    <img src="~/assets/images/Product/2__54401.jpg" alt="">
-                                                </div>
-                                                <div class="text-price">
-                                                    <div class="text">
-                                                        <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                                    </div>
-                                                    <div class="price">
-                                                        <span>$49.50</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                <div class="image">
-                                                    <img src="~/assets/images/Product/26-26__83504.jpg" alt="">
-                                                </div>
-                                                <div class="text-price">
-                                                    <div class="text">
-                                                        <p>[Sample] Chemex Coffeemaker 3 Cup consetetur </p>
-                                                    </div>
-                                                    <div class="price">
-                                                        <span>$49.50</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
+                                        @await Html.PartialAsync("_BestSellerAccessoryPartial", accessories)
+
                                     </ul>
                                 </div>
                             </div>
@@ -421,7 +334,7 @@
                                         <ul>
                                             <li>
                                                 <div class="image col-lg-5">
-                                                    <a href="">
+                                                    <a asp-controller="Shop" asp-action="DetailAccessory" asp-route-id="@item.Id">
                                                         <img style="height:240px; object-fit:contain;" src="~/assets/images/Product/@item.AccessoryImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
                                                     </a>
                                                 </div>
@@ -462,7 +375,7 @@
                                         <ul>
                                             <li>
                                                 <div class="image col-lg-5">
-                                                    <a href="">
+                                                    <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@item.Id">
                                                         <img style="height:240px; object-fit:contain;" src="~/assets/images/Product/@item.ProductImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
                                                     </a>
                                                 </div>
@@ -582,7 +495,7 @@
                             <div class="title">
                                 <div class="upperLine">
                                     <div class="text">
-                                        <h5>Watchs</h5>
+                                        <h5>Accessory</h5>
                                     </div>
                                     <ul>
                                         <li><a href="">Accessories</a></li>
