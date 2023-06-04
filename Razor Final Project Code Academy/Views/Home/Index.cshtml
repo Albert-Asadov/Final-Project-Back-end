@@ -174,7 +174,7 @@
                                         @foreach (var item in newProduct)
                                             {
                                             <li>
-                                                <a href="">
+                                                <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@item.Id">
                                                     <div class="image">
                                                         <img style="width:90px; height:90px; object-fit:contain;" src="~/assets/images/Product/@item.ProductImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
                                                     </div>
@@ -214,7 +214,7 @@
                                         @foreach (var item in newAccessory)
                                         {
                                             <li>
-                                                <a href="">
+                                                <a asp-controller="Shop" asp-action="DetailAccessory" asp-route-id="@item.Id">
                                                     <div class="image">
                                                         <img style="width:90px; height:90px; object-fit:contain;" src="~/assets/images/Product/@item.AccessoryImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
                                                     </div>

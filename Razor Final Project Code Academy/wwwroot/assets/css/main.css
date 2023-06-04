@@ -5578,12 +5578,34 @@ body {
   height: 3px;
   background-color: #ebebeb;
 }
-#detail .rightSide .mainDetail .reviews .main .comments div p {
+#detail .rightSide .mainDetail .reviews .mainCommentContent {
+  height: 350px;
+  overflow-y: scroll;
+}
+#detail .rightSide .mainDetail .reviews .mainCommentContent .comments {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+}
+#detail .rightSide .mainDetail .reviews .mainCommentContent .comments .about {
+  display: flex;
+}
+    #detail .rightSide .mainDetail .reviews .mainCommentContent .comments .about .name span {
+        color: #ff7e00;
+    }
+#detail .rightSide .mainDetail .reviews .mainCommentContent .comments .about .email {
+  margin-left: 15px;
+}
+    #detail .rightSide .mainDetail .reviews .mainCommentContent .comments .about .email span {
+        color: #ff7e00;
+    }
+#detail .rightSide .mainDetail .reviews .mainCommentContent .comments div p {
   font-size: 15px;
   color: #666;
   font-family: "Rubik", sans-serif;
 }
-#detail .rightSide .mainDetail .reviews .main .comments div p .OrangeColor {
+#detail .rightSide .mainDetail .reviews .mainCommentContent .comments div p .OrangeColor {
   color: #ff7e00;
 }
 

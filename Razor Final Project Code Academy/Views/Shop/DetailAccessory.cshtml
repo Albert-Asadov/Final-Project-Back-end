@@ -433,30 +433,29 @@
                             </div>
                         </div>
 
-                        <div class="main">
-
-                            <div class="row gy-2 gx-2">
+                        <div class="mainCommentContent">
+                            <div class="row">
                                 @foreach (var item in Model.AccessoryComments)
                                 {
-                                    <div class="col-lg-4 col-12">
-                                        <div class="comments" style="padding-left: 0px; border: 1px solid rgba(208, 215, 222, 0.8392156863); padding: 5px; height: 275px; ">
+                                    <div class="comments col-lg-12 col-12">
 
-                                            <div class="name">
-                                                <p>@item.CreationTime</p>
-                                            </div>
+                                        <div class="name">
+                                            <p>@item.CreationTime</p>
+                                        </div>
 
+                                        <div class="about">
                                             <div class="name">
                                                 <p><span style="margin-right:10px;" class="OrangeColor">Name:</span>@item.Name</p>
                                             </div>
                                             <div class="email">
                                                 <p><span style="margin-right:10px;" class="OrangeColor">Email:</span>@item.Email</p>
                                             </div>
-                                            <div class="subject">
-                                                <p><span style="margin-right:10px;" class="OrangeColor">Subject:</span>@item.Title</p>
-                                            </div>
-                                            <div class="comment">
-                                                <p><span style="margin-right:10px;" class="OrangeColor">Comment:</span>@item.Text</p>
-                                            </div>
+                                        </div>
+                                        <div class="subject">
+                                            <p><span style="margin-right:10px;" class="OrangeColor">Subject:</span>@item.Title</p>
+                                        </div>
+                                        <div class="comment">
+                                            <p><span style="margin-right:10px;" class="OrangeColor">Comment:</span>@item.Text</p>
                                         </div>
                                     </div>
                                 }

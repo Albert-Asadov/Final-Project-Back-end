@@ -1,4 +1,4 @@
-﻿@model AllVm
+﻿@model AccessoryProductVM
 
 @{
     List<Ram> ram = ViewBag.Ram;
@@ -160,7 +160,7 @@
         <ul class="pagination mt-0">
             @for (int i = 1; i <= ViewBag.TotalPage; i++)
             {
-                <li class="@(i==ViewBag.CurrentPage ? "active" : "")"><a asp-action="Index" asp-route-page="@i">@i</a></li>
+                <li style="margin-left:5px;" class="@(i==ViewBag.CurrentPage ? "active" : "")"><a asp-action="Index" asp-route-page="@i">@i</a></li>
             }
         </ul>
     </div>

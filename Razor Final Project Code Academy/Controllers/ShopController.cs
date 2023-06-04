@@ -29,15 +29,15 @@ namespace Final_Project_Razor.Controllers
             ViewBag.Brand = _context.Brands.ToList();
             ViewBag.Category = _context.Categories.ToList();
 
-            ViewBag.TotalPage = Math.Ceiling((double)_context.Products.Count() / 6);
+            ViewBag.TotalPage = Math.Ceiling((double)_context.Products.Count() / 8);
             ViewBag.CurrentPage = page;
 
             List<Accessory> accessories = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
             List<Product> products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
-            AllVm all = new()
+            AccessoryProductVM all = new()
             {
-                Products = products.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList(),
-                Accessories = accessories.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList()
+                Products = products.Skip((page - 1) * 8).Take(8).AsEnumerable().ToList(),
+                Accessories = accessories.Skip((page - 1) * 8).Take(8).AsEnumerable().ToList()
 
             };
             return View(all);
@@ -104,7 +104,7 @@ namespace Final_Project_Razor.Controllers
             }
             else
             {
-                Product? product = await _context.Products.Include(dt => dt.ProductComments).FirstOrDefaultAsync(p => p.Id == id);
+                Product? product = await _context.Products.Include(dt => dt.ProductComments).OrderByDescending(x=>x.Id).FirstOrDefaultAsync(p => p.Id == id);
 
                 Comment newcomment = new Comment()
                 {
@@ -132,7 +132,7 @@ namespace Final_Project_Razor.Controllers
             }
             else
             {
-                Accessory? accessory = await _context.Accessories.Include(dt => dt.AccessoryComments).FirstOrDefaultAsync(p => p.Id == id);
+                Accessory? accessory = await _context.Accessories.Include(dt => dt.AccessoryComments).OrderByDescending(x => x.Id).FirstOrDefaultAsync(p => p.Id == id);
 
                 Comment newcomment = new Comment()
                 {
@@ -202,7 +202,7 @@ namespace Final_Project_Razor.Controllers
 
             var productList = products.ToList();
             var accessoryList = accessories.ToList();
-            AllVm all = new()
+            AccessoryProductVM all = new()
             {
                 Products = productList.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList(),
                 Accessories = accessoryList.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList()

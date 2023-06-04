@@ -202,10 +202,12 @@ body {
                     ul {
                         padding-left: 15px;
                         font-size: 14px;
+
                         li {
                             display: block;
                             list-style: none;
                             padding-top: 5px;
+
                             a {
                                 color: #666;
                                 text-decoration: none;
@@ -525,28 +527,32 @@ body {
     align-items: center;
     flex-direction: column;
 
-    .hamburgerMenu{
+    .hamburgerMenu {
         border-bottom: 1px solid #8f8f8f;
         position: absolute;
-        top:53px;
+        top: 53px;
         padding-top: 50px;
         padding-bottom: 50px;
         background-color: white;
         width: 100%;
         z-index: 300000;
-        ul{
+
+        ul {
             padding: 0;
             margin: 0;
-            li{
+
+            li {
                 margin-top: 15px;
                 list-style: none;
-                a{
+
+                a {
                     text-decoration: none;
                     color: #666;
                 }
             }
         }
     }
+
     .upperRow {
         display: flex;
         justify-content: center;
@@ -562,7 +568,7 @@ body {
 
         .menu {
             text-align: start;
-            
+
         }
 
         .basketIcon {
@@ -774,12 +780,15 @@ body {
 
                                     .price {
                                         display: flex;
-                                        .discountPrice{
+
+                                        .discountPrice {
                                             color: #999;
                                             font-size: 14px;
                                             text-decoration-line: line-through;
                                         }
-                                        .RealPrice{ margin-left: 10px;
+
+                                        .RealPrice {
+                                            margin-left: 10px;
                                             color: #ff7e00;
                                         }
                                     }
@@ -805,6 +814,7 @@ body {
                             width: 520px;
                         }
                     }
+
                     @media only screen and (max-width: 391px) {
 
                         .mainImage {
@@ -812,28 +822,34 @@ body {
                                 width: 348px;
                             }
                         }
-                     }
-                    .smallImages{
+                    }
+
+                    .smallImages {
                         display: flex;
-                        .images{
+
+                        .images {
                             margin-right: 20px;
                             width: 77px;
                             height: 77px;
                             border: 1px solid #d0d7ded6;
-                            &:hover{
+
+                            &:hover {
                                 border-color: #ff7e00;
                                 cursor: pointer;
                             }
-                            img{
+
+                            img {
                                 width: 100%;
                                 object-fit: contain;
                             }
                         }
-                        .images.active{
+
+                        .images.active {
                             border: 1px solid #ff7e00;
-                           }
+                        }
                     }
                 }
+
                 .titleMain {
                     padding: 0 0 30px 10px;
 
@@ -845,26 +861,29 @@ body {
                         }
                     }
 
-                    .accordion{
+                    .accordion {
                         padding-top: 30px;
-                        .accordion-item{
-                            .accordion-header{
-                                .accordion-button{
-                                    &:hover{
+
+                        .accordion-item {
+                            .accordion-header {
+                                .accordion-button {
+                                    &:hover {
                                         color: black !important;
                                     }
                                 }
                             }
                         }
-                        .accordion-collapse{
-                            .accordion-body{
-                                form{
-                                    label{
+
+                        .accordion-collapse {
+                            .accordion-body {
+                                form {
+                                    label {
                                         font-family: 'Rubik', sans-serif;
                                         color: #333;
                                         font-size: 14px;
                                     }
-                                    input{
+
+                                    input {
                                         margin-top: 6px;
                                         margin-bottom: 6px;
                                         font-family: 'Rubik', sans-serif;
@@ -873,7 +892,8 @@ body {
                                         border-radius: 10px;
                                         border-color: #e6e6e6;
                                         border-width: 1px;
-                                        &::placeholder{
+
+                                        &::placeholder {
                                             font-size: 14px;
                                             color: #999;
                                             padding-left: 5px;
@@ -1008,12 +1028,14 @@ body {
                                 width: 30px;
                                 height: 39px;
                                 border: 1px solid black;
-                                button{
+
+                                button {
                                     border: none;
                                     background-color: white;
                                     width: 29px;
                                     height: 38px;
                                 }
+
                                 i {
                                     display: block;
                                 }
@@ -1035,7 +1057,7 @@ body {
                             font-family: 'Rubik', sans-serif;
                             font-size: 13px;
                             padding-top: 0px;
-                             border:none;
+                            border: none;
                             border-radius: 25px;
                             text-align: center;
                             display: inline-block;
@@ -1122,20 +1144,23 @@ body {
                         }
                     }
                 }
+
                 @media only screen and (max-width: 821px) {
 
                     .titleMain {
-                        
-                       margin-top: 40px;
+
+                        margin-top: 40px;
                     }
-                 }
-                 @media only screen and (max-width: 391px) {
-    
+                }
+
+                @media only screen and (max-width: 391px) {
+
                     .titleMain {
                         margin-top: 40px;
-                     }
-                 }
+                    }
+                }
             }
+
             @media only screen and (max-width: 821px) {
 
                 .aboutProduct {
@@ -1144,8 +1169,9 @@ body {
                     align-items: center;
                     flex-direction: column;
                 }
-             }
-             @media only screen and (max-width: 391px) {
+            }
+
+            @media only screen and (max-width: 391px) {
 
                 .aboutProduct {
                     display: flex;
@@ -1153,7 +1179,7 @@ body {
                     align-items: center;
                     flex-direction: column;
                 }
-             }
+            }
 
             .description {
                 padding-top: 40px;
@@ -1288,6 +1314,7 @@ body {
                             .image {
                                 a {
                                     text-decoration: none;
+
                                     img {
                                         width: 150px;
                                         margin: 0 auto;
@@ -1297,9 +1324,11 @@ body {
 
                             .text {
                                 font-family: 'Rubik', sans-serif;
+
                                 &:hover .addToCard {
                                     display: block;
                                 }
+
                                 text-align: center;
 
                                 .brand {
@@ -1348,6 +1377,7 @@ body {
             .reviews {
                 padding-top: 30px;
                 padding-bottom: 30px;
+
                 .title {
                     .text {
                         h5 {
@@ -1355,13 +1385,16 @@ body {
                             font-family: 'Rubik', sans-serif;
                         }
                     }
+
                     .lineOrange {
                         display: flex;
+
                         .line {
                             width: 10%;
                             height: 3px;
                             background-color: #ff7e00;
                         }
+
                         .lineSecondary {
                             width: 90%;
                             height: 3px;
@@ -1369,19 +1402,45 @@ body {
                         }
                     }
                 }
-                .main{
-                   .comments{
-                    div{
-                        p{
-                            font-size: 15px;
-                            color: #666;
-                            font-family: 'Rubik', sans-serif;
-                            .OrangeColor{
-                                color:  #ff7e00;
+
+                .mainCommentContent {
+                    height: 350px;
+                    overflow-y: scroll;
+                        .comments {
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            width: 100%;
+                            border-top: 1px solid #ebebeb;
+                            .about{
+                                display: flex;
+                                .name{
+                                    span{
+
+                                        color: #4f4f4f;
+                                    }
+                                }
+                                .email{
+                                    margin-left: 15px;
+                                    span{
+
+                                        color: #4f4f4f;
+                                    }
+
+                                }
+                            }
+                            div {
+                                p {
+                                    font-size: 15px;
+                                    color: #666;
+                                    font-family: 'Rubik', sans-serif;
+    
+                                    .OrangeColor {
+                                        color: #ff7e00;
+                                    }
+                                }
                             }
                         }
-                    }
-                   }
+                    
                 }
             }
         }
@@ -1391,46 +1450,52 @@ body {
 
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
-  }
+}
 
-  footer {
+footer {
     background-color: #232f3f;
 
     .upper {
         padding: 45px;
 
-        .accordionFooter{
-            .accordion{
-                border: none !important;
-                .accordion-item{
+        .accordionFooter {
+            .accordion {
                 border: none !important;
 
-                    .accordion-header{
-                        button{
+                .accordion-item {
+                    border: none !important;
+
+                    .accordion-header {
+                        button {
                             border-color: #232f3f;
-                            background-color: #232f3f ;
+                            background-color: #232f3f;
                             color: white;
                             border: none;
-                            ::after{
+
+                            ::after {
                                 color: white !important;
                             }
                         }
                     }
                 }
-                .accordion-collapse{
-                         border: none !important;
 
-                    .accordion-body{
-                         border: none !important;
+                .accordion-collapse {
+                    border: none !important;
+
+                    .accordion-body {
+                        border: none !important;
 
                         border-color: #232f3f;
                         background-color: #232f3f;
-                        ul{
+
+                        ul {
                             padding: 0;
                             margin: 0;
-                            li{
+
+                            li {
                                 list-style: none;
-                                a{
+
+                                a {
                                     text-decoration: none;
                                     color: white;
                                 }

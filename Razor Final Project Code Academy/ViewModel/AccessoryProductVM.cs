@@ -3,15 +3,12 @@ using Razor_Final_Project_Code_Academy.Entities;
 
 namespace Razor_Final_Project_Code_Academy.ViewModel
 {
-	public class AllVm
+	public class AccessoryProductVM
 	{
 		public List<Product> Products { get; set; }
 
        public List<Accessory> Accessories { get; set; }
 
-		public int TotalPage { get; set; }
-
-		public int CurrentPage { get; set; }
 	}
 }
 
