@@ -773,7 +773,13 @@ body {
                                     }
 
                                     .price {
-                                        span {
+                                        display: flex;
+                                        .discountPrice{
+                                            color: #999;
+                                            font-size: 14px;
+                                            text-decoration-line: line-through;
+                                        }
+                                        .RealPrice{ margin-left: 10px;
                                             color: #ff7e00;
                                         }
                                     }
@@ -1028,7 +1034,8 @@ body {
                         .addToCard {
                             font-family: 'Rubik', sans-serif;
                             font-size: 13px;
-                            padding-top: 11px;
+                            padding-top: 0px;
+                             border:none;
                             border-radius: 25px;
                             text-align: center;
                             display: inline-block;
@@ -1118,6 +1125,7 @@ body {
                 @media only screen and (max-width: 821px) {
 
                     .titleMain {
+                        
                        margin-top: 40px;
                     }
                  }

@@ -22,6 +22,9 @@ namespace Final_Project_Razor.Controllers
             ViewBag.Watch = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
             ViewBag.Phone = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
 
+            ViewBag.NewWatch = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).Include(x => x.Brand).OrderByDescending(x => x.Id).Take(3).ToList();
+            ViewBag.NewPhone = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).OrderByDescending(x=>x.Id).Take(3).ToList();
+
             return View();
 		}
 	}

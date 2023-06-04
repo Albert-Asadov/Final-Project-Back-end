@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Razor_Final_Project_Code_Academy.DAL;
 
@@ -11,9 +12,10 @@ using Razor_Final_Project_Code_Academy.DAL;
 namespace Razor_Final_Project_Code_Academy.Migrations
 {
     [DbContext(typeof(RazorDbContext))]
-    partial class RazorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230604113635_WishList")]
+    partial class WishList
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -850,9 +852,6 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.Property<int?>("AccessoryId")
                         .HasColumnType("int");
-
-                    b.Property<bool>("IsAccessory")
-                        .HasColumnType("bit");
 
                     b.Property<int?>("ProductId")
                         .HasColumnType("int");

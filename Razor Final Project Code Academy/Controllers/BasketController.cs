@@ -35,7 +35,6 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
             return View(basket);
         }
-
         public async Task<IActionResult> Addbaskets(int productId, Product? basketProduct)
         {
             User? user = new();
@@ -68,11 +67,10 @@ namespace Razor_Final_Project_Code_Academy.Controllers
             if (basketProduct is not null)
             {
                 ProductRamMemory? productRamMemory = _context.ProductRamMemories
-                .Include(p => p.Product)
-                .FirstOrDefault(p => p.ProductId == productId && p.RamId == basketProduct.AddCart.RamId && p.MemoryId == basketProduct.AddCart.MemoryId);
+                    .Include(p => p.Product)
+                    .FirstOrDefault(p => p.ProductId == productId && p.RamId == basketProduct.AddCart.RamId && p.MemoryId == basketProduct.AddCart.MemoryId);
 
                 if (productRamMemory is null) return NotFound();
-
 
                 BasketItem items = userActiveBasket.BasketItems.FirstOrDefault(i => i.ProductRamMemory == productRamMemory);
 
@@ -93,7 +91,6 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                     userActiveBasket.BasketItems.Add(items);
                 }
             }
-
 
             userActiveBasket.TotalPrice = (double)userActiveBasket.BasketItems.Sum(p => p.SaleQuantity * p.UnitPrice);
             await _context.SaveChangesAsync();
@@ -121,11 +118,10 @@ namespace Razor_Final_Project_Code_Academy.Controllers
             if (basketaccessory is not null)
             {
                 AccessoryColor? accessorycolor = _context.AccessoryColors
-                .Include(p => p.Accessory)
-                .FirstOrDefault(p => p.AccessoryId == productId && p.ColorId == basketaccessory.Adding.ColorId);
+                    .Include(p => p.Accessory)
+                    .FirstOrDefault(p => p.AccessoryId == productId && p.ColorId == basketaccessory.Adding.ColorId);
 
                 if (accessorycolor is null) return NotFound();
-
 
                 BasketItem items = userActiveBasket.BasketItems.FirstOrDefault(i => i.AccessoryColor == accessorycolor);
 
@@ -141,8 +137,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                         SaleQuantity = basketaccessory.Adding.Quantity,
                         UnitPrice = (decimal)accessorycolor.Accessory.DiscountPrice,
                         Basket = userActiveBasket,
-                        IsAccessuar=true
-                       
+                        IsAccessuar = true
                     };
                     userActiveBasket.BasketItems.Add(items);
                 }
@@ -151,6 +146,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
             await _context.SaveChangesAsync();
             return Redirect(Request.Headers["Referer"].ToString());
         }
+
 
         public async Task<IActionResult> AddToBasket(int productId, Product? basketProduct, Accessory? basketAccessory)
         {

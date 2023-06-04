@@ -1,4 +1,4 @@
-﻿@model Tuple<List<Product>, List<Accessory>>
+﻿@model AllVm
 
 @{
     List<Ram> ram = ViewBag.Ram;
@@ -51,7 +51,6 @@
                                 <label for="cat1">@item.Name</label>
                             </div>
                         }
-
                     </div>
 
                     <div class="ram">
@@ -114,40 +113,103 @@
                 </form>
             </div>
             <div class="rightSide col-lg-9">
+                @*<div class="sort">
+                        <div class="name">
+                            SORT BY:
+                        </div>
+                        <form  method="post">
+                            <select name="sortOrder" id="sortOrder">
+                                <option value="A-Z">A-Z</option>
+                                <option value="Z-A">Z-A</option>
+                                <option value="PriceAscending">Price: Ascending</option>
+                                <option value="PriceDescending">Price: Descending</option>
+                            </select>
+                        </form>
+                    </div>*@
+
                 <div class="sort">
                     <div class="name">
                         SORT BY:
                     </div>
-                    <form  method="post">
-                        <select name="sortOrder" id="sortOrder">
-                            <option value="A-Z">A-Z</option>
-                            <option value="Z-A">Z-A</option>
-                            <option value="PriceAscending">Price: Ascending</option>
-                            <option value="PriceDescending">Price: Descending</option>
-                        </select>
-                    </form>
+                    <div>
+                        <form method="post" asp-controller="Shop" asp-action="Sort">
+                            <select name="sortOrder" id="sortOrder" onchange="updateData()">
+                                <option value="A-Z">A-Z</option>
+                                <option value="Z-A">Z-A</option>
+                                <option value="PriceAscending">Price: Ascending</option>
+                                <option value="PriceDescending">Price: Descending</option>
+                            </select>
+                        </form>
+                    </div>
                 </div>
+
                 <div class="mainContent">
                     <div class="row">
 
-                        @await Html.PartialAsync("_ProductPartial", Model.Item1)
+                        @await Html.PartialAsync("_ProductPartial", Model.Products)
 
 
-                        @await Html.PartialAsync("_AccessuarPartial", Model.Item2)
+                        @await Html.PartialAsync("_AccessuarPartial", Model.Accessories)
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <div class="listing-show-more-wrap d-flex mt-4 mt-md-6 justify-content-center align-items-start">
+        <ul class="pagination mt-0">
+            @for (int i = 1; i <= ViewBag.TotalPage; i++)
+            {
+                <li class="@(i==ViewBag.CurrentPage ? "active" : "")"><a asp-action="Index" asp-route-page="@i">@i</a></li>
+            }
+        </ul>
+    </div>
 </section>
 
-<div class="listing-show-more-wrap d-flex mt-4 mt-md-6 justify-content-center align-items-start">
-    <ul class="pagination mt-0">
-        @for (int i = 1; i <= ViewBag.TotalPage; i++)
-        {
-            <li class="@(i==ViewBag.CurrentPage ? "active" : "")"><a asp-action="Index" asp-route-page="@i">@i</a></li>
+
+
+
+@section Script{
+
+    @*<script>
+        function updateData() {
+            var sortOrder = document.getElementById("sortOrder").value;
+
+            fetch('/Shop/Sort', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ sortOrder: sortOrder })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    updateProductData(data.item1);
+                    updateAccessoryData(data.item2);
+                });
         }
-    </ul>
-</div>
+
+        function updateProductData(products) {
+            var productContainer = document.getElementById("productContainer");
+            productContainer.innerHTML = "";
+
+            products.forEach(function (product) {
+                var productDiv = document.createElement("div");
+                productDiv.textContent = product.name;
+                productContainer.appendChild(productDiv);
+            });
+        }
+
+        function updateAccessoryData(accessories) {
+            var accessoryContainer = document.getElementById("accessoryContainer");
+            accessoryContainer.innerHTML = "";
+
+            accessories.forEach(function (accessory) {
+                var accessoryDiv = document.createElement("div");
+                accessoryDiv.textContent = accessory.name;
+                accessoryContainer.appendChild(accessoryDiv);
+            });
+        }
+    </script>*@
+}
+

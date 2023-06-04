@@ -20,42 +20,30 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            if (!User.Identity.IsAuthenticated)
+            {
+                return View(new List<Wishlist>());
+            }
+
+            var userId = _userManager.GetUserId(User);
+
+            List<Wishlist> wishlists = _context.Wishlists
+                                .Include(x => x.Accessory)
+                                .Include(x => x.Accessory)
+                                .ThenInclude(x => x.AccessoryImages)
+                                .Include(x => x.Product)
+                                .Include(x => x.Product)
+                                .ThenInclude(x => x.ProductImages)
+                                .Where(wli => wli.UserId == userId).ToList();
+
+            if (wishlists.Count == 0)
+            {
+                return View(new List<Wishlist>());
+            }
+
+            return View(wishlists);
         }
 
-        //public async Task<IActionResult> AddToWishList(int productId)
-        //{
-        //    Product product = await _context.Products.FindAsync(productId);
-
-        //    if (product is null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    if (!User.Identity.IsAuthenticated)
-        //    {
-        //        return RedirectToAction("Login", "Account");
-        //    }
-
-        //    User user = await _userManager.FindByNameAsync(User.Identity.Name);
-
-        //    WishList wishList = await _context.WishListItems
-        //        .FirstOrDefaultAsync(x => x.UserId == user.Id && x.ProductId == productId);
-
-        //    if (userWishlistItem is null)
-        //    {
-        //        userWishlistItem = new WishListItem
-        //        {
-        //            UserId = user.Id,
-        //            ProductId = productId
-        //        };
-        //        _context.WishListItems.Add(userWishlistItem);
-        //    }
-
-        //    await _context.SaveChangesAsync();
-
-        //    return RedirectToAction(nameof(Index));
-        //}
 
     }
 }

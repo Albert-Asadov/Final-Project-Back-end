@@ -1,4 +1,4 @@
-﻿
+﻿@model ContactUsVM
 
 
     <section id="contact">
@@ -34,26 +34,26 @@
                     </div>
                 </div>
                 <div class="rightSide col-lg-7">
-                    <form action="">
+                    <form asp-controller="Contact" asp-action="Index" method="post" >
                         <div class="row">
                             <div class="name col-lg-6 col-12">
-                                <label for="name">Full Name</label><br>
-                                <input type="text" name="" id="name">
+                                <label asp-for="FullName">Full Name</label><br>
+                                <input asp-for="FullName">
                             </div>
 
                             <div class="number col-lg-6 col-12">
-                                <label for="phone">Phone Number</label><br>
-                                <input type="number" name="" id="phone">
+                                <label asp-for="PhoneNumber">Phone Number</label><br>
+                                <input asp-for="PhoneNumber">
                             </div>
 
                             <div class="email col-lg-12 col-12">
-                                <label for="email">Email Adress</label><br>
-                                <input type="email" name="" id="email">
+                                <label asp-for="Email">Email Adress</label><br>
+                                <input asp-for="Email">
                             </div>
 
                             <div class="comment col-lg-12 col-12">
-                                <label for="comment">Comments/Questions</label><br>
-                                <textarea name="" id="comment" cols="64" rows="5"></textarea>
+                                <label asp-for="Comments">Comments/Questions</label><br>
+                                <textarea asp-for="Comments" cols="64" rows="5"></textarea>
                             </div>
                         </div>
 

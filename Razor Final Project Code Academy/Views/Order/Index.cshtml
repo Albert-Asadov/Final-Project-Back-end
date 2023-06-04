@@ -60,13 +60,23 @@
                                     ORDER
                                 </button>
                             </div>
-                            @foreach (var item in Model.BasketItems)
+                            @foreach (var item in Model.BasketItems.Where(x => x.IsAccessuar == false))
                             {
                                 <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].BasketId" value="@item.BasketId" />
                                 <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].ProductRamMemoryId" value="@item.ProductRamMemoryId" />
                                 <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].SaleQuantity" value="@item.SaleQuantity" />
                                 <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].UnitPrice" value="@item.UnitPrice" />
-                                <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].IsAccessuar" value="@item.IsAccessuar" />
+                                <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].IsAccessuar" value="false" />
+
+                            }
+                            @foreach (var item in Model.BasketItems.Where(x => x.IsAccessuar == true))
+                            {
+                                <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].BasketId" value="@item.BasketId" />
+                                <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].accessoryColorId" value="@item.accessoryColorId" />
+                                <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].SaleQuantity" value="@item.SaleQuantity" />
+                                <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].UnitPrice" value="@item.UnitPrice" />
+                                <input type="hidden" name="BasketItems[@Model.BasketItems.IndexOf(item)].IsAccessuar" value="true" />
+
 
                             }
                         </form>

@@ -5098,7 +5098,16 @@ body {
 #detail .leftside .bestSellers .responsive div ul li a .text-price .text p:hover {
   color: #ff7e00;
 }
-#detail .leftside .bestSellers .responsive div ul li a .text-price .price span {
+#detail .leftside .bestSellers .responsive div ul li a .text-price .price {
+  display: flex;
+}
+#detail .leftside .bestSellers .responsive div ul li a .text-price .price .discountPrice {
+  color: #999;
+  font-size: 14px;
+  text-decoration-line: line-through;
+}
+#detail .leftside .bestSellers .responsive div ul li a .text-price .price .RealPrice {
+  margin-left: 10px;
   color: #ff7e00;
 }
 #detail .rightSide .mainDetail {
@@ -5293,7 +5302,8 @@ body {
 #detail .rightSide .mainDetail .aboutProduct .titleMain .addToCard .addToCard {
   font-family: "Rubik", sans-serif;
   font-size: 13px;
-  padding-top: 11px;
+  padding-top: 0px;
+  border: none;
   border-radius: 25px;
   text-align: center;
   display: inline-block;

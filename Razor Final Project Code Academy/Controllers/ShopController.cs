@@ -6,111 +6,44 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Razor_Final_Project_Code_Academy.ViewModel;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Final_Project_Razor.Controllers
 {
 	public class ShopController:Controller
 	{
         private readonly RazorDbContext _context;
+        private readonly UserManager<User> _userManager;
 
-        public ShopController(RazorDbContext context)
+        public ShopController(RazorDbContext context,UserManager<User> userManager)
 		{
             _context = context;
+            _userManager = userManager;
         }
 
 		public IActionResult Index(int page=1)
 		{
-            //ViewBag.Ram = _context.Rams.ToList();
-            //ViewBag.Memory = _context.Memories.ToList();
-            //ViewBag.Color = _context.Colors.ToList();
-            //ViewBag.Category = _context.Categories.ToList();
-            //List<Accessory> accessories = _context.Accessories.Include(x=>x.AccessoryImages).Include(x=>x.AccessoryCategories).Include(x=>x.Brand).Skip((page - 1) * 5).Take(5).AsEnumerable().ToList();
-            //List<Product> products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x=>x.Brand).Skip((page - 1) * 5).Take(5).AsEnumerable().ToList();
-            //return View(new Tuple<List<Product>, List<Accessory>>(products, accessories));
+            ViewBag.Ram = _context.Rams.ToList();
+            ViewBag.Memory = _context.Memories.ToList();
+            ViewBag.Color = _context.Colors.ToList();
+            ViewBag.Brand = _context.Brands.ToList();
+            ViewBag.Category = _context.Categories.ToList();
 
-            /////
-
-            //ViewBag.TotalPage = Math.Ceiling((double)_context.Products.Count() / 8);
-            //ViewBag.TotalPage = Math.Ceiling((double)_context.Accessories.Count() / 8);
-
-            //ViewBag.CurrentPage = page;
-            //var rams = _context.Rams.ToList();
-            //var memories = _context.Memories.ToList();
-            //var colors = _context.Colors.ToList();
-            //var categories = _context.Categories.ToList();
-
-            //var query = _context.Accessories
-            //    .Include(x => x.AccessoryImages)
-            //    .Include(x => x.AccessoryCategories)
-            //    .Include(x => x.Brand)
-            //    .Skip((page - 1) * 8)
-            //    .Take(5);
-
-            //var accessories = query.ToList();
-            //var products = query.Join(_context.Products,
-            //    a => a.Id,
-            //    p => p.Id,
-            //    (a, p) => p)
-            //    .Include(x => x.ProductImages)
-            //    .Include(x => x.productCategories)
-            //    .Include(x => x.Brand)
-            //    .ToList();
-
-            //var model = new Tuple<List<Product>, List<Accessory>>(products, accessories);
-            //ViewBag.Ram = rams;
-            //ViewBag.Memory = memories;
-            //ViewBag.Color = colors;
-            //ViewBag.Category = categories;
-
-            //return View(model);
-
-            /////
-            
-            var pageSize = 8;
-
-            var totalProductCount = _context.Products.Count();
-            var totalAccessoryCount = _context.Accessories.Count();
-
-            var totalProductPages = (int)Math.Ceiling((double)totalProductCount / pageSize);
-            var totalAccessoryPages = (int)Math.Ceiling((double)totalAccessoryCount / pageSize);
-
-            ViewBag.TotalPage = Math.Max(totalProductPages, totalAccessoryPages);
-
+            ViewBag.TotalPage = Math.Ceiling((double)_context.Products.Count() / 6);
             ViewBag.CurrentPage = page;
-            var brands = _context.Brands.ToList();
-            var rams = _context.Rams.ToList();
-            var memories = _context.Memories.ToList();
-            var colors = _context.Colors.ToList();
-            var categories = _context.Categories.ToList();
 
-            var query = _context.Accessories
-                .Include(x => x.AccessoryImages)
-                .Include(x => x.AccessoryCategories)
-                .Include(x => x.Brand)
-                .Skip((page - 1) * pageSize)
-                .Take(5);
+            List<Accessory> accessories = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
+            List<Product> products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
+            AllVm all = new()
+            {
+                Products = products.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList(),
+                Accessories = accessories.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList()
 
-            var accessories = query.ToList();
+            };
+            return View(all);
 
-            var products = query.Join(_context.Products,
-                a => a.Id,
-                p => p.Id,
-                (a, p) => p)
-                .Include(x => x.ProductImages)
-                .Include(x => x.productCategories)
-                .Include(x => x.Brand)
-                .ToList();
-
-            var model = new Tuple<List<Product>, List<Accessory>>(products, accessories);
-            ViewBag.Ram = rams;
-            ViewBag.Memory = memories;
-            ViewBag.Color = colors;
-            ViewBag.Category = categories;
-            ViewBag.Brand = brands;
-
-            return View(model);
         }
-        public IActionResult DetailPhone(int id)
+        public async Task<IActionResult> DetailPhone(int id)
 		{
             ViewBag.Ram = _context.ProductRamMemories
                              .Where(psc => psc.ProductId == id)
@@ -127,7 +60,14 @@ namespace Final_Project_Razor.Controllers
                              .ToList();
 
             ViewBag.category = _context.Categories.ToList();
+            User? user = new();
 
+            if (User.Identity.IsAuthenticated)
+            {
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+                ViewBag.WishList = _context.Wishlists.Include(x => x.Product).Include(x => x.User).Where(x => x.UserId == user.Id && x.IsAccessory==false).ToList();
+            }
 			if (id == 0) return BadRequest();
             Product? products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x=>x.ProductComments).Include(x => x.Brand).FirstOrDefault(x=>x.Id == id);
             ViewBag.Accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
@@ -211,7 +151,7 @@ namespace Final_Project_Razor.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(int[] CategoryIds, int[] BrandIds, int[] RamIds, int[] MemoryIds, int[] ColorIds)
+        public IActionResult Index(int[] CategoryIds, int[] BrandIds, int[] RamIds, int[] MemoryIds, int[] ColorIds, int page=1)
         {
             ViewBag.Ram = _context.Rams.ToList();
             ViewBag.Memory = _context.Memories.ToList();
@@ -232,6 +172,10 @@ namespace Final_Project_Razor.Controllers
                 .Include(p => p.accessoryColors).ThenInclude(x => x.Color)
                 .Include(x => x.AccessoryCategories)
                 .Include(x => x.Brand);
+
+            ViewBag.TotalPage = Math.Ceiling((double)_context.Products.Count() / 6);
+            ViewBag.CurrentPage = page;
+
 
             if (CategoryIds.Length > 0)
             {
@@ -258,14 +202,142 @@ namespace Final_Project_Razor.Controllers
 
             var productList = products.ToList();
             var accessoryList = accessories.ToList();
+            AllVm all = new()
+            {
+                Products = productList.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList(),
+                Accessories = accessoryList.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList()
 
-            return View(new Tuple<List<Product>, List<Accessory>>(productList, accessoryList));
+            };
+            return View(all);
         }
 
 
-       
+        public async Task<IActionResult> AddWishList(int Id)
+        {
+
+            Product product = await _context.Products.FindAsync(Id);
+
+            if (product is null)
+            {
+                return NotFound();
+            }
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            User user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            Wishlist? userWishList = await _context.Wishlists
+                .FirstOrDefaultAsync(x => x.UserId == user.Id && x.ProductId == Id);
+
+            if (userWishList is null)
+            {
+                userWishList = new Wishlist
+                {
+                    UserId = user.Id,
+                    ProductId = Id,
+                    IsAccessory = false
+                };
+                _context.Wishlists.Add(userWishList);
+            }
+
+            await _context.SaveChangesAsync();
+
+            return Redirect(Request.Headers["Referer"].ToString());
+        }
+
+        public async Task<IActionResult> AddWishListAcc(int Id)
+        {
+
+            Accessory product = await _context.Accessories.FindAsync(Id);
+
+            if (product is null)
+            {
+                return NotFound();
+            }
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            User user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            Wishlist? userWishList = await _context.Wishlists
+                .FirstOrDefaultAsync(x => x.UserId == user.Id && x.AccessoryId == Id);
+
+            if (userWishList is null)
+            {
+                userWishList = new Wishlist
+                {
+                    UserId = user.Id,
+                    AccessoryId = Id,
+                    IsAccessory = true
+                };
+                _context.Wishlists.Add(userWishList);
+            }
+
+            await _context.SaveChangesAsync();
+
+            return Redirect(Request.Headers["Referer"].ToString());
+        }
+
+        public async Task<IActionResult> WishlistRemove(int Id)
+        {
+            User user = await _userManager.FindByNameAsync(User.Identity.Name);
+            Wishlist? wishlist = await _context.Wishlists
+                .FirstOrDefaultAsync(x => x.UserId == user.Id && x.Id == Id);
+
+            if (wishlist is null)
+            {
+                return NotFound();
+            }
+
+            _context.Wishlists.Remove(wishlist);
+            await _context.SaveChangesAsync();
+
+            return Redirect(Request.Headers["Referer"].ToString());
+        }
+
+        [HttpPost]
+        public IActionResult Sort(string sortOrder)
+        {
+            var products = _context.Products.ToList();
+            var accessories = _context.Accessories.ToList();
+
+          
+            switch (sortOrder)
+            {
+                case "A-Z":
+                    products = products.OrderBy(p => p.Name).ToList();
+                    accessories = accessories.OrderBy(a => a.Name).ToList();
+                    break;
+                case "Z-A":
+                    products = products.OrderByDescending(p => p.Name).ToList();
+                    accessories = accessories.OrderByDescending(a => a.Name).ToList();
+                    break;
+                case "PriceAscending":
+                    products = products.OrderBy(p => p.Price).ToList();
+                    accessories = accessories.OrderBy(a => a.Price).ToList();
+                    break;
+                case "PriceDescending":
+                    products = products.OrderByDescending(p => p.Price).ToList();
+                    accessories = accessories.OrderByDescending(a => a.Price).ToList();
+                    break;
+                default:
+                    // По умолчанию не выполняем сортировку
+                    break;
+            }
+
+            var model = new Tuple<List<Product>, List<Accessory>>(products, accessories);
+
+            return Json( model);
+        }
 
 
-	}
+
+    }
 }
 

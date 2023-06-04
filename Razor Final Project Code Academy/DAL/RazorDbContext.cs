@@ -34,6 +34,10 @@ namespace Razor_Final_Project_Code_Academy.DAL
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<DeliveryInformation> DeliveryInformations { get; set; }
+        public DbSet<ContactUs> contactUs { get; set; }
+        public DbSet<Wishlist> Wishlists { get; set; }
+
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Razor_Final_Project_Code_Academy.DAL;
 
@@ -11,9 +12,10 @@ using Razor_Final_Project_Code_Academy.DAL;
 namespace Razor_Final_Project_Code_Academy.Migrations
 {
     [DbContext(typeof(RazorDbContext))]
-    partial class RazorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230603180958_ContactUsTable")]
+    partial class ContactUsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -840,38 +842,6 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Wishlist", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int?>("AccessoryId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsAccessory")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AccessoryId");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Wishlists");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -1130,29 +1100,6 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("Ram");
-                });
-
-            modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Wishlist", b =>
-                {
-                    b.HasOne("Razor_Final_Project_Code_Academy.Entities.Accessory", "Accessory")
-                        .WithMany()
-                        .HasForeignKey("AccessoryId");
-
-                    b.HasOne("Razor_Final_Project_Code_Academy.Entities.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId");
-
-                    b.HasOne("Razor_Final_Project_Code_Academy.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Accessory");
-
-                    b.Navigation("Product");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Accessory", b =>

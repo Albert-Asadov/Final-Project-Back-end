@@ -38,7 +38,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
             checkoutVM.BasketItems = _context.BasketItems
                 .Include(x => x.ProductRamMemory.Product)
-                .Where(x => x.Basket.User.Id == user.Id && x.IsAccessuar == false)
+                .Where(x => x.Basket.User.Id == user.Id )
                 .ToList();
 
             decimal totalPrice = 0;
@@ -52,10 +52,11 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
             return View(checkoutVM);
         }
-
         [HttpPost]
         public async Task<IActionResult> Index(CheckOutVM model)
         {
+            ViewBag.Product = _context.Products.Include(p => p.ProductImages).Include(x => x.Brand).ToList();
+            ViewBag.Acc = _context.Accessories.Include(p => p.AccessoryImages).Include(x => x.Brand).ToList();
             if (!User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Login", "Account");
@@ -63,7 +64,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
             User user = await _userManager.GetUserAsync(User);
 
-            Basket basket = new() { User = user, status = Status.Default };
+            Basket basket = new Basket { User = user, status = Status.Default };
             _context.Baskets.Add(basket);
             await _context.SaveChangesAsync();
 
@@ -99,7 +100,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
             {
                 foreach (BasketItem basketItem in model.BasketItems.Where(x => x.IsAccessuar == false))
                 {
-                    ProductRamMemory? productRamMemory = await _context.ProductRamMemories
+                    ProductRamMemory productRamMemory = await _context.ProductRamMemories
                         .Include(p => p.Product)
                         .FirstOrDefaultAsync(psc => psc.Id == basketItem.ProductRamMemoryId);
 
@@ -130,14 +131,16 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
                     productRamMemory.Quantity = (byte)(productRamMemory.Quantity - basketItem.SaleQuantity);
                     productRamMemory.Product.Count++;
+                   
                 }
+                
             }
 
             if (model.BasketItems != null && model.BasketItems.Any(x => x.IsAccessuar == true))
             {
                 foreach (BasketItem basketItem in model.BasketItems.Where(x => x.IsAccessuar == true))
                 {
-                    AccessoryColor? accessoryColor = await _context.AccessoryColors
+                    AccessoryColor accessoryColor = await _context.AccessoryColors
                         .Include(p => p.Accessory)
                         .FirstOrDefaultAsync(psc => psc.Id == basketItem.accessoryColorId);
 
@@ -159,7 +162,6 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                         UnitPrice = (decimal)accessoryColor.Accessory.DiscountPrice,
                         AccessoryColorId = basketItem.accessoryColorId,
                         AccessoryColor = accessoryColor,
-                        
                     };
 
                     order.OrderItems.Add(orderItem);
@@ -171,6 +173,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                     accessoryColor.Accessory.Count++;
                 }
             }
+
             order.TotalPrice = totalPrice;
 
             _context.Orders.Add(order);
@@ -181,8 +184,12 @@ namespace Razor_Final_Project_Code_Academy.Controllers
         }
 
 
+
+
         public IActionResult AccountOrders()
         {
+
+
             return View();
         }
     }
