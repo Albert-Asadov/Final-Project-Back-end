@@ -8,6 +8,10 @@ namespace Razor_Final_Project_Code_Academy.ViewModel
 		public List<Product> Products { get; set; }
 
        public List<Accessory> Accessories { get; set; }
-    }
+
+		public int TotalPage { get; set; }
+
+		public int CurrentPage { get; set; }
+	}
 }
 
