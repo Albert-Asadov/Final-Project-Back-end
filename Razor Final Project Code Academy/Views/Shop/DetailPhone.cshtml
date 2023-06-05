@@ -82,7 +82,7 @@
                             </div>
 
                         </div>
-                        <div class="titleMain"  style="width: 100%;">
+                        <div class="titleMain" style="width: 100%;">
                             <div class="name">
                                 <h1>@Model.Name</h1>
                             </div>
@@ -116,7 +116,7 @@
                                                        placeholder="Write youre review subject"><br>
 
                                                 <label for="comment">Comment</label><br>
-                                                <input asp-for="ProductComments.FirstOrDefault(cm => cm.Product.Id == Model.Id).Text" type="text"id="comment"
+                                                <input asp-for="ProductComments.FirstOrDefault(cm => cm.Product.Id == Model.Id).Text" type="text" id="comment"
                                                        placeholder="Write youre comment">
 
 
@@ -162,71 +162,78 @@
                                     <li>Date</li>
                                 </ul>
                             </div>
-                        <form asp-controller="Basket" asp-action="Addbaskets" asp-route-productId="@Model.Id" method="post">
-                                    <div class="inputs">
+                            <form asp-controller="Basket" asp-action="Addbaskets" asp-route-productId="@Model.Id" method="post">
+                                <div class="inputs">
 
-                                <div class="ram">
-                                    <label for="">Ram:</label> <br>
-                                    <select asp-for="AddCart.RamId" asp-items="@(new SelectList(ViewBag.Ram,"Id","RamName"))">
-       
-                                    </select>
-                                </div>
-
-                                <div class="memory">
-                                    <label for="">Memory:</label> <br>
-                                    <select asp-for="AddCart.MemoryId" asp-items="@(new SelectList(ViewBag.Memory,"Id","MemoryName"))">
-                                      
-                                    </select>
-                                </div>
-
-                                <div class="input">
-                                    <div class="mainInput">
-                                        <label for="count">Quantity:</label><br>
-                                        <input type="number" value="1" class="quantityInput" asp-for="AddCart.Quantity" id="count">
+                                    <div class="ram">
+                                        <label for="">Ram:</label> <br>
+                                        <select asp-for="AddCart.RamId" asp-items="@(new SelectList(ViewBag.Ram,"Id","RamName"))">
+                                        </select>
                                     </div>
-                                    <div class="chevrons">
-                                        <button type="button" onclick="handleIncreaseQuantity()">
-                                            <i class="fa-solid fa-chevron-up"></i>
+
+                                    <div class="memory">
+                                        <label for="">Memory:</label> <br>
+                                        <select asp-for="AddCart.MemoryId" asp-items="@(new SelectList(ViewBag.Memory,"Id","MemoryName"))">
+                                        </select>
+                                    </div>
+
+                                    <div class="input">
+                                        <div class="mainInput">
+                                            <label for="count">Quantity:</label><br>
+                                            <input type="number" value="1" class="quantityInput" asp-for="AddCart.Quantity" id="count">
+                                        </div>
+                                        <div class="chevrons">
+                                            <button type="button" onclick="handleIncreaseQuantity()">
+                                                <i class="fa-solid fa-chevron-up"></i>
+                                            </button>
+                                            <button type="button" onclick="handleDEcreaseQuantity()">
+                                                <i class="fa-solid fa-chevron-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="addToCard">
+                                    <div class="add">
+                                        <button type="submit" class="addToCard">
+                                            ADD TO CARD
                                         </button>
-                                        <button type="button" onclick="handleDEcreaseQuantity()">
-                                            <i class="fa-solid fa-chevron-down"></i>
-                                        </button>
                                     </div>
-                                </div>
-                            </div>
+                                    <div class="wishlist">
 
-                            <div class="addToCard">
-                                <div class="add">
-                                    <button type="submit" class="addToCard">
-                                        ADD TO CARD
-                                    </button>
-                                </div>
-                                <div class="wishlist">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-heart"></i>
+                                        </div>
+                                        <div class="text">
+                                            <span>
+                                                Add To Wish List
+                                            </span>
+                                        </div>
 
-                                    <div class="icon">
-                                        <i class="fa-solid fa-heart"></i>
-                                    </div>
-                                    <div class="text">
-                                        <span>
-                                            Add To Wish List
-                                        </span>
-                                    </div>
+                                        <div class="panelWish">
 
-                                    <div class="panelWish">
-
-                                        @if (User.Identity.IsAuthenticated)
-                                        {
-                                            if (wishlist.Any())
+                                            @if (User.Identity.IsAuthenticated)
                                             {
-                                                bool isItemInWishlist = wishlist.Any(item => item.ProductId == Model.Id);
-
-                                                if (isItemInWishlist)
+                                                if (wishlist.Any())
                                                 {
-                                                    <div class="deleteFromWishlist">
-                                                        <a asp-controller="Wishlist" asp-action="WishlistRemove" asp-route-Id="@Model.Id">
-                                                            <p>Remove From Wish List</p>
-                                                        </a>
-                                                    </div>
+                                                    bool isItemInWishlist = wishlist.Any(item => item.ProductId == Model.Id);
+
+                                                    if (isItemInWishlist)
+                                                    {
+                                                        <div class="deleteFromWishlist">
+                                                            <a asp-controller="Wishlist" asp-action="WishlistRemove" asp-route-Id="@Model.Id">
+                                                                <p>Remove From Wish List</p>
+                                                            </a>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="addToWishlist">
+                                                            <a asp-controller="Wishlist" asp-action="AddWishList" asp-route-Id="@Model.Id">
+                                                                <p>Add To My Wish List</p>
+                                                            </a>
+                                                        </div>
+                                                    }
                                                 }
                                                 else
                                                 {
@@ -237,20 +244,11 @@
                                                     </div>
                                                 }
                                             }
-                                            else
-                                            {
-                                                <div class="addToWishlist">
-                                                    <a asp-controller="Wishlist" asp-action="AddWishList" asp-route-Id="@Model.Id">
-                                                        <p>Add To My Wish List</p>
-                                                    </a>
-                                                </div>
-                                            }
-                                        }
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
                         </div>
                     </div>
                     <div class="description">
@@ -265,7 +263,7 @@
                         </div>
                         <div class="mainDescr">
                             <p>
-                               @Model.Descr
+                                @Model.Descr
                             </p>
                         </div>
                     </div>
@@ -474,35 +472,40 @@
                             <div class="row">
                                 @foreach (var item in Model.ProductComments)
                                 {
-                                        <div class="comments col-lg-12 col-12">
+                                    <div class="comments col-lg-12 col-12">
 
+                                        <div class="name">
+                                            <p>@item.CreationTime</p>
+                                        </div>
+
+                                        <div class="about">
                                             <div class="name">
-                                                <p>@item.CreationTime</p>
+                                                <p><span style="margin-right:10px;" class="OrangeColor">Name:</span>@item.Name</p>
                                             </div>
-
-                                            <div class="about">
-                                                <div class="name">
-                                                    <p><span style="margin-right:10px;" class="OrangeColor">Name:</span>@item.Name</p>
-                                                </div>
-                                                <div class="email">
-                                                    <p><span style="margin-right:10px;" class="OrangeColor">Email:</span>@item.Email</p>
-                                                </div>
-                                            </div>
-                                            <div class="subject">
-                                                <p><span style="margin-right:10px;" class="OrangeColor">Subject:</span>@item.Title</p>
-                                            </div>
-                                            <div class="comment">
-                                                <p><span style="margin-right:10px;" class="OrangeColor">Comment:</span>@item.Text</p>
+                                            <div class="email">
+                                                <p><span style="margin-right:10px;" class="OrangeColor">Email:</span>@item.Email</p>
                                             </div>
                                         </div>
+                                        <div class="subject">
+                                            <p><span style="margin-right:10px;" class="OrangeColor">Subject:</span>@item.Title</p>
+                                        </div>
+                                        <div class="comment">
+                                            <p><span style="margin-right:10px;" class="OrangeColor">Comment:</span>@item.Text</p>
+                                        </div>
+                                    </div>
                                 }
 
                             </div>
-                         </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="up">
+            <i class="fa-solid fa-chevron-up"></i>
+        </div>
     </div>
 </section>
 

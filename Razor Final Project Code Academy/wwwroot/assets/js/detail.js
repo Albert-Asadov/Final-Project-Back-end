@@ -219,4 +219,16 @@ window.addEventListener("scroll", function () {
   }
 });
 
+let up = document.querySelector(".up");
+up.onclick = function (e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
+
+
+
 

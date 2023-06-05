@@ -32,6 +32,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
            List<Basket> basket = _context.Baskets.Include(x=>x.User).Include(x => x.BasketItems).ThenInclude(x => x.ProductRamMemory).Include(x => x.BasketItems).ThenInclude(x => x.AccessoryColor).Where(x=>x.status==0 && x.User.Id==user.Id).ToList();
             ViewBag.Product = _context.Products.Include(p => p.ProductImages).Include(x=>x.Brand).ToList();
             ViewBag.Acc = _context.Accessories.Include(p => p.AccessoryImages).Include(x => x.Brand).ToList();
+            ViewBag.BasketNotList = _context.Baskets.First();
 
             return View(basket);
         }

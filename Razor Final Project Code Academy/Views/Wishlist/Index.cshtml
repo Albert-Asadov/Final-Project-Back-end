@@ -29,7 +29,7 @@
                 @foreach (var item in Model.Where(x => x.IsAccessory == false))
                 {
                     Product product = products.FirstOrDefault(x => x.Id == item.ProductId);
-                    <div class="content">
+                    <div class="content" style="border-bottom: 1px solid gray;">
                         <div class="image">
                             <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@product.Id">
                                 <img class="imageProduct" src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x => x.IsMain == true)?.Image" alt="">
@@ -67,7 +67,7 @@
                 @foreach (var item in Model.Where(x => x.IsAccessory == true))
                 {
                     Accessory accessory = acc.FirstOrDefault(x => x.Id == item.AccessoryId);
-                    <div class="content">
+                    <div class="content"  style="border-bottom: 1px solid gray;">
                         <div class="image">
                             <a asp-controller="Shop" asp-action="DetailAccessory" asp-route-id="@accessory.Id">
                              <img class="imageProduct" src="~/assets/images/Product/@accessory.AccessoryImages.FirstOrDefault(x => x.IsMain == true)?.Image" alt="">

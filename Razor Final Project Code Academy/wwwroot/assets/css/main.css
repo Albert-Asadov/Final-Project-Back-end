@@ -5591,15 +5591,15 @@ body {
 #detail .rightSide .mainDetail .reviews .mainCommentContent .comments .about {
   display: flex;
 }
-    #detail .rightSide .mainDetail .reviews .mainCommentContent .comments .about .name span {
-        color: #ff7e00;
-    }
+#detail .rightSide .mainDetail .reviews .mainCommentContent .comments .about .name span {
+  color: #4f4f4f;
+}
 #detail .rightSide .mainDetail .reviews .mainCommentContent .comments .about .email {
   margin-left: 15px;
 }
-    #detail .rightSide .mainDetail .reviews .mainCommentContent .comments .about .email span {
-        color: #ff7e00;
-    }
+#detail .rightSide .mainDetail .reviews .mainCommentContent .comments .about .email span {
+  color: #4f4f4f;
+}
 #detail .rightSide .mainDetail .reviews .mainCommentContent .comments div p {
   font-size: 15px;
   color: #666;
@@ -5607,6 +5607,29 @@ body {
 }
 #detail .rightSide .mainDetail .reviews .mainCommentContent .comments div p .OrangeColor {
   color: #ff7e00;
+}
+#detail .up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 85px;
+  bottom: 25px;
+  position: fixed;
+  padding-top: 12px;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  margin: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  background: #999;
+  color: #fff;
+  text-align: center;
+  transition: 0.4s;
+  z-index: 300;
+}
+#detail .up:hover {
+  background-color: #ff7e00;
 }
 
 input[type=number]::-webkit-inner-spin-button {

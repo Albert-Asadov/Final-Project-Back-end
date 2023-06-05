@@ -14,28 +14,29 @@
                 </div>
             </div>
 
-            @foreach (var Basket in Model)
-            {
-                <table class="tableH d-lg-block d-none">
-                    <thead>
-                        <tr>
-                            <th class="item">
-                                ITEM
-                            </th>
 
-                            <th class="price">
-                                PRICE
-                            </th>
+            <table class="tableH d-lg-block d-none">
+                <thead>
+                    <tr>
+                        <th class="item">
+                            ITEM
+                        </th>
 
-                            <th class="quantity">
-                                QUANTITY
-                            </th>
+                        <th class="price">
+                            PRICE
+                        </th>
 
-                            <th class="total">
-                                TOTAL
-                            </th>
-                        </tr>
-                    </thead>
+                        <th class="quantity">
+                            QUANTITY
+                        </th>
+
+                        <th class="total">
+                            TOTAL
+                        </th>
+                    </tr>
+                </thead>
+                @foreach (var Basket in Model)
+                {
                     <tbody class="tableB">
                         @foreach (var item in Basket.BasketItems.Where(x => x.IsAccessuar == false))
                         {
@@ -45,7 +46,7 @@
                                 <td>
                                     <div class="img-text">
                                         <div class="image">
-                                            <img src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
+                                            <img src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x => x.IsMain == true)?.Image" alt="">
                                         </div>
                                         <div class="text">
                                             <div class="brand">
@@ -104,7 +105,7 @@
                                 <td>
                                     <div class="img-text">
                                         <div class="image">
-                                            <img src="~/assets/images/Product/@product.AccessoryImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
+                                            <img src="~/assets/images/Product/@product.AccessoryImages.FirstOrDefault(x => x.IsMain == true)?.Image" alt="">
                                         </div>
                                         <div class="text">
                                             <div class="brand">
@@ -156,15 +157,19 @@
                             </tr>
                         }
                     </tbody>
-                </table>
+                }
+            </table>
+         
 
-                <div class="smallDisplayTable d-lg-none d-block" style="margin-left: 15px;">
+                @foreach (var Basket in Model)
+                    {
+            <div class="smallDisplayTable d-lg-none d-block" style="margin-left: 15px;">
                     @foreach (var item in Basket.BasketItems.Where(x => x.IsAccessuar == false))
-                    {
-                        Product product = products.FirstOrDefault(x => x.Id == item.ProductRamMemory.ProductId);
+                        {
+                            Product product = products.FirstOrDefault(x => x.Id == item.ProductRamMemory.ProductId);
                         <div class="upper">
                             <div class="image">
-                                <img src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="photo">
+                                <img src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x => x.IsMain == true)?.Image" alt="photo">
                             </div>
                             <div class="iconDelete">
                                 <a asp-controller="Basket" asp-action="DeletBasketItem" asp-route-basketItemId="@item.Id" class="delete">
@@ -218,13 +223,13 @@
                                 $800
                             </span>
                         </div>
-                    }
+                        }
                     @foreach (var item in Basket.BasketItems.Where(x => x.IsAccessuar == true))
-                    {
-                        Accessory product = accessories.FirstOrDefault(x => x.Id == item.AccessoryColor.AccessoryId);
+                        {
+                            Accessory product = accessories.FirstOrDefault(x => x.Id == item.AccessoryColor.AccessoryId);
                         <div class="upper">
                             <div class="image">
-                                <img src="~/assets/images/Product/@product.AccessoryImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="photo">
+                                <img src="~/assets/images/Product/@product.AccessoryImages.FirstOrDefault(x => x.IsMain == true)?.Image" alt="photo">
                             </div>
                             <div class="iconDelete">
                                 <a asp-controller="Basket" asp-action="DeletBasketItem" asp-route-basketItemId="@item.Id" class="delete">
@@ -278,8 +283,10 @@
                                 $800
                             </span>
                         </div>
+                        }
+                    
+              </div>
                     }
-                </div>
 
                 <ul class="shippingInfo col-md-12 col-sm-12">
                     <li>
@@ -287,8 +294,9 @@
                             <span>
                                 <b>Subtotal:</b>
                             </span>
+
                             <span>
-                                $@Basket.TotalPrice
+                                $@ViewBag.BasketNotList.TotalPrice
                             </span>
                         </div>
                     </li>
@@ -322,11 +330,13 @@
                             </span>
                             <span class="price">
                                 <b>
-                                    @Basket.TotalPrice $
+                                    @ViewBag.BasketNotList.TotalPrice $
                                 </b>
                             </span>
                         </div>
                     </li>
+                    
+                    
                     <li class="check">
                         <div class="button">
                             <a asp-controller="Order" asp-action="Index">
@@ -335,7 +345,7 @@
                         </div>
                     </li>
                 </ul>
-            }
+
         </div>
     </div>
 </section>

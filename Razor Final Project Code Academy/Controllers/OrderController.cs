@@ -100,7 +100,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
             {
                 foreach (BasketItem basketItem in model.BasketItems.Where(x => x.IsAccessuar == false))
                 {
-                    ProductRamMemory productRamMemory = await _context.ProductRamMemories
+                    ProductRamMemory? productRamMemory = await _context.ProductRamMemories
                         .Include(p => p.Product)
                         .FirstOrDefaultAsync(psc => psc.Id == basketItem.ProductRamMemoryId);
 
@@ -140,7 +140,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
             {
                 foreach (BasketItem basketItem in model.BasketItems.Where(x => x.IsAccessuar == true))
                 {
-                    AccessoryColor accessoryColor = await _context.AccessoryColors
+                    AccessoryColor? accessoryColor = await _context.AccessoryColors
                         .Include(p => p.Accessory)
                         .FirstOrDefaultAsync(psc => psc.Id == basketItem.accessoryColorId);
 
