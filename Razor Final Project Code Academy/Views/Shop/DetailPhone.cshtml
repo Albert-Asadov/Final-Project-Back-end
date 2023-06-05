@@ -218,32 +218,34 @@
                                         {
                                             if (wishlist.Any())
                                             {
-                                                foreach (var item in wishlist)
-                                                {
-                                                    if (item.ProductId == Model.Id)
-                                                    {
-                                                        <div class="deleteFromWishlist">
-                                                            <a asp-controller="Shop" asp-action="WishlistRemove" asp-route-Id="@item.Id">
-                                                                <p>Remove From Wish List</p>
-                                                            </a>
-                                                        </div>
-                                                    }
+                                                bool isItemInWishlist = wishlist.Any(item => item.ProductId == Model.Id);
 
+                                                if (isItemInWishlist)
+                                                {
+                                                    <div class="deleteFromWishlist">
+                                                        <a asp-controller="Wishlist" asp-action="WishlistRemove" asp-route-Id="@Model.Id">
+                                                            <p>Remove From Wish List</p>
+                                                        </a>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="addToWishlist">
+                                                        <a asp-controller="Wishlist" asp-action="AddWishList" asp-route-Id="@Model.Id">
+                                                            <p>Add To My Wish List</p>
+                                                        </a>
+                                                    </div>
                                                 }
                                             }
                                             else
                                             {
                                                 <div class="addToWishlist">
-                                                    <a asp-controller="Shop" asp-action="AddWishList" asp-route-Id="@Model.Id">
+                                                    <a asp-controller="Wishlist" asp-action="AddWishList" asp-route-Id="@Model.Id">
                                                         <p>Add To My Wish List</p>
                                                     </a>
                                                 </div>
                                             }
-
                                         }
-
-
-
 
                                     </div>
                                 </div>

@@ -188,9 +188,28 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
         public IActionResult AccountOrders()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return View(new List<Wishlist>());
+            }
 
+            var userId = _userManager.GetUserId(User);
+            List<Order> orderItems = _context.Orders.Include(x => x.OrderItems)
+                                .ThenInclude(x => x.AccessoryColor)
+                                .ThenInclude(x => x.Accessory)
+                                .ThenInclude(x => x.AccessoryImages)
+                                .Include(x => x.OrderItems)
+                                .ThenInclude(x => x.ProductRamMemory)
+                                .ThenInclude(x => x.Product)
+                                .ThenInclude(x => x.ProductImages)
+                                .Where(wli => wli.UserId == userId).ToList();
 
-            return View();
+            if(orderItems.Count == 0)
+            {
+                return View(new List<Order>());
+            }
+
+            return View(orderItems);
         }
     }
 }
