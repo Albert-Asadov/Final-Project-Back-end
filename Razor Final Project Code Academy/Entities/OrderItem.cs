@@ -10,6 +10,7 @@ namespace Razor_Final_Project_Code_Academy.Entities
         public decimal UnitPrice { get; set; }
 
         public int SaleQuantity { get; set; }
+        public bool IsAccessuar { get; set; }
 
         public int? ProductRamMemoryId { get; set; }
         public ProductRamMemory ProductRamMemory { get; set; }

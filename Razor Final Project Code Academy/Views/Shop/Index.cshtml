@@ -1,4 +1,4 @@
-﻿@model AccessoryProductVM
+﻿@model MyCombineModelsVM
 
 @{
     List<Ram> ram = ViewBag.Ram;
@@ -146,10 +146,52 @@
                 <div class="mainContent">
                     <div class="row">
 
-                        @await Html.PartialAsync("_ProductPartial", Model.Products)
+                        @*@await Html.PartialAsync("_ProductPartial", Model.Products)
+                        @await Html.PartialAsync("_AccessuarPartial", Model.Accessories)*@
+                        @foreach (dynamic item in Model.Products.Cast<object>().Concat(Model.Accessories.Cast<object>()))
+                        {
+                            <div class="product col-lg-3 col-12" style="height: 300px; width: 247px;">
+                                <div class="image">
+                                    @if (item is Product)
+                                    {
+                                        var product = item as Product;
+                                        <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@product.Id">
+                                            @if (product.ProductImages != null && product.ProductImages.Any())
+                                            {
+                                                <img style="width: 150px; height: 150px; object-fit: contain;" src="~/assets/images/Product/@product.ProductImages.First().Image" alt="">
+                                            }
+                                        </a>
+                                    }
+                                    else if (item is Accessory)
+                                    {
+                                        var accessory = item as Accessory;
+                                        <a asp-controller="Shop" asp-action="DetailAccessory" asp-route-id="@accessory.Id">
+                                            @if (accessory.AccessoryImages != null && accessory.AccessoryImages.Any())
+                                            {
+                                                <img style="width: 150px; height: 150px; object-fit: contain;" src="~/assets/images/Product/@accessory.AccessoryImages.First().Image" alt="">
+                                            }
+       
+                                        </a>
+                                    }
+                                </div>
+                                <div class="text">
+                                    <div class="brand">
+                                        <span>@item.Brand.Name</span>
+                                    </div>
+                                    <div class="name">
+                                        <span>@item.Name</span>
+                                    </div>
+                                    <div class="price">
+                                        <span>$@item.Price</span>
+                                    </div>
+                                    <div class="addToCard">
+                                        <a href="#">Add To Card</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
 
 
-                        @await Html.PartialAsync("_AccessuarPartial", Model.Accessories)
 
                     </div>
                 </div>

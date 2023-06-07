@@ -566,6 +566,9 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.Property<int?>("AccessoryColorId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsAccessuar")
+                        .HasColumnType("bit");
+
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 

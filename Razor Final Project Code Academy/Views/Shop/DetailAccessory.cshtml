@@ -203,14 +203,14 @@
                                         <div class="panelWish">
                                             @if (User.Identity.IsAuthenticated)
                                             {
-                                                if (wishlist != null && wishlist.Any())
+                                                if (wishlist.Any(x=>x.IsAccessory==true))
                                                 {
-                                                    bool isItemInWishlist = wishlist.Any(item => item.AccessoryId == Model.Id);
+                                                    bool isItemInWishlist = wishlist.Any(items => items.AccessoryId == Model.Id);
 
                                                     if (isItemInWishlist)
                                                     {
                                                         <div class="deleteFromWishlist">
-                                                            <a asp-controller="Wishlist" asp-action="RemoveWishListAcc" asp-route-Id="@Model.Id">
+                                                            <a asp-controller="Wishlist" asp-action="WishlistRemove" asp-route-Id="@Model.Id">
                                                                 <p>Remove From Wish List</p>
                                                             </a>
                                                         </div>
@@ -233,10 +233,7 @@
                                                     </div>
                                                 }
                                             }
-
                                         </div>
-
-
                                     </div>
                                 </div>
                             </form>

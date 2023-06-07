@@ -1,7 +1,20 @@
 ﻿@model IEnumerable<Product>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p style="padding-top:10px;padding-left:10px;">
+    <a
+      style="
+     background-color: gray;
+     display: inline-block;
+     text-decoration: none;
+     height: 30px;
+     width: 120px;
+     color: white;
+     text-align: center;
+     border-radius: 14px;
+     padding-top: 4px;"
+       asp-action="Create">
+                    Create New
+    </a>
 </p>
 <table class="table">
     <thead>
@@ -48,7 +61,7 @@
         {
             <tr>
                 <td>
-                    <img class="primary-img" style="width:100px;height:100px; object-fit:contain"
+                    <img class="primary-img" style="width:100px; border-radius:0px;height:100px; object-fit:contain"
                          src="~/assets/images/Product/@item.ProductImages.FirstOrDefault(x=>x.IsMain==true)?.Image"
                          alt="Product Images" />
                 </td>
@@ -90,9 +103,9 @@
                     @item.ProductRamMemories.Sum(p => p.Quantity)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a style=" text-decoration: none; color: red;" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a style=" text-decoration: none; color: orange;" asp-action="Detail" asp-route-id="@item.Id">Details</a> |
+                    <a style=" text-decoration: none; color: red;" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }

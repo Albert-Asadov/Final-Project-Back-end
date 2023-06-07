@@ -7,13 +7,13 @@ using Razor_Final_Project_Code_Academy.Entities;
 
 namespace Razor_Final_Project_Code_Academy.Controllers
 {
-	public class WishlistController:Controller
-	{
+    public class WishlistController : Controller
+    {
         private readonly RazorDbContext _context;
         private readonly UserManager<User> _userManager;
 
         public WishlistController(RazorDbContext context, UserManager<User> userManager)
-		{
+        {
             _context = context;
             _userManager = userManager;
         }
@@ -122,7 +122,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
         {
             User user = await _userManager.FindByNameAsync(User.Identity.Name);
             Wishlist? wishlist = await _context.Wishlists
-                .FirstOrDefaultAsync(x => x.UserId == user.Id && x.Id == Id);
+                .FirstOrDefaultAsync(x => x.UserId == user.Id && (x.ProductId == Id || x.AccessoryId==Id));
 
             if (wishlist is null)
             {
@@ -130,12 +130,12 @@ namespace Razor_Final_Project_Code_Academy.Controllers
             }
 
             _context.Wishlists.Remove(wishlist);
+
             await _context.SaveChangesAsync();
 
             return Redirect(Request.Headers["Referer"].ToString());
         }
-
-
     }
 }
 
+ //|| x.UserId == user.Id && x.AccessoryId == Id)

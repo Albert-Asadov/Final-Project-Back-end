@@ -35,24 +35,24 @@
                                         <div class="row">
                                             <div class="input fullname col-lg-6">
                                                 <label asp-for="FullName">Full Name:</label><br>
-                                                <input asp-for="FullName" placeholder="FullName"><br>
+                                                <input asp-for="FullName" placeholder="FullName" required><br>
                                                 <span asp-validation-for="FullName" class="text-danger"></span>
                                             </div>
                                             <div class="input email col-lg-6">
                                                 <label asp-for="Email">Email:</label><br>
-                                                <input asp-for="Email" placeholder="Email"><br>
+                                                <input asp-for="Email" placeholder="Email" required><br>
                                                 <span asp-validation-for="Email" class="text-danger"></span>
                                             </div>
 
                                             <div class="input adress col-lg-6">
                                                 <label asp-for="Address">Adress:</label><br>
-                                                <input asp-for="Address" placeholder="Adress"><br>
+                                                <input asp-for="Address" placeholder="Adress" required><br>
                                                 <span asp-validation-for="Address" class="text-danger"></span>
                                             </div>
 
                                             <div class="input note col-lg-6">
                                                 <label asp-for="Note">Note:</label><br>
-                                                <input asp-for="Note" placeholder="Note">
+                                                <input asp-for="Note" placeholder="Note" required>
                                                 <span asp-validation-for="Note" class="text-danger"></span>
                                             </div>
                                         </div>

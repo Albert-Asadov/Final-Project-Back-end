@@ -26,23 +26,48 @@
                     </div>
                 </div>
 
-                @*@foreach (var item in Model)
+                @foreach (var item in Model)
                 {
-                    <div class="mainContent">
-                        <div class="image">
-                            <img src="~/assets/images/Product/" alt="">
+                    @foreach (var items in item.OrderItems.Where(x => x.IsAccessuar == false))
+                    {
+
+                        Product product = products.FirstOrDefault(x => x.Id == items.ProductRamMemory.ProductId);
+                        <div class="mainContent" style="margin-top:10px;">
+                            <div class="image">
+                                <img src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
+                            </div>
+                            <div class="name">
+                                <span><a href="">@product.Name</a></span>
+                            </div>
+                            <div class="price">
+                                <span>$@product.Price</span>
+                            </div>
+                            <div class="date">
+                                @item.CreatedTime
+                            </div>
                         </div>
-                        <div class="name">
-                            <span><a href="">Apple Watch</a></span>
+                    }
+
+                    @foreach (var items in item.OrderItems.Where(x => x.IsAccessuar == true))
+                    {
+
+                        Accessory accessory = acc.FirstOrDefault(x => x.Id == items.AccessoryColor.AccessoryId);
+                        <div class="mainContent" style="margin-top:10px;">
+                            <div class="image">
+                                <img src="~/assets/images/Product/@accessory.AccessoryImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
+                            </div>
+                            <div class="name">
+                                <span><a href="">@accessory.Name</a></span>
+                            </div>
+                            <div class="price">
+                                <span>$@accessory.Price</span>
+                            </div>
+                            <div class="date">
+                                @item.CreatedTime
+                            </div>
                         </div>
-                        <div class="price">
-                            <span>$800</span>
-                        </div>
-                        <div class="date">
-                            20/02/20
-                        </div>
-                    </div>
-                }*@
+                    }
+                }
 
             </div>
         </div>

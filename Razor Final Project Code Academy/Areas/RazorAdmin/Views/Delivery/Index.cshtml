@@ -7,8 +7,20 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p style="padding-top:10px;padding-left:10px;">
+    <a style="
+     background-color: gray;
+     display: inline-block;
+     text-decoration: none;
+     height: 30px;
+     width: 120px;
+     color: white;
+     text-align: center;
+     border-radius: 14px;
+     padding-top: 4px;"
+       asp-action="Create">
+        Create New
+    </a>
 </p>
 <table class="table">
     <thead>
@@ -33,9 +45,9 @@
                     @item.Shipping
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Detail" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a style=" text-decoration: none; color: red;" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a style=" text-decoration: none; color: orange;" asp-action="Detail" asp-route-id="@item.Id">Details</a> |
+                    <a style=" text-decoration: none; color: red;" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }

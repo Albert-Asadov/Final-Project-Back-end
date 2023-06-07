@@ -21,28 +21,50 @@ namespace Final_Project_Razor.Controllers
             _userManager = userManager;
         }
 
-		public IActionResult Index(int page=1)
-		{
+      
+
+        public IActionResult Index(int page = 1)
+        {
             ViewBag.Ram = _context.Rams.ToList();
             ViewBag.Memory = _context.Memories.ToList();
             ViewBag.Color = _context.Colors.ToList();
             ViewBag.Brand = _context.Brands.ToList();
             ViewBag.Category = _context.Categories.ToList();
 
-            ViewBag.TotalPage = Math.Ceiling((double)_context.Products.Count() / 8);
+            int pageSize = 6;
+            int totalProductsCount = _context.Products.Count() + _context.Accessories.Count();
+            int totalPages = (int)Math.Ceiling((double)totalProductsCount / pageSize);
+            ViewBag.TotalPage = totalPages;
             ViewBag.CurrentPage = page;
 
-            List<Accessory> accessories = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
-            List<Product> products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
-            AccessoryProductVM all = new()
+            List<Product> products = _context.Products
+                .Include(x => x.ProductImages)
+                .Include(x => x.productCategories)
+                .Include(x => x.Brand)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            List<Accessory> accessories = _context.Accessories
+                .Include(x => x.AccessoryImages)
+                .Include(x => x.AccessoryCategories)
+                .Include(x => x.Brand)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            MyCombineModelsVM model = new()
             {
-                Products = products.Skip((page - 1) * 8).Take(8).AsEnumerable().ToList(),
-                Accessories = accessories.Skip((page - 1) * 8).Take(8).AsEnumerable().ToList()
-
+                Products = products,
+                Accessories = accessories
             };
-            return View(all);
 
+            return View(model);
         }
+
+   
+
+
         public async Task<IActionResult> DetailPhone(int id)
 		{
             ViewBag.Ram = _context.ProductRamMemories
@@ -93,7 +115,7 @@ namespace Final_Project_Razor.Controllers
             {
                 user = await _userManager.FindByNameAsync(User.Identity.Name);
 
-                ViewBag.WishList = _context.Wishlists.Include(x => x.Product).Include(x => x.User).Where(x => x.UserId == user.Id && x.IsAccessory == false).ToList();
+                ViewBag.WishList = _context.Wishlists.Include(x => x.Accessory).Include(x => x.User).Where(x => x.UserId == user.Id && x.IsAccessory == true).ToList();
             }
             if (id == 0) return BadRequest();
             Accessory? accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x=>x.AccessoryComments).Include(x => x.Brand).FirstOrDefault(x => x.Id == id);
@@ -159,8 +181,93 @@ namespace Final_Project_Razor.Controllers
             }
         }
 
+        //[HttpPost]
+        //public IActionResult Index(int[] CategoryIds, int[] BrandIds, int[] RamIds, int[] MemoryIds, int[] ColorIds, int page = 1)
+        //{
+        //    ViewBag.Ram = _context.Rams.ToList();
+        //    ViewBag.Memory = _context.Memories.ToList();
+        //    ViewBag.Color = _context.Colors.ToList();
+        //    ViewBag.Category = _context.Categories.ToList();
+        //    ViewBag.Brand = _context.Brands.ToList();
+
+        //    int pageSize = 6;
+
+
+        //    IQueryable<Product> products = _context.Products
+        //        .Include(x => x.ProductImages)
+        //        .Include(x => x.productCategories)
+        //        .ThenInclude(x => x.Category)
+        //        .Include(p => p.ProductRamMemories).ThenInclude(x => x.Ram)
+        //        .Include(p => p.ProductRamMemories).ThenInclude(x => x.Memory)
+        //        .Include(x => x.Brand);
+
+        //    IQueryable<Accessory> accessories = _context.Accessories
+        //        .Include(x => x.AccessoryImages)
+        //        .Include(p => p.accessoryColors).ThenInclude(x => x.Color)
+        //        .Include(x => x.AccessoryCategories)
+        //        .Include(x => x.Brand);
+
+        //    ViewBag.TotalPage = Math.Ceiling((double)_context.Products.Count() / 6);
+        //    ViewBag.CurrentPage = page;
+
+
+        //    if (CategoryIds.Length > 0)
+        //    {
+        //        products = products.Where(p => p.productCategories.Any(pc => CategoryIds.Contains(pc.CategoryId)));
+        //        accessories = accessories.Where(p => p.AccessoryCategories.Any(pc => CategoryIds.Contains(pc.CategoryId)));
+        //    }
+        //    if (BrandIds.Length > 0)
+        //    {
+        //        products = products.Where(p => BrandIds.Any(x => x.Equals(p.BrandId)));
+        //        accessories = accessories.Where(p => BrandIds.Any(x => x.Equals(p.BrandId)));
+        //    }
+        //    if (RamIds.Length > 0)
+        //    {
+        //        products = products.Where(p => p.ProductRamMemories.Any(pc => RamIds.Contains(pc.RamId)));
+        //    }
+        //    if (MemoryIds.Length > 0)
+        //    {
+        //        products = products.Where(p => p.ProductRamMemories.Any(pc => MemoryIds.Contains(pc.MemoryId)));
+        //    }
+        //    if (ColorIds.Length > 0)
+        //    {
+        //        accessories = accessories.Where(p => p.accessoryColors.Any(pc => ColorIds.Contains(pc.ColorId)));
+        //    }
+
+        //    //var productList = products.ToList();
+        //    //var accessoryList = accessories.ToList();
+        //    //MyCombineModelsVM all = new()
+        //    //{
+        //    //    Products = productList.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList(),
+        //    //    Accessories = accessoryList.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList()
+
+        //    //};
+
+        //    int totalProductsCount = products.Count() + accessories.Count();
+        //    int totalPages = (int)Math.Ceiling((double)totalProductsCount / pageSize);
+        //    ViewBag.TotalPage = totalPages;
+        //    ViewBag.CurrentPage = page;
+
+        //    List<Product> filteredProducts = products
+        //        .Skip((page - 1) * pageSize)
+        //        .Take(pageSize)
+        //        .ToList();
+
+        //    List<Accessory> filteredAccessories = accessories
+        //        .Skip((page - 1) * pageSize)
+        //        .Take(pageSize)
+        //        .ToList();
+
+        //    MyCombineModelsVM model = new MyCombineModelsVM()
+        //    {
+        //        Products = filteredProducts,
+        //        Accessories = filteredAccessories
+        //    };
+        //    return View(model);
+        //}
+
         [HttpPost]
-        public IActionResult Index(int[] CategoryIds, int[] BrandIds, int[] RamIds, int[] MemoryIds, int[] ColorIds, int page=1)
+        public IActionResult Index(int[] CategoryIds, int[] BrandIds, int[] RamIds, int[] MemoryIds, int[] ColorIds, int page = 1)
         {
             ViewBag.Ram = _context.Rams.ToList();
             ViewBag.Memory = _context.Memories.ToList();
@@ -182,18 +289,15 @@ namespace Final_Project_Razor.Controllers
                 .Include(x => x.AccessoryCategories)
                 .Include(x => x.Brand);
 
-            ViewBag.TotalPage = Math.Ceiling((double)_context.Products.Count() / 6);
-            ViewBag.CurrentPage = page;
-
-
             if (CategoryIds.Length > 0)
             {
                 products = products.Where(p => p.productCategories.Any(pc => CategoryIds.Contains(pc.CategoryId)));
                 accessories = accessories.Where(p => p.AccessoryCategories.Any(pc => CategoryIds.Contains(pc.CategoryId)));
             }
+  
             if (BrandIds.Length > 0)
             {
-                products = products.Where(p => BrandIds.Any(x=>x.Equals(p.BrandId)));
+                products = products.Where(p => BrandIds.Any(x => x.Equals(p.BrandId)));
                 accessories = accessories.Where(p => BrandIds.Any(x => x.Equals(p.BrandId)));
             }
             if (RamIds.Length > 0)
@@ -209,16 +313,21 @@ namespace Final_Project_Razor.Controllers
                 accessories = accessories.Where(p => p.accessoryColors.Any(pc => ColorIds.Contains(pc.ColorId)));
             }
 
-            var productList = products.ToList();
-            var accessoryList = accessories.ToList();
-            AccessoryProductVM all = new()
-            {
-                Products = productList.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList(),
-                Accessories = accessoryList.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList()
+            List<Product> filteredProducts = products.ToList();
+            List<Accessory> filteredAccessories = accessories.ToList();
 
+            MyCombineModelsVM model = new MyCombineModelsVM()
+            {
+                Products = filteredProducts,
+                Accessories = filteredAccessories
             };
-            return View(all);
+
+            return View(model);
         }
+
+
+
+
 
         [HttpPost]
         public IActionResult Sort(string sortOrder)

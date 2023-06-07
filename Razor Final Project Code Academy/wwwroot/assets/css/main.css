@@ -9870,6 +9870,40 @@ body {
   font-size: 14px;
   font-family: "Rubik", sans-serif;
 }
+#MainHeader .middle .input ul {
+  display: none;
+  border: 1px solid #828282;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  top: 123px;
+  left: 361px;
+  width: 490px;
+  padding: 15px;
+  z-index: 5000;
+  background-color: white;
+}
+#MainHeader .middle .input ul li {
+  list-style: none;
+}
+#MainHeader .middle .input ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#MainHeader .middle .input ul li a .other {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#MainHeader .middle .input ul li a .other span {
+  color: #666;
+}
+#MainHeader .middle .input ul li a .image img {
+  height: 80px;
+  width: 80px;
+}
 #MainHeader .middle .icons {
   display: flex;
   justify-content: center;
@@ -10237,6 +10271,52 @@ body {
   width: 100%;
   border-radius: 5px;
   border: none;
+}
+#secondaryHeader .bottomRow .inputDiv ul {
+  border: 1px solid #828282;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  top: 123px;
+  left: 361px;
+  width: 490px;
+  padding: 15px;
+  z-index: 5000;
+  background-color: white;
+}
+#secondaryHeader .bottomRow .inputDiv ul li {
+  list-style: none;
+}
+#secondaryHeader .bottomRow .inputDiv ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#secondaryHeader .bottomRow .inputDiv ul li a .other {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#secondaryHeader .bottomRow .inputDiv ul li a .other span {
+  color: #666;
+}
+#secondaryHeader .bottomRow .inputDiv ul li a .image img {
+  height: 80px;
+  width: 80px;
+}
+@media only screen and (max-width: 821px) {
+  #secondaryHeader .bottomRow .inputDiv ul {
+    top: 103px;
+    left: 47px;
+    width: 674px;
+  }
+}
+@media only screen and (max-width: 391px) {
+  #secondaryHeader .bottomRow .inputDiv ul {
+    left: 18px;
+    width: 353px;
+  }
 }
 
 #slider {

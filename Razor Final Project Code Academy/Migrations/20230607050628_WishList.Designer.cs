@@ -12,7 +12,7 @@ using Razor_Final_Project_Code_Academy.DAL;
 namespace Razor_Final_Project_Code_Academy.Migrations
 {
     [DbContext(typeof(RazorDbContext))]
-    [Migration("20230604113635_WishList")]
+    [Migration("20230607050628_WishList")]
     partial class WishList
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -852,6 +852,9 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.Property<int?>("AccessoryId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("IsAccessory")
+                        .HasColumnType("bit");
 
                     b.Property<int?>("ProductId")
                         .HasColumnType("int");

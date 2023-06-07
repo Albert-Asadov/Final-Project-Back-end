@@ -68,6 +68,17 @@ namespace Razor_Final_Project_Code_Academy.Controllers
             _context.Baskets.Add(basket);
             await _context.SaveChangesAsync();
 
+            if (model.Note is null)
+            {
+                ModelState.AddModelError("Note", "Please write some note.");
+                return View();
+            }
+
+            if (model.Address is null)
+            {
+                ModelState.AddModelError("Address", "Please write address.");
+                return View();
+            }
             var order = new Order
             {
                 FullName = model.FullName,
@@ -82,17 +93,6 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                 OrderItems = new List<OrderItem>()
             };
 
-            if (model.Note is null)
-            {
-                ModelState.AddModelError("Note", "Please write some note.");
-                return View();
-            }
-
-            if (model.Address is null)
-            {
-                ModelState.AddModelError("Address", "Please write address.");
-                return View();
-            }
 
             decimal totalPrice = 0;
 
@@ -122,6 +122,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                         UnitPrice = (decimal)productRamMemory.Product.DiscountPrice,
                         ProductRamMemoryId = basketItem.ProductRamMemoryId,
                         ProductRamMemory = productRamMemory,
+                        IsAccessuar=false
                     };
 
                     order.OrderItems.Add(orderItem);
@@ -162,6 +163,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                         UnitPrice = (decimal)accessoryColor.Accessory.DiscountPrice,
                         AccessoryColorId = basketItem.accessoryColorId,
                         AccessoryColor = accessoryColor,
+                        IsAccessuar=true
                     };
 
                     order.OrderItems.Add(orderItem);
@@ -202,7 +204,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                                 .ThenInclude(x => x.ProductRamMemory)
                                 .ThenInclude(x => x.Product)
                                 .ThenInclude(x => x.ProductImages)
-                                .Where(wli => wli.UserId == userId).ToList();
+                                .Where(wli => wli.UserId == userId && wli.Status==Status.Accepted).ToList();
 
             if(orderItems.Count == 0)
             {

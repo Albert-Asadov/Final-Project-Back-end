@@ -1,0 +1,103 @@
+﻿@model Razor_Final_Project_Code_Academy.Entities.Order
+@inject Razor_Final_Project_Code_Academy.Service.LayoutService layout
+<h4>Order</h4>
+<hr />
+<div class="row">
+    <div class="col-lg-4">
+        @foreach (var item in Model.OrderItems.Where(x=>x.IsAccessuar==false))
+            {
+                Product product = layout.Products().FirstOrDefault(x => x.Id == item.ProductRamMemory.ProductId);
+           <div style="display:flex; justify-content:center; align-items:center; padding:15px;" class="cart-table-prd">
+               <img style="width:100px;height:100px;object-fit:contain" class="lazyload fade-up" src="~/assets/images/product/@product.ProductImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
+               <div class="cart-table-prd-image">
+               </div>
+               <div style="display: flex; justify-content: center; align-items: center;" class="cart-table-prd-content-wrap">
+                   <div class="cart-table-prd-info">
+                       <p class="cart-table-prd-name" style="margin:0;">
+                           <span>Product Name:</span><br />
+                           <a style="text-decoration:none; color:orange;">@item.ProductRamMemory.Product.Name</a>
+                       </p>
+                   </div>
+                   <div class="cart-table-prd-qty" style="margin-left:10px;">
+                       <div class="qty qty-changer">
+                           <span>Quantity:</span><br />
+                           <span style="color:black; margin-left:15px;">
+                               @item.SaleQuantity
+                           </span>
+                       </div>
+                   </div>
+                   <div style="margin-left:15px;" class="cart-table-prd-price-total">
+                       <span>Price:</span><br />
+                       @item.UnitPrice
+                   </div>
+               </div>
+           </div>
+        }
+        @foreach (var item in Model.OrderItems.Where(x => x.IsAccessuar == true))
+            {
+                Accessory accessory = layout.Accessories().FirstOrDefault(x=>x.Id == item.AccessoryColor.AccessoryId);
+            <div style="display:flex; justify-content:center; align-items:center; padding:15px;" class="cart-table-prd">
+                    <img style="width:100px;height:100px;object-fit:contain" class="lazyload fade-up" src="~/assets/images/product/@accessory.AccessoryImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
+                <div class="cart-table-prd-image">
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; margin-left:10px;" class="cart-table-prd-content-wrap">
+                    <div class="cart-table-prd-info">
+                        <p class="cart-table-prd-name" style="margin:0;">
+                            <span>Product Name:</span><br />
+                            <a style="text-decoration:none; color:orange;">@item.AccessoryColor.Accessory.Name</a>
+                        </p>
+                    </div>
+                    <div class="cart-table-prd-qty" style="margin-left:10px;">
+                        <div class="qty qty-changer">
+                            <span>Quantity:</span><br />
+                            <span style="color:black; margin-left:15px;">
+                                @item.SaleQuantity
+                            </span>
+                        </div>
+                    </div>
+                    <div style="margin-left:15px;" class="cart-table-prd-price-total">
+                        <span>Price:</span><br />
+                        @item.UnitPrice
+                    </div>
+                </div>
+            </div>
+        }
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="FullName" class="control-label"></label>
+                <input asp-for="FullName" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="Note" class="control-label"></label>
+                <input asp-for="Note" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedTime" class="control-label"></label>
+                <input asp-for="CreatedTime" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalPrice" class="control-label"></label>
+                <input asp-for="TotalPrice" class="form-control" readonly />
+            </div>
+            <a style="color:green; text-decoration:none;" asp-action="Accept" asp-route-id="@Model.Id">Accepted</a> |
+            <a style="color: red; text-decoration: none;"asp-action="Reject" asp-route-id="@Model.Id">Rejected</a> |
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

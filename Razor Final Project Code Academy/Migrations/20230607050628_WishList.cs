@@ -16,6 +16,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProductId = table.Column<int>(type: "int", nullable: true),
                     AccessoryId = table.Column<int>(type: "int", nullable: true),
+                    IsAccessory = table.Column<bool>(type: "bit", nullable: false),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>

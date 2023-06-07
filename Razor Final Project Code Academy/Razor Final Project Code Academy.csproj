@@ -37,6 +37,8 @@
     <None Remove="Views\Basket\" />
     <None Remove="Views\Wishlist\" />
     <None Remove="Areas\RazorAdmin\Views\Delivery\" />
+    <None Remove="Areas\RazorAdmin\Views\Order\" />
+    <None Remove="Areas\RazorAdmin\Views\Contact\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
@@ -59,5 +61,7 @@
     <Folder Include="Views\Basket\" />
     <Folder Include="Views\Wishlist\" />
     <Folder Include="Areas\RazorAdmin\Views\Delivery\" />
+    <Folder Include="Areas\RazorAdmin\Views\Order\" />
+    <Folder Include="Areas\RazorAdmin\Views\Contact\" />
   </ItemGroup>
 </Project>

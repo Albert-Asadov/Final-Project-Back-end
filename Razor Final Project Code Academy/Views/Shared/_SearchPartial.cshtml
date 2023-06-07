@@ -1,0 +1,48 @@
+﻿@model HomeVM
+
+@foreach (Product item in Model.products)
+{
+    <li class="searchPanel">
+        <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@item.Id">
+            <div class="image">
+                <img style="object-fit:contain;" src="~/assets/images/Product/@item.ProductImages.FirstOrDefault(ri => ri.IsMain == true)?.Image" alt="@item.Name" class="js-prd-img lazyload fade-up">
+            </div>
+            <div class="other">
+                <span>
+                    @item.Name
+                </span>
+                <span>
+                    $@item.Price
+                </span>
+            </div>
+        </a>
+    </li>
+}
+
+@foreach (Accessory item in Model.accessories)
+{
+    <li class="searchPanel">
+        <a asp-controller="Shop" asp-action="DetailAccessory" asp-route-id="@item.Id">
+            <div class="image">
+                <img style="object-fit:contain;" src="~/assets/images/Product/@item.AccessoryImages.FirstOrDefault(ri => ri.IsMain == true)?.Image" alt="@item.Name" class="js-prd-img lazyload fade-up">
+            </div>
+            <div class="other">
+                <span>
+                    @item.Name
+                </span>
+                <span>
+                    $@item.Price
+                </span>
+            </div>
+        </a>
+    </li>
+}
+
+
+
+
+
+
+
+
+

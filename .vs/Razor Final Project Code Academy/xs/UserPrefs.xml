@@ -1,31 +1,42 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{08D1FEEE-4871-4F44-A826-4781606F3463}|Default">
+﻿<Properties StartupConfiguration="{08D1FEEE-4871-4F44-A826-4781606F3463}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Razor_220Final_220Project_220Code_220Academy PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Razor Final Project Code Academy/Views/Home/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Razor Final Project Code Academy/Areas/RazorAdmin/Controllers/ProductController.cs">
     <Files>
-      <File FileName="Razor Final Project Code Academy/Views/Home/Index.cshtml" Line="207" Column="30" />
-      <File FileName="Razor Final Project Code Academy/Views/Shared/_BestSellersProductPartial.cshtml" Line="9" Column="16" />
-      <File FileName="Razor Final Project Code Academy/Controllers/ShopController.cs" Line="80" Column="45" />
+      <File FileName="Razor Final Project Code Academy/Areas/RazorAdmin/Views/Slider/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Razor Final Project Code Academy/Areas/RazorAdmin/Views/Setting/Index.cshtml" Line="52" Column="122" />
+      <File FileName="Razor Final Project Code Academy/Areas/RazorAdmin/Views/Ram/Index.cshtml" Line="38" Column="122" />
+      <File FileName="Razor Final Project Code Academy/Areas/RazorAdmin/Views/Product/Index.cshtml" Line="108" Column="122" />
+      <File FileName="Razor Final Project Code Academy/Areas/RazorAdmin/Views/Memory/Index.cshtml" Line="38" Column="122" />
+      <File FileName="Razor Final Project Code Academy/Areas/RazorAdmin/Views/Delivery/Index.cshtml" Line="50" Column="122" />
+      <File FileName="Razor Final Project Code Academy/Areas/RazorAdmin/Views/Color/Index.cshtml" Line="37" Column="126" />
+      <File FileName="Razor Final Project Code Academy/Areas/RazorAdmin/Views/Accessory/Index.cshtml" Line="106" Column="122" />
+      <File FileName="Razor Final Project Code Academy/Areas/RazorAdmin/Controllers/ProductController.cs" Line="374" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Razor Final Project Code Academy" expanded="True">
             <Node name="Razor Final Project Code Academy" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Basket" expanded="True" />
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
-                <Node name="Wishlist" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="assets" expanded="True">
-                  <Node name="css" expanded="True" />
+              <Node name="Areas" expanded="True">
+                <Node name="RazorAdmin" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Views" expanded="True" />
                 </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="ViewModel" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Order" expanded="True" />
+                <Node name="Shared" expanded="True" />
+                <Node name="Shop" expanded="True" />
+                <Node name="Wishlist" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -33,6 +44,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

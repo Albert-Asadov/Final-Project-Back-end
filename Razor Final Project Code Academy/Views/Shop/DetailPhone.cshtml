@@ -243,7 +243,15 @@
                                                         </a>
                                                     </div>
                                                 }
-                                            }
+}
+else
+{
+                                        <div class="addToWishlist">
+                                            <a asp-controller="Wishlist" asp-action="AddWishList" asp-route-Id="@Model.Id">
+                                                <p>Add To My Wish List</p>
+                                            </a>
+                                        </div>
+}
 
                                         </div>
                                     </div>

@@ -12,8 +12,8 @@ using Razor_Final_Project_Code_Academy.DAL;
 namespace Razor_Final_Project_Code_Academy.Migrations
 {
     [DbContext(typeof(RazorDbContext))]
-    [Migration("20230604130238_WishListIsAccColumn")]
-    partial class WishListIsAccColumn
+    [Migration("20230607092642_IsAccCOlumnInOrder")]
+    partial class IsAccCOlumnInOrder
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -567,6 +567,9 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.Property<int?>("AccessoryColorId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("IsAccessuar")
+                        .HasColumnType("bit");
 
                     b.Property<int>("OrderId")
                         .HasColumnType("int");

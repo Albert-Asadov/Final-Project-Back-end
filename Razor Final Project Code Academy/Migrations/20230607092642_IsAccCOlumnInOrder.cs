@@ -4,13 +4,13 @@
 
 namespace Razor_Final_Project_Code_Academy.Migrations
 {
-    public partial class WishListIsAccColumn : Migration
+    public partial class IsAccCOlumnInOrder : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<bool>(
-                name: "IsAccessory",
-                table: "Wishlists",
+                name: "IsAccessuar",
+                table: "OrderItems",
                 type: "bit",
                 nullable: false,
                 defaultValue: false);
@@ -19,8 +19,8 @@ namespace Razor_Final_Project_Code_Academy.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "IsAccessory",
-                table: "Wishlists");
+                name: "IsAccessuar",
+                table: "OrderItems");
         }
     }
 }
