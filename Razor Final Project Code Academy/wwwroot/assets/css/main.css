@@ -10870,8 +10870,8 @@ body {
   margin-right: 20px;
   list-style: none;
 }
-#main .rightSide .mainContent .productFirst .title .upperLine ul li a,
-#main .rightSide .mainContent .productSecond .title .upperLine ul li a {
+#main .rightSide .mainContent .productFirst .title .upperLine ul li ,
+#main .rightSide .mainContent .productSecond .title .upperLine ul li  {
   font-family: "Rubik", sans-serif;
   color: #93979c;
   text-decoration: none;

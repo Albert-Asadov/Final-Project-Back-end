@@ -25,7 +25,12 @@
                         <ul>
                             @foreach (var item in ViewBag.Category)
                             {
-                                <li><a href="">@item.Name</a></li>
+                                <li>
+                                    <form method="post" asp-controller="Shop" asp-action="Index">
+                                        <input name="CategoryIds" value="@item.Id" type="hidden">
+                                        <button style=" background-color: white; color: black; padding-left: 0; border: none; text-align: start;" class="btn btn-light w-100" type="submit">@item.Name</button>
+                                    </form>
+                                </li>
                             }
                         </ul>
                     </div>

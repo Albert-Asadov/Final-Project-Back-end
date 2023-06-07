@@ -22,7 +22,6 @@
                             </div>
                         </div>
                         <form asp-controller="Order" asp-action="Index">
-
                             <div class="shippingInfo">
                                 <div class="title">
                                     <h3>Shipping</h3>
@@ -35,12 +34,12 @@
                                         <div class="row">
                                             <div class="input fullname col-lg-6">
                                                 <label asp-for="FullName">Full Name:</label><br>
-                                                <input asp-for="FullName" placeholder="FullName" required><br>
+                                                <input asp-for="FullName"placeholder="FullName" required><br>
                                                 <span asp-validation-for="FullName" class="text-danger"></span>
                                             </div>
                                             <div class="input email col-lg-6">
                                                 <label asp-for="Email">Email:</label><br>
-                                                <input asp-for="Email" placeholder="Email" required><br>
+                                                <input asp-for="Email"placeholder="Email" required><br>
                                                 <span asp-validation-for="Email" class="text-danger"></span>
                                             </div>
 

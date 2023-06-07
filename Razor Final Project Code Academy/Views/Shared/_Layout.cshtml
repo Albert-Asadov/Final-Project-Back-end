@@ -54,8 +54,7 @@
                                         @if (User.Identity.IsAuthenticated)
                                         {
 
-                                            <li><a href="./accountOrders.html">Orders</a></li>
-                                            <li><a href="./accountAdress.html">Adress</a></li>
+                                            <li><a asp-controller="Order" asp-action="AccountOrders">Orders</a></li>
                                             <li><a asp-controller="account" asp-action="AccountDetails">Account Settings</a></li>
                                             <li>
                                                 <a asp-controller="Account" asp-action="LogOut">
@@ -88,14 +87,7 @@
                                 <div class="usd">
                                     <img src="~/assets/images/valute/us.gif" alt="">
                                     USD
-                                </div>
-
-                                <div class="au d-none">
-                                    <img src="~/assets/images/valute/au.webp" alt="">
-                                    AUD
-                                </div>
-
-                                <i class="fa-solid fa-chevron-down"></i>
+                                </div
                             </li>
                         </ul>
                     </div>
@@ -193,8 +185,7 @@
                                     <ul>
                                         @if (User.Identity.IsAuthenticated)
                                         {
-                                            <li><a href="./accountOrders.html">Orders</a></li>
-                                            <li><a href="./accountAdress.html">Adress</a></li>
+                                            <li><a asp-controller="Order" asp-action="AccountOrders">Orders</a></li>
                                             <li><a asp-controller="account" asp-action="AccountDetails">Account Settings</a></li>
                                             <li>
                                                 <a asp-controller="Account" asp-action="LogOut">
@@ -333,7 +324,7 @@
                                         <li>
                                         <form  method="post" asp-controller="Shop" asp-action="Index">
                                             <input name="CategoryIds" value="@item.Id" type="hidden">
-                                            <button class="btn btn-light w-100" type="submit">@item.Name</button>
+                                            <button style=" background-color: white; color: black; padding-left: 0; border: none; text-align: start;" class="btn btn-light w-100" type="submit">@item.Name</button>
                                         </form>
                                         </li>
                                     }
@@ -517,7 +508,12 @@
                                 <ul>
                                     @foreach (var item in Brands)
                                     {
-                                        <li><a asp-controller="Shop" asp-action="Index">@item.Name</a></li>
+                                        <li>
+                                            <form method="post" asp-controller="Shop" asp-action="Index">
+                                                <input name="BrandIds" value="@item.Id" type="hidden">
+                                                <button style=" background-color: #232f3f; color: #93979c; padding-left: 0; border: none; text-align: start;" class="btn btn-light w-100" type="submit">@item.Name</button>
+                                            </form>
+                                        </li>
                                     }
                                 </ul>
                             </div>
@@ -533,7 +529,10 @@
                                     @foreach (var item in categories)
                                     {
                                         <li>
-                                    <a href="">@item.Name</a>
+                                            <form method="post" asp-controller="Shop" asp-action="Index">
+                                                <input name="CategoryIds" value="@item.Id" type="hidden">
+                                                <button style=" background-color: #232f3f; color: #93979c; padding-left: 0; border: none; text-align: start;" class="btn btn-light w-100" type="submit">@item.Name</button>
+                                            </form>
                                         </li>
                                     }
                                 </ul>

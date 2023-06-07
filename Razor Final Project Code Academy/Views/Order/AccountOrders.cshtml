@@ -34,12 +34,12 @@
                         Product product = products.FirstOrDefault(x => x.Id == items.ProductRamMemory.ProductId);
                         <div class="mainContent" style="margin-top:10px;">
                             <div class="image">
-                                <img src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
+                                <img style="width:120px; height:120px; object-fit:contain;" src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
                             </div>
-                            <div class="name">
-                                <span><a href="">@product.Name</a></span>
+                            <div class="name" style="width:150px; text-align:center;">
+                                <span><a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@product.Id">@product.Name</a></span>
                             </div>
-                            <div class="price">
+                            <div class="price" style="width:65px; text-align:center;">
                                 <span>$@product.Price</span>
                             </div>
                             <div class="date">
@@ -54,12 +54,12 @@
                         Accessory accessory = acc.FirstOrDefault(x => x.Id == items.AccessoryColor.AccessoryId);
                         <div class="mainContent" style="margin-top:10px;">
                             <div class="image">
-                                <img src="~/assets/images/Product/@accessory.AccessoryImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
+                                <img  style="width:120px; height:120px; object-fit:contain;" src="~/assets/images/Product/@accessory.AccessoryImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
                             </div>
-                            <div class="name">
-                                <span><a href="">@accessory.Name</a></span>
+                            <div class="name" style="width: 150px; text-align: center;">
+                                <span><a asp-controller="Shop" asp-action="DetailAccessory" asp-route-id="@accessory.Id" >@accessory.Name</a></span>
                             </div>
-                            <div class="price">
+                            <div class="price" style="width:65px; text-align:center;">
                                 <span>$@accessory.Price</span>
                             </div>
                             <div class="date">
