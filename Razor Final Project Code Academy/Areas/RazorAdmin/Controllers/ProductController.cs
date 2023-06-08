@@ -40,7 +40,6 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             ViewBag.Rams = _context.Rams.AsEnumerable();
             ViewBag.Memories = _context.Memories.AsEnumerable();
             return View();
-
         }
 
         [HttpPost]
@@ -73,7 +72,7 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
                 DiscountPrice = (decimal)newProduct.DiscountPrice,
                 Discount = (decimal)newProduct.Discount,
                 SKU = newProduct.SKU,
-                BrandId = newProduct.BrandId
+                BrandId = newProduct.BrandId,
             };
 
             var imagefolderPath = Path.Combine(_env.WebRootPath, "assets", "images");
@@ -90,8 +89,6 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
                 };
                 product.ProductImages.Add(productImage);
             }
-
-
             ProductImage main = new()
             {
                 IsMain = true,
@@ -108,7 +105,6 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
                 product.productCategories.Add(category);
             }
 
-
             if (newProduct.ProductRamMemory is null)
             {
                 ModelState.AddModelError("", "Please Select Color,Size and Quantity");
@@ -116,21 +112,21 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             }
             else
             {
-                string[] colorSizeQuantities = newProduct.ProductRamMemory.Split(',');
-                foreach (string colorSizeQuantity in colorSizeQuantities)
+                string[] ramMemoryQuantities = newProduct.ProductRamMemory.Split(',');
+                foreach (string ramMemoryQuantity in ramMemoryQuantities)
                 {
-                    string[] datas = colorSizeQuantity.Split('-');
-                    ProductRamMemory productSizeColor = new()
+                    string[] datas = ramMemoryQuantity.Split('-');
+                    ProductRamMemory productRamMemory = new()
                     {
                         RamId = int.Parse(datas[0]),
                         MemoryId = int.Parse(datas[1]),
                         Quantity = (byte)int.Parse(datas[2])
                     };
-                    if (productSizeColor.Quantity > 0)
+                    if (productRamMemory.Quantity > 0)
                     {
                         product.InStock = true;
                     }
-                    product.ProductRamMemories.Add(productSizeColor);
+                    product.ProductRamMemories.Add(productRamMemory);
                 }
             }
 
@@ -165,9 +161,9 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             Product? product = await _context.Products.Include(p => p.ProductImages).
                 Include(p => p.productCategories)
                     .Include(p => p.ProductRamMemories).
-                        ThenInclude(p => p.Ram).
+                        ThenInclude(pr => pr.Ram).
                           Include(p => p.ProductRamMemories).
-                        ThenInclude(pc => pc.Memory).
+                        ThenInclude(pm => pm.Memory).
                     FirstOrDefaultAsync(p => p.Id == id);
 
             if (product is null) return BadRequest();
@@ -231,9 +227,9 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             if (edited.ProductRamMemory is not null)
             {
                 string[] RamMemoryQuantities = edited.ProductRamMemory.Split(',');
-                foreach (string colorSizeQuantityLoop in RamMemoryQuantities)
+                foreach (string ramMemoryQuantityLoop in RamMemoryQuantities)
                 {
-                    string[] datas = colorSizeQuantityLoop.Split('-');
+                    string[] datas = ramMemoryQuantityLoop.Split('-');
                     ProductRamMemory productRamM = new()
                     {
                         RamId = int.Parse(datas[0]),
@@ -298,7 +294,6 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
                                                     Desc = p.Descr,
                                                     Price = p.Price,
                                                     Discount = p.Discount,
-                                                  
                                                     DiscountPrice = p.DiscountPrice,
                                                     CategoryIds = p.productCategories.Select(pc => pc.CategoryId).ToList(),
                                                     BrandId = p.BrandId,
@@ -318,17 +313,6 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
                                                 .FirstOrDefault(p => p.Id == id);
             return model;
         }
-
-        private async Task AdjustPlantPhoto(bool? ismain, IFormFile image, Product product)
-        {
-            var imagefolderPath = Path.Combine(_env.WebRootPath, "assets", "images");
-            string filepath = Path.Combine(imagefolderPath, "Product", product.ProductImages.FirstOrDefault(p => p.IsMain == ismain).Image);
-            Files.DeleteImage(filepath);
-            product.ProductImages.FirstOrDefault(p => p.IsMain == ismain).Image = await image.CreateImage(imagefolderPath, "Product");
-        }
-
-
-
 
         public IActionResult Details(int id)
         {
@@ -374,6 +358,16 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+
+
+        private async Task AdjustPlantPhoto(bool? ismain, IFormFile image, Product product)
+        {
+            var imagefolderPath = Path.Combine(_env.WebRootPath, "assets", "images");
+            string filepath = Path.Combine(imagefolderPath, "Product", product.ProductImages.FirstOrDefault(p => p.IsMain == ismain).Image);
+            Files.DeleteImage(filepath);
+            product.ProductImages.FirstOrDefault(p => p.IsMain == ismain).Image = await image.CreateImage(imagefolderPath, "Product");
+        }
+
     }
 }
 

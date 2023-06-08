@@ -72,7 +72,7 @@
                                         else
                                         {
                                             <li><a asp-controller="Account" asp-action="login">Sign in</a></li>
-                                            <li><a asp-controller="Account" asp-action="Register" >Register</a></li>
+                                            <li><a asp-controller="Account" asp-action="Register">Register</a></li>
                                         }
 
                                     </ul>
@@ -87,7 +87,7 @@
                                 <div class="usd">
                                     <img src="~/assets/images/valute/us.gif" alt="">
                                     USD
-                                </div
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -108,51 +108,8 @@
                             <form method="post" action="#" class="searchFormMain">
                                 <input style="padding:5px;" class="searchInputMain" type="search" placeholder="Search the store">
                                 <ul class="searchUlMain">
-
                                 </ul>
                             </form>
-                            <script>
-                                const searchFormMain = document.querySelector('.searchFormMain');
-                                const searchInputMain = searchFormMain.querySelector('.searchInputMain');
-                                const searchResultsMain = document.querySelector('.searchUlMain');
-
-                                searchFormMain.addEventListener('submit', (e) => {
-                                    const searchQuery = e.target.value.trim();
-                                    e.preventDefault();
-                                    window.location.href = "/Home/Index?search=${searchQuery}";
-                                });
-
-                                let timeoutIdd;
-
-                                searchInputMain.addEventListener('input', (e) => {
-                                    searchResultsMain.style.display = 'block';
-
-                                    const searchQuery = e.target.value.trim();
-                                    if (searchQuery.length < 2) {
-                                        searchResultsMain.innerHTML = '';
-                                        return;
-                                    }
-                                    clearTimeout(timeoutId);
-                                    timeoutIdd = setTimeout(() => {
-                                        fetch(`/Home/Search?search=${searchQuery}`)
-                                            .then(response => response.text())
-                                            .then(data => {
-                                                searchResultsMain.innerHTML = data;
-                                            })
-                                            .catch(error => console.log(error));
-                                    }, 500);
-                                });
-
-                                document.addEventListener('click', (e) => {
-                                    const searchResultsMain = document.querySelector('.searchUlMain');
-                                    const targetElement = e.target;
-                                    const isInsideSearchResults = searchResultsMain.contains(targetElement);
-                                    const isSearchInput = targetElement.classList.contains('searchInputMain');
-
-                                    if (!isInsideSearchResults && !isSearchInput) {
-                                        searchResultsMain.style.display = 'none';
-                                    }
-                                });</script>
 
                         </div>
                     </div>
@@ -202,7 +159,7 @@
                                         }
                                         else
                                         {
-                                            <li><a  asp-controller="Account" asp-action="login">Sign in</a></li>
+                                            <li><a asp-controller="Account" asp-action="login">Sign in</a></li>
                                             <li><a asp-controller="Account" asp-action="Register">Register</a></li>
                                         }
 
@@ -223,7 +180,7 @@
                                 </div>
 
                                 <div class="panelBasketItems d-none">
-                                    @foreach (var item in basketItem.Where(x=>x.IsAccessuar==false))
+                                    @foreach (var item in basketItem.Where(x => x.IsAccessuar == false))
                                     {
                                         Product? product = products.FirstOrDefault(x => x.Id == item.ProductRamMemory.ProductId);
                                         <ul>
@@ -253,7 +210,7 @@
                                             </li>
                                         </ul>
                                     }
-                                    @foreach (var item in basketItem.Where(x=>x.IsAccessuar==true))
+                                    @foreach (var item in basketItem.Where(x => x.IsAccessuar == true))
                                     {
                                         Accessory? product = accessories.FirstOrDefault(x => x.Id == item.AccessoryColor.AccessoryId);
                                         <ul>
@@ -322,10 +279,10 @@
                                     @foreach (var item in categories)
                                     {
                                         <li>
-                                        <form  method="post" asp-controller="Shop" asp-action="Index">
-                                            <input name="CategoryIds" value="@item.Id" type="hidden">
-                                            <button style=" background-color: white; color: black; padding-left: 0; border: none; text-align: start;" class="btn btn-light w-100" type="submit">@item.Name</button>
-                                        </form>
+                                            <form method="post" asp-controller="Shop" asp-action="Index">
+                                                <input name="CategoryIds" value="@item.Id" type="hidden">
+                                                <button style=" background-color: white; color: black; padding-left: 0; border: none; text-align: start;" class="btn btn-light w-100" type="submit">@item.Name</button>
+                                            </form>
                                         </li>
                                     }
                                 </ul>
@@ -378,54 +335,8 @@
                             <form method="post" action="#" class="searchItem">
                                 <input style="padding:5px;" class="searchInput" type="search" placeholder="Search the store">
                                 <ul class="searchUl">
-
                                 </ul>
                             </form>
-                            <script>
-
-                                const searchForm = document.querySelector('.searchItem');
-                                const searchInput = searchForm.querySelector('.searchInput');
-                                const searchResults = document.querySelector('.searchUl');
-
-                                searchForm.addEventListener('submit', (e) => {
-                                    const searchQuery = e.target.value.trim();
-                                    e.preventDefault();
-                                    window.location.href = "/Home/Index?search=${searchQuery}";
-                                });
-
-                                let timeoutId;
-
-                                searchInput.addEventListener('input', (e) => {
-                                    searchResults.style.display = 'block';
-
-                                    const searchQuery = e.target.value.trim();
-                                    if (searchQuery.length < 2) {
-                                        searchResults.innerHTML = '';
-                                        return;
-                                    }
-                                    clearTimeout(timeoutId);
-                                    timeoutId = setTimeout(() => {
-                                        fetch(`/Home/Search?search=${searchQuery}`)
-                                            .then(response => response.text())
-                                            .then(data => {
-                                                searchResults.innerHTML = data;
-                                            })
-                                            .catch(error => console.log(error));
-                                    }, 500);
-                                });
-
-                                document.addEventListener('click', (e) => {
-                                    const searchResults = document.querySelector('.searchUl');
-                                    const targetElement = e.target;
-                                    const isInsideSearchResults = searchResults.contains(targetElement);
-                                    const isSearchInput = targetElement.classList.contains('searchInput');
-
-                                    if (!isInsideSearchResults && !isSearchInput) {
-                                        searchResults.style.display = 'none';
-                                    }
-                                });
-
-                            </script>
 
                         </div>
                     </div>
@@ -436,19 +347,19 @@
             <div class="container">
                 <ul>
                     @foreach (var item in categories)
-                        {
+                    {
 
-                          <li><a href="">@item.Name</a></li>
+                        <li><a href="">@item.Name</a></li>
 
-                        }
+                    }
                 </ul>
             </div>
         </div>
     </header>
 
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
 
 
     <footer>
@@ -576,7 +487,7 @@
                                             @foreach (var item in Brands)
                                             {
                                                 <li>
-                                                     <a href="">@item.Name</a>
+                                                    <a href="">@item.Name</a>
                                                 </li>
                                             }
                                         </ul>
@@ -625,10 +536,98 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
     </footer>
+    <script>
+        const searchFormMain = document.querySelector('.searchFormMain');
+        const searchInputMain = searchFormMain.querySelector('.searchInputMain');
+        const searchResultsMain = document.querySelector('.searchUlMain');
 
-   
+        searchFormMain.addEventListener('submit', (e) => {
+            const searchQuery = e.target.value.trim();
+            e.preventDefault();
+            window.location.href = "/Home/Index?search=${searchQuery}";
+        });
+
+        let timeoutIdd;
+
+        searchInputMain.addEventListener('input', (e) => {
+            searchResultsMain.style.display = 'block';
+
+            const searchQuery = e.target.value.trim();
+            if (searchQuery.length < 2) {
+                searchResultsMain.innerHTML = '';
+                return;
+            }
+            clearTimeout(timeoutId);
+            timeoutIdd = setTimeout(() => {
+                fetch(`/Home/Search?search=${searchQuery}`)
+                    .then(response => response.text())
+                    .then(data => {
+                        searchResultsMain.innerHTML = data;
+                    })
+                    .catch(error => console.log(error));
+            }, 500);
+        });
+
+        document.addEventListener('click', (e) => {
+            const searchResultsMain = document.querySelector('.searchUlMain');
+            const targetElement = e.target;
+            const isInsideSearchResults = searchResultsMain.contains(targetElement);
+            const isSearchInput = targetElement.classList.contains('searchInputMain');
+
+            if (!isInsideSearchResults && !isSearchInput) {
+                searchResultsMain.style.display = 'none';
+            }
+        });
+    </script>
+
+
+    <script>
+        const searchForm = document.querySelector('.searchItem');
+        const searchInput = searchForm.querySelector('.searchInput');
+        const searchResults = document.querySelector('.searchUl');
+
+        searchForm.addEventListener('submit', (e) => {
+            const searchQuery = e.target.value.trim();
+            e.preventDefault();
+            window.location.href = "/Home/Index?search=${searchQuery}";
+        });
+
+        let timeoutId;
+
+        searchInput.addEventListener('input', (e) => {
+            searchResults.style.display = 'block';
+
+            const searchQuery = e.target.value.trim();
+            if (searchQuery.length < 2) {
+                searchResults.innerHTML = '';
+                return;
+            }
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                fetch(`/Home/Search?search=${searchQuery}`)
+                    .then(response => response.text())
+                    .then(data => {
+                        searchResults.innerHTML = data;
+                    })
+                    .catch(error => console.log(error));
+            }, 500);
+        });
+
+        document.addEventListener('click', (e) => {
+            const searchResults = document.querySelector('.searchUl');
+            const targetElement = e.target;
+            const isInsideSearchResults = searchResults.contains(targetElement);
+            const isSearchInput = targetElement.classList.contains('searchInput');
+
+            if (!isInsideSearchResults && !isSearchInput) {
+                searchResults.style.display = 'none';
+            }
+        });
+    </script>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"

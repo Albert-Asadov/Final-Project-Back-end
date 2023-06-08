@@ -7207,7 +7207,6 @@ footer .bottomLine .paymant ul li i {
 }
 .order .aboutUser .customerEmail .title h3 {
   font-family: "Rubik", sans-serif;
-  font-weight: 900;
 }
 .order .aboutUser .customerEmail .email {
   font-family: "Rubik", sans-serif;
@@ -7217,7 +7216,6 @@ footer .bottomLine .paymant ul li i {
 }
 .order .aboutUser .shippingInfo .title h3 {
   font-family: "Rubik", sans-serif;
-  font-weight: 900;
 }
 .order .aboutUser .shippingInfo .text {
   padding-top: 30px;
@@ -7230,7 +7228,6 @@ footer .bottomLine .paymant ul li i {
   font-size: 16px;
   padding: 0;
   margin: 0;
-  font-weight: 900;
 }
 .order .aboutUser .shippingInfo .text .descr {
   border: 1px solid #ddd;

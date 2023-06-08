@@ -88,10 +88,10 @@
                 <label class="control-label">Color and Quantity</label>
                 <div class="d-flex">
                     <select class="form-control colors" asp-items="@(new SelectList(ViewBag.Colors,"Id","ColorName"))"></select>
-                    <input class="form-control quantity" type="number" value="1" class="mt-4 " placeholder="how much the Product" />colo
+                    <input class="form-control quantity" type="number" value="1" class="mt-4" placeholder="how much the Product" />colo
                 </div>
-                <button class="btn btn-success add-buttons" type="button">+</button>
-                <button class="btnSubmit btn btn-danger" type="button">Submit</button>
+                <button style="margin-top:10px;" class="btn btn-outline-secondary add-buttons" type="button">+</button>
+                <button style="margin-top:10px;" class="btn btn-outline-secondary btnSubmit" type="button">Submit</button>
 
                 <input type="hidden" id="product-data" name="AccessoryColor" />
             </div>

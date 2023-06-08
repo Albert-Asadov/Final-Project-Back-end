@@ -60,8 +60,8 @@
                     <select class="form-control color" asp-items="@(new SelectList(ViewBag.Colors,"Id","ColorName"))"></select>
                     <input class="form-control quantity" type="number" value="1" class="mt-4 " placeholder="How much this plant?" />
                 </div>
-                <button class="btn btn-success add-buttons" type="button">+</button>
-                <button class="btnSubmit btn btn-danger" type="button">Submit</button>
+                <button style="margin-top:10px;" class="btn btn-outline-secondary add-buttons" type="button">+</button>
+                <button style="margin-top:10px;" class="btn btn-outline-secondary btnSubmit" type="button">Submit</button>
 
                 <input type="hidden" id="plant-data" name="AccessoryColor" />
             </div>

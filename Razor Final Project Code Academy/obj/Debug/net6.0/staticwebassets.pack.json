@@ -501,6 +501,10 @@
       "PackagePath": "staticwebassets/assets/images/Product/.DS_Store"
     },
     {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/100images (1).jpeg",
+      "PackagePath": "staticwebassets/assets/images/Product/100images (1).jpeg"
+    },
+    {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/108download.jpeg",
       "PackagePath": "staticwebassets/assets/images/Product/108download.jpeg"
     },
@@ -541,10 +545,6 @@
       "PackagePath": "staticwebassets/assets/images/Product/195MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO.jpeg"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/20__64971.jpg",
-      "PackagePath": "staticwebassets/assets/images/Product/20__64971.jpg"
-    },
-    {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/225MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO.jpeg",
       "PackagePath": "staticwebassets/assets/images/Product/225MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO.jpeg"
     },
@@ -563,10 +563,6 @@
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/26-26__83504.jpg",
       "PackagePath": "staticwebassets/assets/images/Product/26-26__83504.jpg"
-    },
-    {
-      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/26-26_phone__83504.jpeg",
-      "PackagePath": "staticwebassets/assets/images/Product/26-26_phone__83504.jpeg"
     },
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/290ultra-midnightband1.jpg",
@@ -597,6 +593,18 @@
       "PackagePath": "staticwebassets/assets/images/Product/385MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO.jpeg"
     },
     {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/402Apple-iPhone-14-Pro-iPhone-14-Pro-Max-silver-220907_inline.jpg.large.jpg",
+      "PackagePath": "staticwebassets/assets/images/Product/402Apple-iPhone-14-Pro-iPhone-14-Pro-Max-silver-220907_inline.jpg.large.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/403Herstellerfoto_2.png",
+      "PackagePath": "staticwebassets/assets/images/Product/403Herstellerfoto_2.png"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/405Apple-Watch-Ultra-3up-hero-220907_Full-Bleed-Image.jpg.large.jpg",
+      "PackagePath": "staticwebassets/assets/images/Product/405Apple-Watch-Ultra-3up-hero-220907_Full-Bleed-Image.jpg.large.jpg"
+    },
+    {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/412MQE93_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-ocean-ultra_VW_34FR_WF_CO_GEO_SG.jpeg",
       "PackagePath": "staticwebassets/assets/images/Product/412MQE93_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-ocean-ultra_VW_34FR_WF_CO_GEO_SG.jpeg"
     },
@@ -613,12 +621,12 @@
       "PackagePath": "staticwebassets/assets/images/Product/478kv-galaxy-s23_s.jpg"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/499ultra-midnightband1.jpg",
-      "PackagePath": "staticwebassets/assets/images/Product/499ultra-midnightband1.jpg"
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/49081KbgrFcqCL._AC_UF1000,1000_QL80_.jpg",
+      "PackagePath": "staticwebassets/assets/images/Product/49081KbgrFcqCL._AC_UF1000,1000_QL80_.jpg"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/500download.jpeg",
-      "PackagePath": "staticwebassets/assets/images/Product/500download.jpeg"
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/499ultra-midnightband1.jpg",
+      "PackagePath": "staticwebassets/assets/images/Product/499ultra-midnightband1.jpg"
     },
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/521images.jpeg",
@@ -635,6 +643,14 @@
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/589carousel-vertu-signature-v-design-black-alligator.png.pagespeed.ce.sJ-7MOsx9X.png",
       "PackagePath": "staticwebassets/assets/images/Product/589carousel-vertu-signature-v-design-black-alligator.png.pagespeed.ce.sJ-7MOsx9X.png"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/597refurb-iphone11-black-2019.jpeg",
+      "PackagePath": "staticwebassets/assets/images/Product/597refurb-iphone11-black-2019.jpeg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/6022020-apple-iphone-11-black-front.webp",
+      "PackagePath": "staticwebassets/assets/images/Product/6022020-apple-iphone-11-black-front.webp"
     },
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/60300189060014704____4__640x640-2.jpg",
@@ -661,16 +677,24 @@
       "PackagePath": "staticwebassets/assets/images/Product/666MQE93_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-ocean-ultra_VW_34FR_WF_CO_GEO_SG.jpeg"
     },
     {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/66gsmarena_006.jpg",
+      "PackagePath": "staticwebassets/assets/images/Product/66gsmarena_006.jpg"
+    },
+    {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/690kv-galaxy-s23_s.jpg",
       "PackagePath": "staticwebassets/assets/images/Product/690kv-galaxy-s23_s.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/718MQEE3_VW_PF+watch-49-titanium-ultra_VW_PF_WF_SI+watch-face-49-ocean-ultra_VW_PF_WF_SI.png",
+      "PackagePath": "staticwebassets/assets/images/Product/718MQEE3_VW_PF+watch-49-titanium-ultra_VW_PF_WF_SI+watch-face-49-ocean-ultra_VW_PF_WF_SI.png"
     },
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/736dd.jpeg",
       "PackagePath": "staticwebassets/assets/images/Product/736dd.jpeg"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/768kv-galaxy-s23_s.jpg",
-      "PackagePath": "staticwebassets/assets/images/Product/768kv-galaxy-s23_s.jpg"
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/743IMG-111573_823x.webp",
+      "PackagePath": "staticwebassets/assets/images/Product/743IMG-111573_823x.webp"
     },
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/770MPU63.jpeg",
@@ -689,6 +713,10 @@
       "PackagePath": "staticwebassets/assets/images/Product/809download.jpeg"
     },
     {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/813apple-iphone-14-pro-max-pakistan-priceoye-4hr9p.jpg",
+      "PackagePath": "staticwebassets/assets/images/Product/813apple-iphone-14-pro-max-pakistan-priceoye-4hr9p.jpg"
+    },
+    {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/829ultra-midnightband1.jpg",
       "PackagePath": "staticwebassets/assets/images/Product/829ultra-midnightband1.jpg"
     },
@@ -701,8 +729,16 @@
       "PackagePath": "staticwebassets/assets/images/Product/87351Bkaobg6RL.jpg"
     },
     {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/88130017707b.avif",
+      "PackagePath": "staticwebassets/assets/images/Product/88130017707b.avif"
+    },
+    {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/887np1-white3.jpg",
       "PackagePath": "staticwebassets/assets/images/Product/887np1-white3.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/8955302013124651PM_635_nokia_lumia_720.png",
+      "PackagePath": "staticwebassets/assets/images/Product/8955302013124651PM_635_nokia_lumia_720.png"
     },
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/89571lQfltQGfL._AC_UF1000,1000_QL80_.jpg",
@@ -721,12 +757,24 @@
       "PackagePath": "staticwebassets/assets/images/Product/931ultra-midnightband1.jpg"
     },
     {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/939IMG-111573_823x.webp",
+      "PackagePath": "staticwebassets/assets/images/Product/939IMG-111573_823x.webp"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/94134927725707294.jpg",
+      "PackagePath": "staticwebassets/assets/images/Product/94134927725707294.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/948refurb-iphone11-black-2019.jpeg",
+      "PackagePath": "staticwebassets/assets/images/Product/948refurb-iphone11-black-2019.jpeg"
+    },
+    {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/962MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO.jpeg",
       "PackagePath": "staticwebassets/assets/images/Product/962MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO.jpeg"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/9__34422.jpg",
-      "PackagePath": "staticwebassets/assets/images/Product/9__34422.jpg"
+      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/994nokia_a00012798_lumia_720_blue_1028781.jpg",
+      "PackagePath": "staticwebassets/assets/images/Product/994nokia_a00012798_lumia_720_blue_1028781.jpg"
     },
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/Galaxy-Fold-Main-f926-silver.jpeg",
@@ -739,10 +787,6 @@
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/akrales_220811_226124_0029.jpg",
       "PackagePath": "staticwebassets/assets/images/Product/akrales_220811_226124_0029.jpg"
-    },
-    {
-      "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/apple-watch-se-og-202303_GEO_IN.jpeg",
-      "PackagePath": "staticwebassets/assets/images/Product/apple-watch-se-og-202303_GEO_IN.jpeg"
     },
     {
       "Id": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/galaxy-Fold-False-phantom-silver-hero-zoom.webp",
