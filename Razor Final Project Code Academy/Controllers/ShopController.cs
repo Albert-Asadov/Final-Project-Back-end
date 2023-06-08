@@ -21,8 +21,7 @@ namespace Final_Project_Razor.Controllers
             _userManager = userManager;
         }
 
-      
-
+     
         public IActionResult Index(int page = 1)
         {
             ViewBag.Ram = _context.Rams.ToList();
@@ -62,23 +61,20 @@ namespace Final_Project_Razor.Controllers
             return View(model);
         }
 
-   
-
-
         public async Task<IActionResult> DetailPhone(int id)
 		{
             ViewBag.Ram = _context.ProductRamMemories
-                             .Where(psc => psc.ProductId == id)
-                             .Select(psc => psc.Ram)
+                             .Where(prm => prm.ProductId == id)
+                             .Select(prm => prm.Ram)
                              .Distinct()
-                             .Select(s => new { s.Id, s.RamName })
+                             .Select(r => new { r.Id, r.RamName })
                              .ToList();
 
             ViewBag.Memory = _context.ProductRamMemories
-                             .Where(psc => psc.ProductId == id)
-                             .Select(psc => psc.Memory)
+                             .Where(prm => prm.ProductId == id)
+                             .Select(prm => prm.Memory)
                              .Distinct()
-                             .Select(s => new { s.Id, s.MemoryName })
+                             .Select(m => new { m.Id, m.MemoryName })
                              .ToList();
 
             ViewBag.category = _context.Categories.ToList();
@@ -102,10 +98,10 @@ namespace Final_Project_Razor.Controllers
         public async Task<IActionResult> DetailAccessory(int id)
         {
             ViewBag.Color = _context.AccessoryColors
-                            .Where(psc => psc.AccessoryId == id)
-                            .Select(psc => psc.Color)
+                            .Where(ac => ac.AccessoryId == id)
+                            .Select(ac => ac.Color)
                             .Distinct()
-                            .Select(s => new { s.Id, s.ColorName })
+                            .Select(c => new { c.Id, c.ColorName })
                             .ToList();
             ViewBag.category = _context.Categories.ToList();
 

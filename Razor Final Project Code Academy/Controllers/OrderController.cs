@@ -31,8 +31,8 @@ namespace Razor_Final_Project_Code_Academy.Controllers
             }
 
             List<Basket> basket = _context.Baskets.Include(x => x.User).Include(x => x.BasketItems).ThenInclude(x => x.ProductRamMemory).Include(x => x.BasketItems).ThenInclude(x => x.AccessoryColor).Where(x => x.status == 0 && x.User.Id == user.Id).ToList();
-            ViewBag.Product = _context.Products.Include(p => p.ProductImages).Include(x => x.Brand).ToList();
-            ViewBag.Acc = _context.Accessories.Include(p => p.AccessoryImages).Include(x => x.Brand).ToList();
+            ViewBag.Product = _context.Products.Include(x => x.ProductImages).Include(x => x.Brand).ToList();
+            ViewBag.Acc = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.Brand).ToList();
             checkoutVM.Email = user.Email;
             checkoutVM.FullName = user.Fullname;
 
@@ -55,8 +55,8 @@ namespace Razor_Final_Project_Code_Academy.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(CheckOutVM model)
         {
-            ViewBag.Product = _context.Products.Include(p => p.ProductImages).Include(x => x.Brand).ToList();
-            ViewBag.Acc = _context.Accessories.Include(p => p.AccessoryImages).Include(x => x.Brand).ToList();
+            ViewBag.Product = _context.Products.Include(x => x.ProductImages).Include(x => x.Brand).ToList();
+            ViewBag.Acc = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.Brand).ToList();
             if (!User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Login", "Account");
@@ -101,7 +101,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                 foreach (BasketItem basketItem in model.BasketItems.Where(x => x.IsAccessuar == false))
                 {
                     ProductRamMemory? productRamMemory = await _context.ProductRamMemories
-                        .Include(p => p.Product)
+                        .Include(x => x.Product)
                         .FirstOrDefaultAsync(psc => psc.Id == basketItem.ProductRamMemoryId);
 
                     if (productRamMemory == null)
@@ -204,7 +204,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                                 .ThenInclude(x => x.ProductRamMemory)
                                 .ThenInclude(x => x.Product)
                                 .ThenInclude(x => x.ProductImages)
-                                .Where(wli => wli.UserId == userId && wli.Status==Status.Accepted).ToList();
+                                .Where(wl => wl.UserId == userId && wl.Status==Status.Accepted).ToList();
 
             if(orderItems.Count == 0)
             {

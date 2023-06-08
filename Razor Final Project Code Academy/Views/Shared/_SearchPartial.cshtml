@@ -7,7 +7,7 @@
             <div class="image">
                 <img style="object-fit:contain;" src="~/assets/images/Product/@item.ProductImages.FirstOrDefault(ri => ri.IsMain == true)?.Image" alt="@item.Name" class="js-prd-img lazyload fade-up">
             </div>
-            <div class="other">
+            <div class="other" style="width:460px;">
                 <span>
                     @item.Name
                 </span>
@@ -26,7 +26,7 @@
             <div class="image">
                 <img style="object-fit:contain;" src="~/assets/images/Product/@item.AccessoryImages.FirstOrDefault(ri => ri.IsMain == true)?.Image" alt="@item.Name" class="js-prd-img lazyload fade-up">
             </div>
-            <div class="other">
+            <div class="other" style="width:460px;">
                 <span>
                     @item.Name
                 </span>
