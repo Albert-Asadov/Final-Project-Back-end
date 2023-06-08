@@ -62,39 +62,55 @@
                 </div>
             </div>
         }
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" readonly />
-            </div>
-            <div class="form-group">
-                <label asp-for="FullName" class="control-label"></label>
-                <input asp-for="FullName" class="form-control" readonly />
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" readonly />
-            </div>
-            <div class="form-group">
-                <label asp-for="Note" class="control-label"></label>
-                <input asp-for="Note" class="form-control" readonly />
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatedTime" class="control-label"></label>
-                <input asp-for="CreatedTime" class="form-control" readonly />
-            </div>
-            <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" readonly />
-            </div>
-            <div class="form-group">
-                <label asp-for="TotalPrice" class="control-label"></label>
-                <input asp-for="TotalPrice" class="form-control" readonly />
-            </div>
-            <a style="color:green; text-decoration:none;" asp-action="Accept" asp-route-id="@Model.Id">Accepted</a> |
-            <a style="color: red; text-decoration: none;"asp-action="Reject" asp-route-id="@Model.Id">Rejected</a> |
-        </form>
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Contry" class="control-label"></label>
+            <input asp-for="Contry" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="City" class="control-label"></label>
+            <input asp-for="City" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="Zip" class="control-label"></label>
+            <input asp-for="Zip" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="Number" class="control-label"></label>
+            <input asp-for="Number" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="Address" class="control-label"></label>
+            <input asp-for="Address" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="FullName" class="control-label"></label>
+            <input asp-for="FullName" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="Note" class="control-label"></label>
+            <input asp-for="Note" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="CreatedTime" class="control-label"></label>
+            <input asp-for="CreatedTime" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="Status" class="control-label"></label>
+            <input asp-for="Status" class="form-control" readonly />
+        </div>
+        <div class="form-group">
+            <label asp-for="TotalPrice" class="control-label"></label>
+            <input asp-for="TotalPrice" class="form-control" readonly />
+        </div>
+        <a style="color:green; text-decoration:none;" asp-action="Accept" asp-route-id="@Model.Id">Accepted</a> |
+        <a style="color: red; text-decoration: none;" asp-action="Reject" asp-route-id="@Model.Id">Rejected</a> |
+    </form>
     </div>
 </div>
 
