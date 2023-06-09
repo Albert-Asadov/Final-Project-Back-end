@@ -283,7 +283,7 @@ else
                     <div class="customersAlso">
                         <div class="title">
                             <div class="text">
-                                <h5>Customers Also Viewed</h5>
+                                <h5>Customers Also Bought</h5>
                             </div>
                             <div class="lineOrange">
                                 <p class="firstOfFirst"></p>
@@ -293,180 +293,68 @@ else
                         </div>
 
                         <div class="products">
-                            <ul class="col-lg-3">
-                                <li>
-                                    <div class="image">
-                                        <a href="">
-                                            <img src="~/assets/images/Product/iphone-14-pro-MainPhoto-finish-select-202209-6-1inch-gold.jpeg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <div class="brand">
-                                            <span>
-                                                Brand name here
-                                            </span>
-                                        </div>
-                                        <div class="name">
-                                            <span>
-                                                Product Name Here
-                                            </span>
-                                        </div>
-                                        <div class="price">
-                                            <span>$119</span>
-                                        </div>
-                                        <div class="addToCard">
-                                            <a href="">
-                                                Add To Card
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="col-lg-3">
-                                <li>
-                                    <div class="image">
-                                        <a href="">
-                                            <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <div class="brand">
-                                            <span>
-                                                Brand name here
-                                            </span>
-                                        </div>
-                                        <div class="name">
-                                            <span>
-                                                Product Name Here
-                                            </span>
-                                        </div>
-                                        <div class="price">
-                                            <span>$119</span>
-                                        </div>
-                                        <div class="addToCard">
-                                            <a href="">
-                                                Add To Card
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="col-lg-3">
-                                <li>
-                                    <div class="image">
-                                        <a href="">
-                                            <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <div class="brand">
-                                            <span>
-                                                Brand name here
-                                            </span>
-                                        </div>
-                                        <div class="name">
-                                            <span>
-                                                Product Name Here
-                                            </span>
-                                        </div>
-                                        <div class="price">
-                                            <span>$119</span>
-                                        </div>
-                                        <div class="addToCard">
-                                            <a href="">
-                                                Add To Card
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="col-lg-3">
-                                <li>
-                                    <div class="image">
-                                        <a href="">
-                                            <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <div class="brand">
-                                            <span>
-                                                Brand name here
-                                            </span>
-                                        </div>
-                                        <div class="name">
-                                            <span>
-                                                Product Name Here
-                                            </span>
-                                        </div>
-                                        <div class="price">
-                                            <span>$119</span>
-                                        </div>
-                                        <div class="addToCard">
-                                            <a href="">
-                                                Add To Card
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="col-lg-3">
-                                <li>
-                                    <div class="image">
-                                        <a href="">
-                                            <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <div class="brand">
-                                            <span>
-                                                Brand name here
-                                            </span>
-                                        </div>
-                                        <div class="name">
-                                            <span>
-                                                Product Name Here
-                                            </span>
-                                        </div>
-                                        <div class="price">
-                                            <span>$119</span>
-                                        </div>
-                                        <div class="addToCard">
-                                            <a href="">
-                                                Add To Card
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="col-lg-3">
-                                <li>
-                                    <div class="image">
-                                        <a href="">
-                                            <img src="~/assets/images/Product/13__93391.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <div class="brand">
-                                            <span>
-                                                Brand name here
-                                            </span>
-                                        </div>
-                                        <div class="name">
-                                            <span>
-                                                Product Name Here
-                                            </span>
-                                        </div>
-                                        <div class="price">
-                                            <span>$119</span>
-                                        </div>
-                                        <div class="addToCard">
-                                            <a href="">
-                                                Add To Card
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+
+                            @foreach (var item in products)
+                            {
+                                if (item.Count > 1)
+                                {
+                                    <ul class="col-lg-3">
+                                        <li>
+                                            <div class="image">
+                                                <a href="">
+                                                    <img style="height: 150px; width: 150px; object-fit: contain;" src="~/assets/images/Product/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="text">
+                                                <div class="brand">
+                                                    <span>
+                                                        @item.Brand.Name
+                                                    </span>
+                                                </div>
+                                                <div class="name">
+                                                    <span>
+                                                        @item.Name
+                                                    </span>
+                                                </div>
+                                                <div class="price">
+                                                    <span>$@item.Price</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                }
+                            }
+                            @foreach (var item in accessories)
+                            {
+                                if (item.Count > 1)
+                                {
+                                    <ul class="col-lg-3">
+                                        <li>
+                                            <div class="image">
+                                                <a href="">
+                                                    <img style="height: 150px; width: 150px; object-fit: contain;" src="~/assets/images/Product/@item.AccessoryImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="text">
+                                                <div class="brand">
+                                                    <span>
+                                                        @item.Brand.Name
+                                                    </span>
+                                                </div>
+                                                <div class="name">
+                                                    <span>
+                                                        @item.Name
+                                                    </span>
+                                                </div>
+                                                <div class="price">
+                                                    <span>$@item.Price</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                }
+                            }
+
                         </div>
                     </div>
                     <div class="reviews">

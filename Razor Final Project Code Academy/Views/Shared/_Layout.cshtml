@@ -3,7 +3,7 @@
 @{
     List<Category> categories = _layoutServices.AllCategories();
     List<Brand> Brands = _layoutServices.AllBrands();
-    User user = _layoutServices.AllUsers();
+    User user = await _layoutServices.AllUsers();
     List<BasketItem> basketItem = _layoutServices.BaskeItem();
     List<Accessory> accessories = _layoutServices.Accessories();
     List<Product> products = _layoutServices.Products();
@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="info">
-                            <p>Free International Shipping. No Minimum Purchase Required <span>*</span> </p>
+                            <p> @_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "Main Page Upper Title")?.Value <span>*</span> </p>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -51,9 +51,16 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                                 <div class="panel d-none">
                                     <ul>
+
+
                                         @if (User.Identity.IsAuthenticated)
                                         {
-
+                                            @if (User.IsInRole(Roles.Admin.ToString()) || User.IsInRole(Roles.SuperAdmin.ToString()))
+                                            {
+                                                <li>
+                                                    <a asp-area="RazorAdmin" asp-controller="Product" asp-action="Index">Admin Panel -></a>
+                                                </li>
+                                            }
                                             <li><a asp-controller="Order" asp-action="AccountOrders">Orders</a></li>
                                             <li><a asp-controller="account" asp-action="AccountDetails">Account Settings</a></li>
                                             <li>
@@ -184,12 +191,12 @@
                                     {
                                         Product? product = products.FirstOrDefault(x => x.Id == item.ProductRamMemory.ProductId);
                                         <ul>
-                                            <li>
+                                            <li style=" height: 85px;">
                                                 <div class="product">
                                                     <div class="image">
-                                                        <img src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
+                                                        <img style="height:65px; width:65px; object-fit:contain;" src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
                                                     </div>
-                                                    <div class="about">
+                                                    <div class="about" style="width: 110px;">
                                                         <div class="name">
                                                             <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@product.Id">@product.Name</a>
                                                         </div>
@@ -214,12 +221,12 @@
                                     {
                                         Accessory? product = accessories.FirstOrDefault(x => x.Id == item.AccessoryColor.AccessoryId);
                                         <ul>
-                                            <li>
+                                            <li style=" height: 85px;">
                                                 <div class="product">
                                                     <div class="image">
-                                                        <img src="~/assets/images/Product/@product.AccessoryImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
+                                                        <img style="height:65px; width:65px; object-fit:contain;" src="~/assets/images/Product/@product.AccessoryImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
                                                     </div>
-                                                    <div class="about">
+                                                    <div class="about"  style="width: 110px;">
                                                         <div class="name">
                                                             <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@product.Id">@product.Name</a>
                                                         </div>
@@ -385,12 +392,11 @@
                                 </div>
 
                                 <address>
-                                    Addresses : Acme Widgets 123 Widget Street Acmeville, AC 12345 United States of
-                                    America
+                                    @_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "Adress")?.Value
                                 </address>
 
                                 <div class="email">
-                                    <p>Email: <a href="">contact@ibigecommerce.com</a></p>
+                                    <p>Email: <a href=""> @_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "Email")?.Value</a></p>
                                 </div>
                             </div>
                         </div>

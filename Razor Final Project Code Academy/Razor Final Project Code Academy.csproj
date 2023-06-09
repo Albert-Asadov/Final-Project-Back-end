@@ -39,6 +39,8 @@
     <None Remove="Areas\RazorAdmin\Views\Delivery\" />
     <None Remove="Areas\RazorAdmin\Views\Order\" />
     <None Remove="Areas\RazorAdmin\Views\Contact\" />
+    <None Remove="Areas\RazorAdmin\Views\AccountAdmin\" />
+    <None Remove="ViewModel\Roles\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
@@ -63,5 +65,7 @@
     <Folder Include="Areas\RazorAdmin\Views\Delivery\" />
     <Folder Include="Areas\RazorAdmin\Views\Order\" />
     <Folder Include="Areas\RazorAdmin\Views\Contact\" />
+    <Folder Include="Areas\RazorAdmin\Views\AccountAdmin\" />
+    <Folder Include="ViewModel\Roles\" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9ZgaHTJu4e5s0oKud2ABl5eF7Or3oZ3wntA1S0i82l8=",
+  "Hash": "VTcQE8Ls8WSqonoEyJRxpqh62Lt+dAVTtENyi4HDIYA=",
   "Source": "Razor Final Project Code Academy",
   "BasePath": "_content/Razor Final Project Code Academy",
   "Mode": "Default",
@@ -2550,6 +2550,23 @@
       "OriginalItemSpec": "wwwroot/assets/images/Product/2__54401.jpg"
     },
     {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/217in_the_box_cream_plus_MO.webp",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/217in_the_box_cream_plus_MO.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/217in_the_box_cream_plus_MO.webp"
+    },
+    {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/225MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO.jpeg",
       "SourceId": "Razor Final Project Code Academy",
       "SourceType": "Discovered",
@@ -2822,6 +2839,23 @@
       "OriginalItemSpec": "wwwroot/assets/images/Product/419kv-galaxy-s23_s.jpg"
     },
     {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/42201-DM1-Cream-PDP-1600x1200.webp",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/42201-DM1-Cream-PDP-1600x1200.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/42201-DM1-Cream-PDP-1600x1200.webp"
+    },
+    {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/437download.jpeg",
       "SourceId": "Razor Final Project Code Academy",
       "SourceType": "Discovered",
@@ -2905,6 +2939,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/images/Product/521images.jpeg"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/52214825_big.jpg",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/52214825_big.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/52214825_big.jpg"
     },
     {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/540MQE93_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-ocean-ultra_VW_34FR_WF_CO_GEO_SG.jpeg",
@@ -3077,6 +3128,23 @@
       "OriginalItemSpec": "wwwroot/assets/images/Product/62871lQfltQGfL._AC_UF1000,1000_QL80_.jpg"
     },
     {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/640220908140014568817.webp",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/640220908140014568817.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/640220908140014568817.webp"
+    },
+    {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/666MQE93_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-ocean-ultra_VW_34FR_WF_CO_GEO_SG.jpeg",
       "SourceId": "Razor Final Project Code Academy",
       "SourceType": "Discovered",
@@ -3109,6 +3177,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/images/Product/66gsmarena_006.jpg"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/68361bM8Mojf6L.jpg",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/68361bM8Mojf6L.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/68361bM8Mojf6L.jpg"
     },
     {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/690kv-galaxy-s23_s.jpg",
@@ -3279,6 +3364,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/images/Product/829ultra-midnightband1.jpg"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/830220908140011739119.webp",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/830220908140011739119.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/830220908140011739119.webp"
     },
     {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/83571M8i3jXVUL.jpg",

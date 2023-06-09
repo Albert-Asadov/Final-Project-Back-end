@@ -36,6 +36,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9BY2Nlc3NvcnkvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Areas/RazorAdmin/Views/AccountAdmin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9BY2NvdW50QWRtaW4vTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Areas/RazorAdmin/Views/AccountAdmin/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9BY2NvdW50QWRtaW4vUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Areas/RazorAdmin/Views/Brand/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9CcmFuZC9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -124,12 +132,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9NZW1vcnkvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Areas/RazorAdmin/Views/Order/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9PcmRlci9FZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Areas/RazorAdmin/Views/Order/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9PcmRlci9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Areas/RazorAdmin/Views/Order/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9PcmRlci9WaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Areas/RazorAdmin/Views/Product/Create.cshtml]

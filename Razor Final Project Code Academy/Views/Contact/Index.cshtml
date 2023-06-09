@@ -1,69 +1,68 @@
 ﻿@model ContactUsVM
+@inject Razor_Final_Project_Code_Academy.Service.LayoutService _layoutServices
 
 
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="leftside col-lg-5">
-                    <div class="title">
-                        <h3>
-                            Contact Us
-                        </h3>
-                    </div>
-
-                    <div class="text">
-                        <div class="welcome">
-                            <p>
-                                We're happy to answer questions or help you with returns.
-                                Please fill out the form below if you need assistance.
-                            </p>
-                        </div>
-                        <div class="adress">
-                            <p>
-                                Addresses : Acme Widgets 123 Widget Street Acmeville, AC 12345 United States of
-                                America
-                            </p>
-                        </div>
-                        <div class="email">
-                            <p>Email: <span style=" color: #ff7e00">contact@ibigecommerce.com</span></p>
-                        </div>
-                        <div class="tel">
-                            <p>Hotline Free 24/24:</p>
-                            <p class="number" style=" color: #ff7e00">(1800)-000-6890</p>
-                        </div>
-                    </div>
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="leftside col-lg-5">
+                <div class="title">
+                    <h3>
+                        Contact Us
+                    </h3>
                 </div>
-                <div class="rightSide col-lg-7">
-                    <form asp-controller="Contact" asp-action="Index" method="post" >
-                        <div class="row">
-                            <div class="name col-lg-6 col-12">
-                                <label asp-for="FullName">Full Name</label><br>
-                                <input asp-for="FullName">
-                            </div>
 
-                            <div class="number col-lg-6 col-12">
-                                <label asp-for="PhoneNumber">Phone Number</label><br>
-                                <input asp-for="PhoneNumber">
-                            </div>
-
-                            <div class="email col-lg-12 col-12">
-                                <label asp-for="Email">Email Adress</label><br>
-                                <input asp-for="Email">
-                            </div>
-
-                            <div class="comment col-lg-12 col-12">
-                                <label asp-for="Comments">Comments/Questions</label><br>
-                                <textarea asp-for="Comments" cols="64" rows="5"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="button">
-                            <button type="submit">
-                                SUBMIT FORM
-                            </button>
-                        </div>
-                    </form>
+                <div class="text">
+                    <div class="welcome">
+                        <p>
+                            @_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "Contacts Page Descr")?.Value
+                        </p>
+                    </div>
+                    <div class="adress">
+                        <p>
+                            @_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "Adress")?.Value
+                        </p>
+                    </div>
+                    <div class="email">
+                        <p>Email: <span style=" color: #ff7e00">@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "Email")?.Value</span></p>
+                    </div>
+                    <div class="tel">
+                        <p>Hotline Free 24/24:</p>
+                        <p class="number" style=" color: #ff7e00">@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "Phone Number")?.Value</p>
+                    </div>
                 </div>
             </div>
+            <div class="rightSide col-lg-7">
+                <form asp-controller="Contact" asp-action="Index" method="post">
+                    <div class="row">
+                        <div class="name col-lg-6 col-12">
+                            <label asp-for="FullName">Full Name</label><br>
+                            <input asp-for="FullName">
+                        </div>
+
+                        <div class="number col-lg-6 col-12">
+                            <label asp-for="PhoneNumber">Phone Number</label><br>
+                            <input asp-for="PhoneNumber">
+                        </div>
+
+                        <div class="email col-lg-12 col-12">
+                            <label asp-for="Email">Email Adress</label><br>
+                            <input asp-for="Email">
+                        </div>
+
+                        <div class="comment col-lg-12 col-12">
+                            <label asp-for="Comments">Comments/Questions</label><br>
+                            <textarea asp-for="Comments" cols="64" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="button">
+                        <button type="submit">
+                            SUBMIT FORM
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
+</section>

@@ -20,6 +20,12 @@ namespace Razor_Final_Project_Code_Academy.Service
             _userManager = userManager;
         }
 
+        public List<Setting> GetSettings()
+        {
+            List<Setting> settings = _context.Settings.ToList();
+            return settings;
+        }
+
         public List<Category> AllCategories()
         {
             List<Category> categories = _context.Categories.ToList();
@@ -34,9 +40,9 @@ namespace Razor_Final_Project_Code_Academy.Service
             return Brands;
         }
 
-        public User AllUsers()
+        public async Task <User> AllUsers()
         {
-            User user = _context.Users.First();
+            User user = await _userManager.GetUserAsync(_accessor.HttpContext.User);
 
             return user;
         }

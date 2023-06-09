@@ -3,10 +3,13 @@ using Razor_Final_Project_Code_Academy.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Razor_Final_Project_Code_Academy.ViewModel;
 using Razor_Final_Project_Code_Academy.DAL;
+using Microsoft.AspNetCore.Authorization;
+using Razor_Final_Project_Code_Academy.ViewModel.Roles;
 
 namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
 {
     [Area("RazorAdmin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class CategoryController : Controller
     {
         private readonly RazorDbContext _context;

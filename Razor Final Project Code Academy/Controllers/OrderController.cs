@@ -38,7 +38,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
             checkoutVM.BasketItems = _context.BasketItems
                 .Include(x => x.ProductRamMemory.Product)
-                .Where(x => x.Basket.User.Id == user.Id )
+                .Where(x => x.Basket.User.Id == user.Id)
                 .ToList();
 
             decimal totalPrice = 0;
@@ -52,6 +52,8 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
             return View(checkoutVM);
         }
+
+
         [HttpPost]
         public async Task<IActionResult> Index(CheckOutVM model)
         {
@@ -66,6 +68,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
             Basket basket = new Basket { User = user, status = Status.Default };
             _context.Baskets.Add(basket);
+
             await _context.SaveChangesAsync();
 
             if (model.Note is null)
@@ -79,11 +82,35 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                 ModelState.AddModelError("Address", "Please write address.");
                 return View();
             }
+            if (model.Contry is null)
+            {
+                ModelState.AddModelError("Address", "Please write youre Contry Name.");
+                return View();
+            }
+            if (model.City is null)
+            {
+                ModelState.AddModelError("Address", "Please write youre City Name.");
+                return View();
+            }
+            if (model.Zip is null)
+            {
+                ModelState.AddModelError("Address", "Please write youre Zip Code.");
+                return View();
+            }
+            if (model.Number is null)
+            {
+                ModelState.AddModelError("Address", "Please write youre Phone Number.");
+                return View();
+            }
             var order = new Order
             {
                 FullName = model.FullName,
                 Email = model.Email,
                 Address = model.Address,
+                Number = model.Number,
+                City = model.City,
+                Contry = model.Contry,
+                Zip = model.Zip,
                 Note = model.Note,
                 CreatedTime = DateTime.Now,
                 Status = Status.Pending,

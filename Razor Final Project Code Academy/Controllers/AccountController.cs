@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Mail;
 using Microsoft.AspNetCore.Mvc;
 using Razor_Final_Project_Code_Academy.ViewModel;
-
+using Razor_Final_Project_Code_Academy.ViewModel.Roles;
 
 namespace Final_Project_Razor.Controllers
 {
@@ -13,11 +13,13 @@ namespace Final_Project_Razor.Controllers
 	{
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, RoleManager<IdentityRole> roleManager)
 		{
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
 
@@ -32,7 +34,7 @@ namespace Final_Project_Razor.Controllers
             if (!ModelState.IsValid) return View();
             User user = new()
             {
-                Fullname = string.Concat(account.FirstName, " ", account.LastNAme),
+                Fullname = string.Concat(account.FirstName, " ", account.LastName),
                 Email = account.Email,
                 UserName = account.UserName
             };
@@ -50,28 +52,31 @@ namespace Final_Project_Razor.Controllers
                 }
                 return  View();
             }
+
+            await _userManager.AddToRoleAsync(user, Roles.User.ToString());
+
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             string link = Url.Action(nameof(VerifyEmail), "Account", new { email = user.Email, token }, Request.Scheme, Request.Host.ToString());
-            MailMessage mail = new MailMessage();
-            mail.From = new MailAddress("razor.familysites@gmail.com", "Welcome To Razor!");
-            mail.To.Add(new MailAddress(user.Email));
-            mail.Subject = "Verify Email";
-            mail.Body = string.Empty;
+            MailMessage mailMessage = new MailMessage();
+            mailMessage.From = new MailAddress("razor.familysites@gmail.com", "Welcome To Razor!");
+            mailMessage.To.Add(new MailAddress(user.Email));
+            mailMessage.Subject = "Verify Email";
+            mailMessage.Body = string.Empty;
             string body = string.Empty;
             using (StreamReader reader = new StreamReader("wwwroot/assets/template/verifyemail.html"))
             {
                 body = reader.ReadToEnd();
             }
             body = body.Replace("{{userFullName}}", user.Fullname);
-            mail.Body = body.Replace("{{link}}", link);
-            mail.IsBodyHtml = true;
+            mailMessage.Body = body.Replace("{{link}}", link);
+            mailMessage.IsBodyHtml = true;
             SmtpClient smtp = new SmtpClient();
             smtp.Host = "smtp.gmail.com";
             smtp.Port = 587;
             smtp.EnableSsl = true;
             smtp.UseDefaultCredentials = false;
             smtp.Credentials = new NetworkCredential("razor.familysites@gmail.com", "lrzxazlzxwtshywn");
-            smtp.Send(mail);
+            smtp.Send(mailMessage);
             return RedirectToAction("Index", "Home");
 
         }
@@ -241,6 +246,14 @@ namespace Final_Project_Razor.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction(nameof(Login));
         }
+
+
+        //public async Task CreateRoles()
+        //{
+        //    await _roleManager.CreateAsync(new IdentityRole(Roles.Admin.ToString()));
+        //    await _roleManager.CreateAsync(new IdentityRole(Roles.User.ToString()));
+        //    await _roleManager.CreateAsync(new IdentityRole(Roles.SuperAdmin.ToString()));
+        //}
 
     }
 }

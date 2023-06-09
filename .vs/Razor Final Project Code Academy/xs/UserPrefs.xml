@@ -1,7 +1,11 @@
 ﻿<Properties StartupConfiguration="{08D1FEEE-4871-4F44-A826-4781606F3463}|Default" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Razor_220Final_220Project_220Code_220Academy PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="Razor Final Project Code Academy/Controllers/ShopController.cs">
     <Files>
-      <File FileName="Razor Final Project Code Academy/Controllers/ShopController.cs" Line="160" Column="48" />
+      <File FileName="Razor Final Project Code Academy/Controllers/ShopController.cs" Line="37" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,22 +15,13 @@
               <Node name="Controllers" expanded="True">
                 <Node name="ShopController.cs" selected="True" />
               </Node>
-              <Node name="Service" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="Order" expanded="True" />
-              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Razor_220Final_220Project_220Code_220Academy PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

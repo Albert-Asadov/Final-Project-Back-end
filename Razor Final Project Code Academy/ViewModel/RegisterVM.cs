@@ -7,7 +7,7 @@ namespace Razor_Final_Project_Code_Academy.ViewModel
 	{
 		public string FirstName { get; set; }
 
-		public string LastNAme { get; set; }
+		public string LastName { get; set; }
 
 		[DataType(DataType.EmailAddress)]
 		public string Email { get; set; }

@@ -22582,7 +22582,7 @@ dl li {
 }
 
 .sidebar .nav.sub-menu .nav-item::before {
-  content: '';
+ 
   position: absolute;
   width: 5px;
   height: 5px;

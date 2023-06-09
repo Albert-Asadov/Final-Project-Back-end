@@ -18,9 +18,9 @@
                         </div>
 
                         <div class="lastname col-lg-6 col-12">
-                            <label asp-for="LastNAme">Last Name:</label><br>
-                            <input asp-for="LastNAme">
-                            <span asp-validation-for="LastNAme" class="text-danger"></span>
+                            <label asp-for="LastName">Last Name:</label><br>
+                            <input asp-for="LastName">
+                            <span asp-validation-for="LastName" class="text-danger"></span>
                         </div>
 
                         <div class="adress col-lg-6 col-12">
@@ -48,7 +48,7 @@
                         </div>
                         <div class="confirmpassword col-lg-6 col-12" style="display: flex; justify-content: start; align-items: center;">
                             <label asp-for="Terms">Confirm Registration:</label><br>
-                            <input asp-for="Terms" style="width: 15px; margin-left:15px;" >
+                            <input asp-for="Terms" style="width: 15px; margin-left:15px;"  required>
                             <span asp-validation-for="Terms" class="text-danger"></span>
                         </div>
 
