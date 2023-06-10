@@ -11,13 +11,14 @@ namespace Razor_Final_Project_Code_Academy.Entities
         public int BasketId { get; set; }
         public Basket Basket { get; set; }
 
-        public int? ProductRamMemoryId{ get; set; }
+        public int? ProductRamMemoryId{ get; set; } 
         public ProductRamMemory ProductRamMemory { get; set; }
 
         public bool IsAccessuar { get; set;}
 
-        public int? accessoryColorId { get; set; }
+        public int? accessoryColorId { get; set; } 
         public AccessoryColor AccessoryColor { get; set; }
+
     }
 }
 

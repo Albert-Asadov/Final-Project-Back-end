@@ -67,7 +67,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
             if (basketProduct is not null)
             {
-                ProductRamMemory? productRamMemory = _context.ProductRamMemories
+                ProductRamMemory productRamMemory = _context.ProductRamMemories
                     .Include(p => p.Product)
                     .FirstOrDefault(p => p.ProductId == productId && p.RamId == basketProduct.AddCart.RamId && p.MemoryId == basketProduct.AddCart.MemoryId);
 
@@ -111,7 +111,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
             {
                 return RedirectToAction("Login", "Account");
             }
-            Basket userActiveBasket = _context.Baskets
+            Basket? userActiveBasket = _context.Baskets
                .Include(b => b.User)
                .Include(b => b.BasketItems)
                .ThenInclude(i => i.ProductRamMemory)
@@ -162,7 +162,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            Basket userActiveBasket = _context.Baskets
+            Basket? userActiveBasket = _context.Baskets
                 .Include(b => b.User)
                 .Include(b => b.BasketItems)
                 .ThenInclude(i => i.ProductRamMemory)
@@ -183,7 +183,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
             if (basketProduct is not null)
             {
-                ProductRamMemory? productRamMemory = _context.ProductRamMemories
+                ProductRamMemory productRamMemory = _context.ProductRamMemories
                     .Include(p => p.Product)
                     .FirstOrDefault(p => p.ProductId == productId && p.RamId == basketProduct.AddCart.RamId && p.MemoryId == basketProduct.AddCart.MemoryId);
 
@@ -210,7 +210,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
             if (basketAccessory is not null)
             {
-                AccessoryColor? accessoryColor = _context.AccessoryColors
+                AccessoryColor accessoryColor = _context.AccessoryColors
                     .Include(p => p.Accessory)
                     .FirstOrDefault(p => p.AccessoryId == productId && p.ColorId == basketAccessory.Adding.ColorId);
 

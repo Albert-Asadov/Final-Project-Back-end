@@ -255,7 +255,7 @@
                             </div>
                         </div>
                         <div class="mainDescr">
-                            <p>
+                            <p style=" line-height: 34px">
                                 @Model.Descr
                             </p>
                         </div>
@@ -280,7 +280,7 @@
                                     <ul class="col-lg-3">
                                         <li>
                                             <div class="image">
-                                                <a href="">
+                                                <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@item.Id">
                                                     <img style="height: 150px; width: 150px; object-fit: contain;" src="~/assets/images/Product/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
                                                 </a>
                                             </div>
@@ -310,7 +310,7 @@
                                     <ul class="col-lg-3">
                                         <li>
                                             <div class="image">
-                                                <a href="">
+                                                <a asp-controller="Shop" asp-action="DetailAccessory" asp-route-id="@item.Id">
                                                     <img style="height: 150px; width: 150px; object-fit: contain;" src="~/assets/images/Product/@item.AccessoryImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
                                                 </a>
                                             </div>

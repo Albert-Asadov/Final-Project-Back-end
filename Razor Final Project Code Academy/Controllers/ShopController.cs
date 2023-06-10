@@ -62,7 +62,7 @@ namespace Final_Project_Razor.Controllers
         }
 
         public async Task<IActionResult> DetailPhone(int id)
-		{
+        {
             ViewBag.Ram = _context.ProductRamMemories
                              .Where(prm => prm.ProductId == id)
                              .Select(prm => prm.Ram)
@@ -84,16 +84,16 @@ namespace Final_Project_Razor.Controllers
             {
                 user = await _userManager.FindByNameAsync(User.Identity.Name);
 
-                ViewBag.WishList = _context.Wishlists.Include(x => x.Product).Include(x => x.User).Where(x => x.UserId == user.Id && x.IsAccessory==false).ToList();
+                ViewBag.WishList = _context.Wishlists.Include(x => x.Product).Include(x => x.User).Where(x => x.UserId == user.Id && x.IsAccessory == false).ToList();
             }
-			if (id == 0) return BadRequest();
-            Product? products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x=>x.ProductComments).Include(x => x.Brand).FirstOrDefault(x=>x.Id == id);
+            if (id == 0) return BadRequest();
+            Product? products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.ProductComments).Include(x => x.Brand).FirstOrDefault(x => x.Id == id);
             ViewBag.Accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
             ViewBag.Product = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
 
             if (products is null) return NotFound();
             return View(products);
-		}
+        }
 
         public async Task<IActionResult> DetailAccessory(int id)
         {
@@ -114,7 +114,7 @@ namespace Final_Project_Razor.Controllers
                 ViewBag.WishList = _context.Wishlists.Include(x => x.Accessory).Include(x => x.User).Where(x => x.UserId == user.Id && x.IsAccessory == true).ToList();
             }
             if (id == 0) return BadRequest();
-            Accessory? accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x=>x.AccessoryComments).Include(x => x.Brand).FirstOrDefault(x => x.Id == id);
+            Accessory? accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.AccessoryComments).Include(x => x.Brand).FirstOrDefault(x => x.Id == id);
             ViewBag.Accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
             ViewBag.Product = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
 
@@ -122,7 +122,77 @@ namespace Final_Project_Razor.Controllers
             return View(accessory);
         }
 
-        [HttpPost]
+
+        //public async Task<IActionResult> Detail(int id)
+        //{
+        //    Accessory? accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.AccessoryComments).Include(x => x.Brand).FirstOrDefault(x => x.Id == id);
+        //    Product? products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.ProductComments).Include(x => x.Brand).FirstOrDefault(x => x.Id == id);
+        //    DetailVM model = new()
+        //    {
+        //        product = products,
+        //        accessory = accessory
+        //    };
+
+        //    ViewBag.category = _context.Categories.ToList();
+
+        //    ViewBag.Accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
+        //    ViewBag.Product = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
+
+        //    if (accessory?.isAccessory == true)
+        //    {
+        //        ViewBag.Color = _context.AccessoryColors
+        //                .Where(ac => ac.AccessoryId == id)
+        //                .Select(ac => ac.Color)
+        //                .Distinct()
+        //                .Select(c => new { c.Id, c.ColorName })
+        //                .ToList();
+
+        //        User? user = new();
+
+        //        if (User.Identity.IsAuthenticated)
+        //        {
+        //            user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+        //            ViewBag.WishList = _context.Wishlists.Include(x => x.Accessory).Include(x => x.User).Where(x => x.UserId == user.Id && x.IsAccessory == true).ToList();
+        //        }
+        //        if (id == 0) return BadRequest();
+        //        return View(model);
+        //    }
+
+        //    if(products?.isAccessory == false)
+        //    {
+
+        //        ViewBag.Ram = _context.ProductRamMemories
+        //                      .Where(prm => prm.ProductId == id)
+        //                      .Select(prm => prm.Ram)
+        //                      .Distinct()
+        //                      .Select(r => new { r.Id, r.RamName })
+        //                      .ToList();
+
+        //        ViewBag.Memory = _context.ProductRamMemories
+        //                         .Where(prm => prm.ProductId == id)
+        //                         .Select(prm => prm.Memory)
+        //                         .Distinct()
+        //                         .Select(m => new { m.Id, m.MemoryName })
+        //                         .ToList();
+
+        //        User? user = new();
+
+        //        if (User.Identity.IsAuthenticated)
+        //        {
+        //            user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+        //            ViewBag.WishList = _context.Wishlists.Include(x => x.Product).Include(x => x.User).Where(x => x.UserId == user.Id && x.IsAccessory == false).ToList();
+        //        }
+        //        if (id == 0) return BadRequest();
+
+        //        return View(model);
+        //    }
+
+
+        //    return View(model);
+        //}
+        //[HttpPost]
         public async Task<IActionResult> AddCommentProduct(Comment comment, int id)
         {
             if (!User.Identity.IsAuthenticated)
@@ -143,7 +213,7 @@ namespace Final_Project_Razor.Controllers
                     Email = comment.Email
 
                 };
-                product.ProductComments.Add(newcomment);
+                product?.ProductComments.Add(newcomment);
                 await _context.Comments.AddAsync(newcomment);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(DetailPhone), new { id });
@@ -170,7 +240,7 @@ namespace Final_Project_Razor.Controllers
                     Name = comment.Name,
                     Email = comment.Email
                 };
-                accessory.AccessoryComments.Add(newcomment);
+                accessory?.AccessoryComments.Add(newcomment);
                 await _context.Comments.AddAsync(newcomment);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(DetailAccessory), new { id });

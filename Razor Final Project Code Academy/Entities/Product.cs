@@ -32,7 +32,7 @@ namespace Razor_Final_Project_Code_Academy.Entities
 
 		public int BrandId { get; set; }
 
-		public List<Comment> ProductComments { get; set; }
+		public List<Comment> ProductComments { get; set; } = null;
 
         public List<ProductRamMemory> ProductRamMemories { get; set; }
 

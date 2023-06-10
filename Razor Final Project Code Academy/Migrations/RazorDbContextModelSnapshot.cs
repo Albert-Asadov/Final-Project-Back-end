@@ -199,7 +199,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("BrandId");
 
-                    b.ToTable("Accessories");
+                    b.ToTable("Accessories", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.AccessoryCategory", b =>
@@ -222,7 +222,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("AccessoryCategories");
+                    b.ToTable("AccessoryCategories", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.AccessoryColor", b =>
@@ -248,7 +248,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("ColorId");
 
-                    b.ToTable("AccessoryColors");
+                    b.ToTable("AccessoryColors", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.AccessoryImage", b =>
@@ -273,7 +273,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("AccessoryId");
 
-                    b.ToTable("AccessoryImages");
+                    b.ToTable("AccessoryImages", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Basket", b =>
@@ -297,7 +297,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Baskets");
+                    b.ToTable("Baskets", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.BasketItem", b =>
@@ -334,7 +334,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("accessoryColorId");
 
-                    b.ToTable("BasketItems");
+                    b.ToTable("BasketItems", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Brand", b =>
@@ -354,7 +354,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Brands");
+                    b.ToTable("Brands", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Category", b =>
@@ -374,7 +374,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Color", b =>
@@ -391,7 +391,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Colors");
+                    b.ToTable("Colors", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Comment", b =>
@@ -433,7 +433,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.ContactUs", b =>
@@ -465,7 +465,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("contactUs");
+                    b.ToTable("contactUs", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.DeliveryInformation", b =>
@@ -486,7 +486,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("DeliveryInformations");
+                    b.ToTable("DeliveryInformations", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Memory", b =>
@@ -502,7 +502,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Memories");
+                    b.ToTable("Memories", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Order", b =>
@@ -572,7 +572,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("BasketId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.OrderItem", b =>
@@ -609,7 +609,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("ProductRamMemoryId");
 
-                    b.ToTable("OrderItems");
+                    b.ToTable("OrderItems", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Product", b =>
@@ -656,7 +656,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("BrandId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.ProductCategory", b =>
@@ -679,7 +679,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductCategories");
+                    b.ToTable("ProductCategories", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.ProductImage", b =>
@@ -704,7 +704,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImages");
+                    b.ToTable("ProductImages", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.ProductRamMemory", b =>
@@ -735,7 +735,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("RamId");
 
-                    b.ToTable("ProductRamMemories");
+                    b.ToTable("ProductRamMemories", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Ram", b =>
@@ -751,7 +751,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Rams");
+                    b.ToTable("Rams", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Setting", b =>
@@ -775,7 +775,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
                     b.HasIndex("Key")
                         .IsUnique();
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.Slider", b =>
@@ -791,7 +791,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders");
+                    b.ToTable("Sliders", (string)null);
                 });
 
             modelBuilder.Entity("Razor_Final_Project_Code_Academy.Entities.User", b =>
@@ -892,7 +892,7 @@ namespace Razor_Final_Project_Code_Academy.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Wishlists");
+                    b.ToTable("Wishlists", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
