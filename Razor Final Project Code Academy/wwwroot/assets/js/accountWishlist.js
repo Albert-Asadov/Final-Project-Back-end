@@ -1,4 +1,15 @@
 
+var content = document.querySelector(".content");
+var message = document.querySelector(".alertMessage")
+
+if (content == 0) {
+    content.style.display = "none";
+    message.style.display = "block"
+} else {
+    content.style.display = "block";
+    message.style.display = "none"
+}
+
 var button = document.querySelector(".buttonHover");
 var image = document.querySelector(".imageProduct");
 
@@ -65,16 +76,7 @@ window.addEventListener("click",function(){
     hambMenuCateg.setAttribute("style","display:none !important")
 })
 
-var content = document.querySelector(".content");
-var message = document.querySelector(".alertMessage")
 
-if(content == 0){
-   content.style.display = "none";
-   message.style.display = "block"
-}else{
-  content.style.display = "block";
-  message.style.display = "none"
-}
 
 const mainHeader = document.getElementById('MainHeader');
 

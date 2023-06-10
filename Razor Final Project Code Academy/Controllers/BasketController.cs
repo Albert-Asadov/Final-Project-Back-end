@@ -22,6 +22,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
         public async Task<IActionResult> BasketCartAsync()
         {
+
             User? user = new();
 
             if (User.Identity.IsAuthenticated)

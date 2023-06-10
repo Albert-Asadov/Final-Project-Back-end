@@ -42,6 +42,7 @@ namespace Razor_Final_Project_Code_Academy.Service
 
         public async Task <User> AllUsers()
         {
+
             User user = await _userManager.GetUserAsync(_accessor.HttpContext.User);
 
             return user;

@@ -20,9 +20,10 @@
             </ul>
 
             <div class="content" style="padding-left: 0; padding-top: 20px;">
+
                 <div class="alertMessage">
                     <div class="alert alert-primary" role="alert">
-                        You haven't placed any orders with us. When you do, their status will appear on this page.
+                        You dont't have any orders with us. Wait for them status accept.
                     </div>
                 </div>
 
@@ -54,10 +55,10 @@
                         Accessory accessory = acc.FirstOrDefault(x => x.Id == items.AccessoryColor.AccessoryId);
                         <div class="mainContent" style="margin-top:10px;">
                             <div class="image">
-                                <img  style="width:120px; height:120px; object-fit:contain;" src="~/assets/images/Product/@accessory.AccessoryImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
+                                <img style="width:120px; height:120px; object-fit:contain;" src="~/assets/images/Product/@accessory.AccessoryImages.FirstOrDefault(x=>x.IsMain == true)?.Image" alt="">
                             </div>
                             <div class="name" style="width: 150px; text-align: center;">
-                                <span><a asp-controller="Shop" asp-action="DetailAccessory" asp-route-id="@accessory.Id" >@accessory.Name</a></span>
+                                <span><a asp-controller="Shop" asp-action="DetailAccessory" asp-route-id="@accessory.Id">@accessory.Name</a></span>
                             </div>
                             <div class="price" style="width:65px; text-align:center;">
                                 <span>$@accessory.Price</span>

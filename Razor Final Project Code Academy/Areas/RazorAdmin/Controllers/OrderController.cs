@@ -21,9 +21,13 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
-            List<Order> orders = _context.Orders.ToList();
+
+            ViewBag.TotalPage = Math.Ceiling((double)_context.Orders.Count() / 5);
+            ViewBag.CurrentPage = page;
+
+            List<Order> orders = _context.Orders.AsNoTracking().Skip((page - 1) * 5).Take(5).ToList();
             return View(orders);
         }
 

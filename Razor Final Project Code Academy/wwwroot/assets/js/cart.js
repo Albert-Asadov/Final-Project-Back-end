@@ -1,4 +1,5 @@
 
+
 var THead = document.querySelector(".tableH");
 var TBody = document.querySelector(".tableB");
 var message = document.querySelector(".alertMessage");
@@ -126,14 +127,14 @@ window.addEventListener("scroll", function () {
   }
 });
 
-let i = document.querySelector(".up")
-window.addEventListener("scroll", function () {
-  if (window.scrollY >= 250 || window.pageYOffset >= 250) {
-    i.classList.add('i');
-    i.style.opacity = "1";
-  } else {
-    i.classList.remove('i');
-    i.style.opacity = "0";
-  }
-});
+//let i = document.querySelector(".up")
+//window.addEventListener("scroll", function () {
+//  if (window.scrollY >= 250 || window.pageYOffset >= 250) {
+//    i.classList.add('i');
+//    i.style.opacity = "1";
+//  } else {
+//    i.classList.remove('i');
+//    i.style.opacity = "0";
+//  }
+//});
 
