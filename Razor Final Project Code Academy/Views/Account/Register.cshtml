@@ -2,7 +2,6 @@
 
 @model RegisterVM
 
-
         <section id="register">
             <div class="container">
                 <div class="title">
@@ -48,7 +47,7 @@
                         </div>
                         <div class="confirmpassword col-lg-6 col-12" style="display: flex; justify-content: start; align-items: center;">
                             <label asp-for="Terms">Confirm Registration:</label><br>
-                            <input asp-for="Terms" style="width: 15px; margin-left:15px;"  required>
+                            <input asp-for="Terms" style="width: 15px; margin-left:15px;" required>
                             <span asp-validation-for="Terms" class="text-danger"></span>
                         </div>
 
@@ -71,9 +70,10 @@
                 </form>
             </div>
         </section>
-   
 
-    @section Script{
+
+
+@section Script{
 
     <script src="~/assets/js/register.js"></script>
-     }
+}

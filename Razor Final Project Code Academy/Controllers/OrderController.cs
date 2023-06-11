@@ -131,15 +131,17 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                         .Include(x => x.Product)
                         .FirstOrDefaultAsync(psc => psc.Id == basketItem.ProductRamMemoryId);
 
-                    if (productRamMemory == null)
+
+                    if (productRamMemory.Quantity==0)
                     {
-                        ModelState.AddModelError("productRamMemory", "Product Ram Memory does not exist.");
+                        productRamMemory.Product.InStock = false;
+                        _context.SaveChanges();
                         return View(model);
                     }
 
                     if (basketItem.SaleQuantity > productRamMemory.Quantity)
                     {
-                        ModelState.AddModelError("Quantity", "The selected quantity is not available in stock.");
+                        ModelState.AddModelError(" ", "The selected quantity is not available in stock.");
                         return View(model);
                     }
 
@@ -156,7 +158,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
                     decimal itemTotalPrice = orderItem.UnitPrice * orderItem.SaleQuantity;
                     totalPrice += itemTotalPrice;
-
+               
                     productRamMemory.Quantity = (byte)(productRamMemory.Quantity - basketItem.SaleQuantity);
                     productRamMemory.Product.Count++;
                    
@@ -172,15 +174,16 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                         .Include(p => p.Accessory)
                         .FirstOrDefaultAsync(psc => psc.Id == basketItem.accessoryColorId);
 
-                    if (accessoryColor == null)
+                    if (accessoryColor.Quantity == 0)
                     {
-                        ModelState.AddModelError("productColor", "Product Ram Memory does not exist.");
+                        accessoryColor.Accessory.InStock = false;
+                        _context.SaveChanges();
                         return View(model);
                     }
 
                     if (basketItem.SaleQuantity > accessoryColor.Quantity)
                     {
-                        ModelState.AddModelError("Quantity", "The selected quantity is not available in stock.");
+                        ModelState.AddModelError(" ", "The selected quantity is not available in stock.");
                         return View(model);
                     }
 
@@ -197,7 +200,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
                     decimal itemTotalPrice = orderItem.UnitPrice * orderItem.SaleQuantity;
                     totalPrice += itemTotalPrice;
-
+           
                     accessoryColor.Quantity = (byte)(accessoryColor.Quantity - basketItem.SaleQuantity);
                     accessoryColor.Accessory.Count++;
                 }

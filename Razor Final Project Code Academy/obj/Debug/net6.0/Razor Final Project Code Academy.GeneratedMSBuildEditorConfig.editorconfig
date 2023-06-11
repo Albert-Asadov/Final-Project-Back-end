@@ -36,12 +36,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9BY2Nlc3NvcnkvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Areas/RazorAdmin/Views/AccountAdmin/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9BY2NvdW50QWRtaW4vTG9naW4uY3NodG1s
+[/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Areas/RazorAdmin/Views/AdminLogin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9BZG1pbkxvZ2luL0xvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Areas/RazorAdmin/Views/AccountAdmin/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9BY2NvdW50QWRtaW4vUmVnaXN0ZXIuY3NodG1s
+[/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Areas/RazorAdmin/Views/AdminRegister/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvUmF6b3JBZG1pbi9WaWV3cy9BZG1pblJlZ2lzdGVyL1JlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Areas/RazorAdmin/Views/Brand/Create.cshtml]
@@ -286,10 +286,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Views/Shared/_SearchPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19TZWFyY2hQYXJ0aWFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Views/Shop/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC9EZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Views/Shop/DetailAccessory.cshtml]

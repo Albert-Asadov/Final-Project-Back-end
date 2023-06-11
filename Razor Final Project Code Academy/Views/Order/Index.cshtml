@@ -22,6 +22,8 @@
                             </div>
                         </div>
                         <form asp-controller="Order" asp-action="Index">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
                             <div class="shippingInfo">
                                 <div class="title">
                                     <h3>Shipping</h3>

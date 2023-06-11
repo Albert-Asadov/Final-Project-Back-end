@@ -199,11 +199,20 @@
                                 </div>
 
                                 <div class="addToCard">
-                                    <div class="add">
-                                        <button type="submit" class="addToCard">
-                                            ADD TO CARD
-                                        </button>
-                                    </div>
+                                    @if (Model.InStock == true)
+                                    {
+                                        <div class="add">
+                                            <button type="submit" class="addToCard">
+                                                ADD TO CARD
+                                            </button>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="alert alert-success" role="alert">
+                                            Not in Srock!
+                                        </div>
+                                    }
                                     <div class="wishlist">
 
                                         <div class="icon">
@@ -248,15 +257,15 @@
                                                         </a>
                                                     </div>
                                                 }
-}
-else
-{
-                                        <div class="addToWishlist">
-                                            <a asp-controller="Wishlist" asp-action="AddWishList" asp-route-Id="@Model.Id">
-                                                <p>Add To My Wish List</p>
-                                            </a>
-                                        </div>
-}
+                                            }
+                                            else
+                                            {
+                                                <div class="addToWishlist">
+                                                    <a asp-controller="Wishlist" asp-action="AddWishList" asp-route-Id="@Model.Id">
+                                                        <p>Add To My Wish List</p>
+                                                    </a>
+                                                </div>
+                                            }
 
                                         </div>
                                     </div>
