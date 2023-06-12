@@ -7207,6 +7207,7 @@ footer .bottomLine .paymant ul li i {
 }
 .order .aboutUser .customerEmail .title h3 {
   font-family: "Rubik", sans-serif;
+  font-weight: 900;
 }
 .order .aboutUser .customerEmail .email {
   font-family: "Rubik", sans-serif;
@@ -7216,6 +7217,7 @@ footer .bottomLine .paymant ul li i {
 }
 .order .aboutUser .shippingInfo .title h3 {
   font-family: "Rubik", sans-serif;
+  font-weight: 900;
 }
 .order .aboutUser .shippingInfo .text {
   padding-top: 30px;
@@ -7228,6 +7230,7 @@ footer .bottomLine .paymant ul li i {
   font-size: 16px;
   padding: 0;
   margin: 0;
+  font-weight: 900;
 }
 .order .aboutUser .shippingInfo .text .descr {
   border: 1px solid #ddd;
@@ -9558,8 +9561,20 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 15px;
 }
 #shop .rightSide .mainContent .product .text .price {
-  font-family: "Rubik", sans-serif;
   margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#shop .rightSide .mainContent .product .text .price .discountPrice {
+  font-family: "Rubik", sans-serif;
+  color: #999;
+  font-size: 14px;
+  text-decoration-line: line-through;
+}
+#shop .rightSide .mainContent .product .text .price .realPrice {
+  font-family: "Rubik", sans-serif;
+  margin-left: 10px;
   font-size: 16px;
   color: #ff7e00;
 }
@@ -10778,6 +10793,11 @@ body {
   object-fit: contain;
   width: 270px;
 }
+@media only screen and (max-width: 391px) {
+  #main .rightSide .mainContent .deals ul li .image {
+    width: 44%;
+  }
+}
 #main .rightSide .mainContent .deals ul li .textDeal {
   font-family: "Rubik", sans-serif;
 }
@@ -10842,6 +10862,16 @@ body {
   background-color: #ff7e00;
   color: white;
 }
+@media only screen and (max-width: 391px) {
+  #main .rightSide .mainContent .deals ul li .textDeal {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 44%;
+    flex-direction: column;
+    font-family: "Rubik", sans-serif;
+  }
+}
 #main .rightSide .mainContent .productFirst,
 #main .rightSide .mainContent .productSecond {
   padding-top: 10px;
@@ -10867,8 +10897,8 @@ body {
   margin-right: 20px;
   list-style: none;
 }
-#main .rightSide .mainContent .productFirst .title .upperLine ul li ,
-#main .rightSide .mainContent .productSecond .title .upperLine ul li  {
+#main .rightSide .mainContent .productFirst .title .upperLine ul li a,
+#main .rightSide .mainContent .productSecond .title .upperLine ul li a {
   font-family: "Rubik", sans-serif;
   color: #93979c;
   text-decoration: none;

@@ -13,6 +13,10 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 		{
 			return View();
 		}
-	}
+        public IActionResult ConfirmRegister()
+        {
+            return View();
+        }
+    }
 }
 

@@ -322,7 +322,9 @@
                     </div>
                     <div class="col-6">
                         <div class="image">
-                            <img src="~/assets/images/HeaderLogo/logo-2_1553586230__63532.original.png" alt="">
+                            <a asp-controller="Home" asp-action="Index">
+                                <img src="~/assets/images/HeaderLogo/logo-2_1553586230__63532.original.png" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="col-3">
@@ -353,12 +355,41 @@
         <div class="hamburgerMenu d-none">
             <div class="container">
                 <ul>
+
                     @foreach (var item in categories)
                     {
-
-                        <li><a href="">@item.Name</a></li>
-
+                        <li>
+                            <form method="post" asp-controller="Shop" asp-action="Index">
+                                <input name="CategoryIds" value="@item.Id" type="hidden">
+                                <button style=" background-color: white; color: black; padding-left: 0; border: none; text-align: start;" class="btn btn-light w-100" type="submit">@item.Name</button>
+                            </form>
+                        </li>
                     }
+                    <li style="color: #ff7e00; font-weight: 600; font-size: 18px;">
+                        Page Information
+                    </li>
+
+                    <a asp-controller="Wishlist" asp-action="Index" style="text-decoration:none;color:black;">
+                        <li>
+                            Wish List
+                        </li>
+                    </a>
+                    <a asp-controller="Page" asp-action="Index" style="text-decoration:none;color:black;">
+                        <li>
+                            Pages
+                        </li>
+                    </a>
+                    <a asp-controller="Contact" asp-action="Index" style="text-decoration:none;color:black;">
+                        <li>
+                            Contact Us
+                        </li>
+                    </a>
+                    <a asp-controller="Shop" asp-action="Index" style="text-decoration:none;color:black;">
+                        <li>
+                            Shop
+                        </li>
+                    </a>
+
                 </ul>
             </div>
         </div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LDKVgXN9Wx04fgKTwzdGw39IRHR2jMbvclfFr1o99nM=",
+  "Hash": "xtbEZzn+YRRkhGSjKghq4K9HLBr+9oyV0ZUSXTZfmek=",
   "Source": "Razor Final Project Code Academy",
   "BasePath": "_content/Razor Final Project Code Academy",
   "Mode": "Default",
@@ -4588,6 +4588,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/scss/page/_cart.scss"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/scss/page/_Confrim.scss",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/scss/page/_Confrim.scss",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/scss/page/_Confrim.scss"
     },
     {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/scss/page/_contactUs.scss",
