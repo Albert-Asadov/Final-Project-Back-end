@@ -27,7 +27,7 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             ViewBag.TotalPage = Math.Ceiling((double)_context.Orders.Count() / 5);
             ViewBag.CurrentPage = page;
 
-            List<Order> orders = _context.Orders.AsNoTracking().Skip((page - 1) * 5).Take(5).ToList();
+            List<Order> orders = _context.Orders.AsNoTracking().OrderByDescending(x=>x.Id).Skip((page - 1) * 5).Take(5).ToList();
             return View(orders);
         }
 

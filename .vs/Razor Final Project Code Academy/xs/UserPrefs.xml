@@ -1,9 +1,14 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{08D1FEEE-4871-4F44-A826-4781606F3463}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Razor Final Project Code Academy/Views/Basket/BasketCart.cshtml">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Razor Final Project Code Academy/Areas/RazorAdmin/Controllers/OrderController.cs">
     <Files>
-      <File FileName="Razor Final Project Code Academy/Views/Basket/BasketCart.cshtml" Line="308" Column="19" />
+      <File FileName="Razor Final Project Code Academy/Controllers/OrderController.cs" Line="140" Column="22" />
+      <File FileName="Razor Final Project Code Academy/Views/Shop/DetailPhone.cshtml" Line="203" Column="21" />
+      <File FileName="Razor Final Project Code Academy/Controllers/ShopController.cs" Line="66" Column="54" />
+      <File FileName="Razor Final Project Code Academy/Areas/RazorAdmin/Views/Product/Detail.cshtml" Line="1" Column="1" />
+      <File FileName="Razor Final Project Code Academy/Areas/RazorAdmin/Views/Product/Delete.cshtml" Line="21" Column="50" />
+      <File FileName="Razor Final Project Code Academy/Areas/RazorAdmin/Controllers/OrderController.cs" Line="30" Column="90" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,35 +17,30 @@
             <Node name="Razor Final Project Code Academy" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="RazorAdmin" expanded="True">
-                  <Node name="Controllers" expanded="True" />
+                  <Node name="Controllers" expanded="True">
+                    <Node name="OrderController.cs" selected="True" />
+                  </Node>
                   <Node name="Views" expanded="True">
-                    <Node name="Order" expanded="True" />
                     <Node name="Product" expanded="True" />
                   </Node>
                 </Node>
               </Node>
               <Node name="Service" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Basket" expanded="True" />
-                <Node name="Home" expanded="True" />
+                <Node name="Account" expanded="True" />
                 <Node name="Order" expanded="True" />
                 <Node name="Shop" expanded="True" />
-                <Node name="Wishlist" expanded="True" />
               </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="assets" expanded="True">
-                  <Node name="js" expanded="True" />
-                </Node>
-              </Node>
+              <Node name="wwwroot" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Razor_220Final_220Project_220Code_220Academy PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Razor_220Final_220Project_220Code_220Academy PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

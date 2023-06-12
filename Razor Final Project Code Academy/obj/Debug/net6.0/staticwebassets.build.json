@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "y32Ji80r+R2J5wrwkWCI+FwUfBHqT+Hyhpzngye86IQ=",
+  "Hash": "LDKVgXN9Wx04fgKTwzdGw39IRHR2jMbvclfFr1o99nM=",
   "Source": "Razor Final Project Code Academy",
   "BasePath": "_content/Razor Final Project Code Academy",
   "Mode": "Default",
@@ -2516,6 +2516,23 @@
       "OriginalItemSpec": "wwwroot/assets/images/Product/173MQE93_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-ocean-ultra_VW_34FR_WF_CO_GEO_SG.jpeg"
     },
     {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/174bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/174bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/174bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif"
+    },
+    {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/182ultra-midnightband1.jpg",
       "SourceId": "Razor Final Project Code Academy",
       "SourceType": "Discovered",
@@ -2737,6 +2754,23 @@
       "OriginalItemSpec": "wwwroot/assets/images/Product/290ultra-midnightband1.jpg"
     },
     {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/291DSC04144_processed.jpg",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/291DSC04144_processed.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/291DSC04144_processed.jpg"
+    },
+    {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/3261MQsr9LgwL._AC_UF894,1000_QL80_.jpg",
       "SourceId": "Razor Final Project Code Academy",
       "SourceType": "Discovered",
@@ -2820,6 +2854,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/images/Product/385MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO.jpeg"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/39FA-01-I000001BA.jpg",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/39FA-01-I000001BA.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/39FA-01-I000001BA.jpg"
     },
     {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/3s48v787v4s7v.jpg",
@@ -2958,6 +3009,23 @@
       "OriginalItemSpec": "wwwroot/assets/images/Product/42nothing case.jpeg"
     },
     {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/435bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/435bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/435bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif"
+    },
+    {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/478kv-galaxy-s23_s.jpg",
       "SourceId": "Razor Final Project Code Academy",
       "SourceType": "Discovered",
@@ -2973,6 +3041,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/images/Product/478kv-galaxy-s23_s.jpg"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/483bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/483bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/483bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif"
     },
     {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/49081KbgrFcqCL._AC_UF1000,1000_QL80_.jpg",
@@ -3500,6 +3585,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/images/Product/825Galaxy-S23_KV_Ecosystem-Sleep_2p_HI.webp"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/826bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/826bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/826bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif"
     },
     {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/829ultra-midnightband1.jpg",

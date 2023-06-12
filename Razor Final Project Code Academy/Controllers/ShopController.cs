@@ -87,10 +87,9 @@ namespace Final_Project_Razor.Controllers
                 ViewBag.WishList = _context.Wishlists.Include(x => x.Product).Include(x => x.User).Where(x => x.UserId == user.Id && x.IsAccessory == false).ToList();
             }
             if (id == 0) return BadRequest();
-            Product? products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.ProductComments).Include(x => x.Brand).FirstOrDefault(x => x.Id == id);
+            Product? products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.ProductComments).Include(x => x.Brand).Include(x=>x.ProductRamMemories).FirstOrDefault(x => x.Id == id);
             ViewBag.Accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
             ViewBag.Product = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
-
             if (products is null) return NotFound();
             return View(products);
         }
@@ -114,7 +113,7 @@ namespace Final_Project_Razor.Controllers
                 ViewBag.WishList = _context.Wishlists.Include(x => x.Accessory).Include(x => x.User).Where(x => x.UserId == user.Id && x.IsAccessory == true).ToList();
             }
             if (id == 0) return BadRequest();
-            Accessory? accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.AccessoryComments).Include(x => x.Brand).FirstOrDefault(x => x.Id == id);
+            Accessory? accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.AccessoryComments).Include(x => x.Brand).Include(x=>x.accessoryColors).FirstOrDefault(x => x.Id == id);
             ViewBag.Accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
             ViewBag.Product = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
 

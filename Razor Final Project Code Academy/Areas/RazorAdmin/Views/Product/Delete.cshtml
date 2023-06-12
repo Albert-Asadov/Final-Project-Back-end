@@ -18,7 +18,7 @@
                         <div class="card" style="width:152px">
                             <img style="width:150px;height:150px;object-fit:contain" src="~/assets/images/Product/@image.Image" class="card-img-top @(image.IsMain == true ? "main" : "")" />
                         </div>
-                        <input type="text" name="ImagesId" value="@image.Id" />
+                        <input type="text" hidden name="ImagesId" value="@image.Id" />
                     </div>
                 }
 

@@ -4,6 +4,8 @@
     List<Accessory> accessories = ViewBag.Accessory;
     List<Product> products = ViewBag.Product;
     List<Wishlist> wishlist = ViewBag.WishList;
+    var AccessoryColor = Model.accessoryColors.Sum(q => q.Quantity);
+
 }
 <section id="detail">
     <div class="container">
@@ -191,7 +193,7 @@
                                 <div class="addToCard">
 
 
-                                    @if (Model.InStock == true)
+                                    @if (AccessoryColor != 0)
                                     {
                                         <div class="add">
                                             <button type="submit" class="addToCard">
@@ -201,10 +203,11 @@
                                     }
                                     else
                                     {
-                                        <div class="alert alert-success" role="alert">
-                                           Not in Srock!
+                                        <div class="alert alert-dark" role="alert">
+                                            Not In Stock!
                                         </div>
                                     }
+
 
                                     <div class="wishlist">
 

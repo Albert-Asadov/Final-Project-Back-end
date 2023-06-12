@@ -131,11 +131,18 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                         .Include(x => x.Product)
                         .FirstOrDefaultAsync(psc => psc.Id == basketItem.ProductRamMemoryId);
 
-
-                    if (productRamMemory.Quantity==0)
+                    if (productRamMemory.Quantity == 0)
                     {
-                        productRamMemory.Product.InStock = false;
+                        var orderItems = _context.OrderItems.Where(o => o.ProductRamMemoryId == productRamMemory.Id).ToList();
+                        _context.OrderItems.RemoveRange(orderItems);
+
+                        var basketItems = _context.BasketItems.Where(b => b.ProductRamMemoryId == productRamMemory.Id).ToList();
+                        _context.BasketItems.RemoveRange(basketItems);
+
+                        _context.ProductRamMemories.Remove(productRamMemory);
+
                         _context.SaveChanges();
+
                         return View(model);
                     }
 
@@ -176,8 +183,16 @@ namespace Razor_Final_Project_Code_Academy.Controllers
 
                     if (accessoryColor.Quantity == 0)
                     {
-                        accessoryColor.Accessory.InStock = false;
+                        var orderItems = _context.OrderItems.Where(o => o.AccessoryColorId == accessoryColor.Id).ToList();
+                        _context.OrderItems.RemoveRange(orderItems);
+
+                        var basketItems = _context.BasketItems.Where(b => b.accessoryColorId == accessoryColor.Id).ToList();
+                        _context.BasketItems.RemoveRange(basketItems);
+
+                        _context.AccessoryColors.Remove(accessoryColor);
+
                         _context.SaveChanges();
+
                         return View(model);
                     }
 

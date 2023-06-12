@@ -348,7 +348,8 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             if (id != deleteProduct.Id) return NotFound();
             Product? product = _context.Products.FirstOrDefault(s => s.Id == id);
             if (product is null) return NotFound();
-            IEnumerable<string> removables = product.ProductImages.Where(p => !deleteProduct.ImagesId.Contains(p.Id)).Select(i => i.Image).AsEnumerable();
+            IEnumerable<string> removables = product.ProductImages.Where(p => !deleteProduct.ImagesId.Contains(p.Id)).Select(i => i.Image)
+                .AsEnumerable();
             var imagefolderPath = Path.Combine(_env.WebRootPath, "assets", "images");
 
             foreach (string removable in removables)
@@ -360,7 +361,6 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
-
 
         private async Task AdjustPlantPhoto(bool? ismain, IFormFile image, Product product)
         {
