@@ -65,19 +65,11 @@
                                     </td>
                                     <td>
                                         <div class="quantity">
-                                            <div class="iconLeft">
-                                                <button type="button" onclick="handleDEcreaseQuantity()">
-                                                    <i class="fa-solid fa-chevron-down"></i>
-                                                </button>
-                                            </div>
+                                        
                                             <div class="input">
                                                 <input class="quantityInput" type="number" value="@item.SaleQuantity">
                                             </div>
-                                            <div class="iconRight">
-                                                <button type="button" onclick="handleIncreaseQuantity()">
-                                                    <i class="fa-solid fa-chevron-up"></i>
-                                                </button>
-                                            </div>
+                         
                                         </div>
                                     </td>
                                     <td>
@@ -169,7 +161,7 @@
                                 <div class="image">
                                     <img src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x => x.IsMain == true)?.Image" alt="photo">
                                 </div>
-                                <div class="iconDelete">
+                                <div class="iconDelete" style="position: relative; bottom: 118px; left: 113px;">
                                     <a asp-controller="Basket" asp-action="DeletBasketItem" asp-route-basketItemId="@item.Id" class="delete">
                                         <i class="fa-solid fa-xmark"></i>
                                     </a>
@@ -198,19 +190,8 @@
                                 <span style="margin-right: 10px;">
                                     Quantity:
                                 </span>
-                                <div class="iconLeft">
-                                    <button onclick="handleDEcreaseQuantitySM()">
-                                        <i class="fa-solid fa-chevron-down"></i>
-                                    </button>
-                                </div>
                                 <div class="input">
                                     <input class="quantityInputSM" type="number" value="@item.SaleQuantity">
-                                </div>
-                                <div class="iconRight">
-
-                                    <button onclick="handleIncreaseQuantitySM()">
-                                        <i class="fa-solid fa-chevron-up"></i>
-                                    </button>
                                 </div>
                             </div>
                             <div class="total">
@@ -229,7 +210,7 @@
                                 <div class="image">
                                     <img src="~/assets/images/Product/@product.AccessoryImages.FirstOrDefault(x => x.IsMain == true)?.Image" alt="photo">
                                 </div>
-                                <div class="iconDelete">
+                                <div class="iconDelete" style="position: relative; bottom: 118px; left: 113px;">
                                     <a asp-controller="Basket" asp-action="DeletBasketItem" asp-route-basketItemId="@item.Id" class="delete">
                                         <i class="fa-solid fa-xmark"></i>
                                     </a>
@@ -258,19 +239,8 @@
                                 <span style="margin-right: 10px;">
                                     Quantity:
                                 </span>
-                                <div class="iconLeft">
-                                    <button onclick="handleDEcreaseQuantitySM()">
-                                        <i class="fa-solid fa-chevron-down"></i>
-                                    </button>
-                                </div>
                                 <div class="input">
                                     <input class="quantityInputSM" type="number" value="@item.SaleQuantity">
-                                </div>
-                                <div class="iconRight">
-
-                                    <button onclick="handleIncreaseQuantitySM()">
-                                        <i class="fa-solid fa-chevron-up"></i>
-                                    </button>
                                 </div>
                             </div>
                             <div class="total">

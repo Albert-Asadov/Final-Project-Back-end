@@ -3370,7 +3370,7 @@ footer .bottomLine .paymant ul li i {
   padding: 20px;
 }
 #cart table thead tr .item {
-  width: 40%;
+  width: 24%;
 }
 #cart table thead tr .price {
   width: 20%;
@@ -3464,7 +3464,7 @@ footer .bottomLine .paymant ul li i {
   height: 20px;
   position: absolute;
   right: 45px;
-  bottom: 45px;
+  bottom: 74px;
 }
 #cart table tbody tr td .iconDelete a {
   text-decoration: none;
@@ -7207,7 +7207,6 @@ footer .bottomLine .paymant ul li i {
 }
 .order .aboutUser .customerEmail .title h3 {
   font-family: "Rubik", sans-serif;
-  font-weight: 900;
 }
 .order .aboutUser .customerEmail .email {
   font-family: "Rubik", sans-serif;
@@ -7217,7 +7216,6 @@ footer .bottomLine .paymant ul li i {
 }
 .order .aboutUser .shippingInfo .title h3 {
   font-family: "Rubik", sans-serif;
-  font-weight: 900;
 }
 .order .aboutUser .shippingInfo .text {
   padding-top: 30px;
@@ -7230,7 +7228,6 @@ footer .bottomLine .paymant ul li i {
   font-size: 16px;
   padding: 0;
   margin: 0;
-  font-weight: 900;
 }
 .order .aboutUser .shippingInfo .text .descr {
   border: 1px solid #ddd;
