@@ -273,7 +273,7 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
         }
 
 
-        public IActionResult Details(int id)
+        public IActionResult Detail(int id)
         {
             if (id == 0) return BadRequest();
             AccessoryVM? modelAcc = EditedModel(id);

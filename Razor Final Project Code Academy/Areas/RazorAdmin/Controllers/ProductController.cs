@@ -281,12 +281,13 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
 
         private ProductVM? EditedModel(int id)
         {
-            ProductVM? model = _context.Products.Include(p => p.ProductImages).
-                Include(p => p.productCategories)
+            ProductVM? model = _context.Products.
+               Include(p => p.ProductImages).
+                 Include(p => p.productCategories)
                     .Include(p => p.ProductRamMemories).
                         ThenInclude(p => p.Ram).
                           Include(p => p.ProductRamMemories).
-                        ThenInclude(pc => pc.Memory)
+                             ThenInclude(pc => pc.Memory)
                                             .Select(p =>
                                                 new ProductVM
                                                 {
@@ -316,7 +317,7 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             return model;
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Detail(int id)
         {
             if (id == 0) return BadRequest();
             ProductVM? model = EditedModel(id);

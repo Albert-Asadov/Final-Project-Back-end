@@ -1,1 +1,59 @@
-﻿
+﻿@model ProductVM
+
+<div style="padding:50px;">
+    <div class="image" style="padding-bottom:30px;">
+        @foreach (var item in Model.AllImages)
+        {
+            <img style="width: 200px; height: 200px; object-fit: contain;" src="~/assets/images/Product/@item.Image" />
+
+        }
+    </div>
+    <div class="name">
+        <span style="font-weight:700; color:orange;">
+            Product Name:
+        </span>
+        <span style="margin-left:10px;">
+            @Model.Name
+        </span>
+    </div>
+    <div class="Descr">
+        <span style="font-weight:700; color:orange;">
+            Product Description:
+        </span>
+        <span style="margin-left:10px;">
+            @Model.Desc
+        </span>
+    </div>
+    <div class="Price">
+        <span style="font-weight:700; color:orange;">
+            Product Price:
+        </span>
+        <span style="margin-left:10px;">
+            @Model.Price$
+        </span>
+    </div>
+    <div class="DiscountPrice">
+        <span style="font-weight:700; color:orange;">
+            Product DiscountPrice:
+        </span>
+        <span style="margin-left:10px;">
+            @Model.DiscountPrice $
+        </span>
+    </div>
+    <div class="Discount">
+        <span style="font-weight:700; color:orange;">
+            Product Discount:
+        </span>
+        <span style="margin-left:10px;">
+            @Model.Discount %
+        </span>
+    </div>
+    <div class="SKU">
+        <span style="font-weight:700; color:orange;">
+            product SKU:
+        </span>
+        <span style="margin-left:10px;">
+            @Model.SKU
+        </span>
+    </div>
+</div>
