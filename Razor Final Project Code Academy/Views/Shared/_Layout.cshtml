@@ -621,95 +621,92 @@
         </div>
     </footer>
 
-  <script>
-      document.addEventListener('DOMContentLoaded', () => {
-          const form = document.querySelector('.searchItem');
-          const input = form.querySelector('.searchInput');
-          const results = form.querySelector('.searchUl');
+    <script>document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('.searchItem');
+            const input = form.querySelector('.searchInput');
+            const results = form.querySelector('.searchUl');
 
-          const formMain = document.querySelector('.searchFormMain');
-          const inputMain = formMain.querySelector('.searchInputMain');
-          const resultsMain = formMain.querySelector('.searchUlMain');
+            const formMain = document.querySelector('.searchFormMain');
+            const inputMain = formMain.querySelector('.searchInputMain');
+            const resultsMain = formMain.querySelector('.searchUlMain');
 
-          form.addEventListener('submit', handleSubmit);
-          input.addEventListener('input', handleInput);
+            form.addEventListener('submit', handleSubmit);
+            input.addEventListener('input', handleInput);
 
-          formMain.addEventListener('submit', handleSubmitMain);
-          inputMain.addEventListener('input', handleInputMain);
+            formMain.addEventListener('submit', handleSubmitMain);
+            inputMain.addEventListener('input', handleInputMain);
 
-          let timeoutId;
-          let timeoutIdMain;
+            let timeoutId;
+            let timeoutIdMain;
 
-          function handleSubmit(e) {
-              e.preventDefault();
-              const searchQuery = input.value.trim();
+            function handleSubmit(e) {
+                e.preventDefault();
+                const searchQuery = input.value.trim();
 
-              if (searchQuery.length < 2) {
-                  results.innerHTML = '';
-                  results.style.display = 'none';
-                  return;
-              }
+                if (searchQuery.length < 2) {
+                    results.innerHTML = '';
+                    results.style.display = 'none';
+                    return;
+                }
 
-              fetchSearchResults(searchQuery, results);
-          }
+                fetchSearchResults(searchQuery, results);
+            }
 
-          function handleInput() {
-              const searchQuery = input.value.trim();
+            function handleInput() {
+                const searchQuery = input.value.trim();
 
-              if (searchQuery.length < 2) {
-                  results.innerHTML = '';
-                  results.style.display = 'none';
-                  return;
-              }
+                if (searchQuery.length < 2) {
+                    results.innerHTML = '';
+                    results.style.display = 'none';
+                    return;
+                }
 
-              clearTimeout(timeoutId);
-              timeoutId = setTimeout(() => {
-                  fetchSearchResults(searchQuery, results);
-              }, 500);
-          }
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => {
+                    fetchSearchResults(searchQuery, results);
+                }, 500);
+            }
 
-          function handleSubmitMain(e) {
-              e.preventDefault();
-              const searchQueryMain = inputMain.value.trim();
+            function handleSubmitMain(e) {
+                e.preventDefault();
+                const searchQueryMain = inputMain.value.trim();
 
-              if (searchQueryMain.length < 2) {
-                  resultsMain.innerHTML = '';
-                  resultsMain.style.display = 'none';
-                  return;
-              }
+                if (searchQueryMain.length < 2) {
+                    resultsMain.innerHTML = '';
+                    resultsMain.style.display = 'none';
+                    return;
+                }
 
-              fetchSearchResults(searchQueryMain, resultsMain);
-          }
+                fetchSearchResults(searchQueryMain, resultsMain);
+            }
 
-          function handleInputMain() {
-              const searchQueryMain = inputMain.value.trim();
+            function handleInputMain() {
+                const searchQueryMain = inputMain.value.trim();
 
-              if (searchQueryMain.length < 2) {
-                  resultsMain.innerHTML = '';
-                  resultsMain.style.display = 'none';
-                  return;
-              }
+                if (searchQueryMain.length < 2) {
+                    resultsMain.innerHTML = '';
+                    resultsMain.style.display = 'none';
+                    return;
+                }
 
-              clearTimeout(timeoutIdMain);
-              timeoutIdMain = setTimeout(() => {
-                  fetchSearchResults(searchQueryMain, resultsMain);
-              }, 500);
-          }
+                clearTimeout(timeoutIdMain);
+                timeoutIdMain = setTimeout(() => {
+                    fetchSearchResults(searchQueryMain, resultsMain);
+                }, 500);
+            }
 
-          async function fetchSearchResults(searchQuery, resultsContainer) {
-              try {
-                  const response = await fetch(`/Home/Search?search=${searchQuery}`);
-                  const data = await response.text();
-                  resultsContainer.innerHTML = data;
-                  resultsContainer.style.display = 'block';
-              } catch (error) {
-                  console.log(error);
-              }
-          }
-      });
-
-  </script>
-
+            async function fetchSearchResults(searchQuery, resultsContainer) {
+                try {
+                    const response = await fetch(`/Home/Search?search=${searchQuery}`);
+                    const data = await response.text();
+                    resultsContainer.innerHTML = data;
+                    resultsContainer.style.display = 'block';
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+        });</script>
+    <script src="//code.jivosite.com/widget/BkZVjtIQOJ" async></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
             integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>

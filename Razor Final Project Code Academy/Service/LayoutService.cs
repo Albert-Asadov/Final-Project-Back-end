@@ -62,9 +62,6 @@ namespace Razor_Final_Project_Code_Academy.Service
             return basket;
         }
 
-
-      
-
         public List<Product> Products()
         {
             List<Product> products = _context.Products.Include(p => p.ProductImages).ToList();
@@ -78,6 +75,11 @@ namespace Razor_Final_Project_Code_Academy.Service
             return accessories;
         }
 
+        public List<Order> GetOrders()
+        {
+            List<Order> orders = _context.Orders.Include(x => x.OrderItems).Include(x => x.Basket).ThenInclude(x => x.User).ToList();
+            return orders;
+        }
 
     }
 }
