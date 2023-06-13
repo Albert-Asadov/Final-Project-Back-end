@@ -367,6 +367,49 @@
                             </form>
                         </li>
                     }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li style="color: #ff7e00; font-weight: 600; font-size: 18px;">User</li>
+                        <li>
+                            <a asp-controller="Account" asp-action="LogOut">
+                                <div class="SignOut">
+                                    <span>
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                    </span>
+                                    <span>
+                                        Sign Out
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li style="color: #ff7e00; font-weight: 600; font-size: 18px;">
+                            Login/Register
+                        </li>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+
+                        <li>@user.UserName</li>
+
+
+                    }
+                    else
+                    {
+                        <a asp-controller="Account" asp-action="Login" style="text-decoration:none;color:black;">
+                        <li>
+                            Login
+                        </li>
+                        </a>
+                        <a asp-controller="Account" asp-action="Register" style="text-decoration:none;color:black;">
+                        <li>
+                            Register
+                        </li>
+                        </a>
+                    }
+
                     <li style="color: #ff7e00; font-weight: 600; font-size: 18px;">
                         Page Information
                     </li>

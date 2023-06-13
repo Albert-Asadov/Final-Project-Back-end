@@ -113,36 +113,6 @@
                 </form>
             </div>
             <div class="rightSide col-lg-9">
-                @*<div class="sort">
-                        <div class="name">
-                            SORT BY:
-                        </div>
-                        <form  method="post">
-                            <select name="sortOrder" id="sortOrder">
-                                <option value="A-Z">A-Z</option>
-                                <option value="Z-A">Z-A</option>
-                                <option value="PriceAscending">Price: Ascending</option>
-                                <option value="PriceDescending">Price: Descending</option>
-                            </select>
-                        </form>
-                    </div>*@
-
-                <div class="sort">
-                    <div class="name">
-                        SORT BY:
-                    </div>
-                    <div>
-                        <form method="post" asp-controller="Shop" asp-action="Sort">
-                            <select name="sortOrder" id="sortOrder" onchange="updateData()">
-                                <option value="A-Z">A-Z</option>
-                                <option value="Z-A">Z-A</option>
-                                <option value="PriceAscending">Price: Ascending</option>
-                                <option value="PriceDescending">Price: Descending</option>
-                            </select>
-                        </form>
-                    </div>
-                </div>
-
                 <div class="mainContent">
                     <div class="row">
 
