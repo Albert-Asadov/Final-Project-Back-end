@@ -21,9 +21,11 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             _env = env;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page =1)
         {
-            IEnumerable<Slider> slider = _context.Sliders.AsEnumerable();
+            ViewBag.TotalPage = Math.Ceiling((double)_context.Brands.Count() / 10);
+            ViewBag.CurrentPage = page;
+            IEnumerable<Slider> slider = _context.Sliders.Skip((page - 1) * 10).Take(10).AsEnumerable();
             return View(slider);
         }
 

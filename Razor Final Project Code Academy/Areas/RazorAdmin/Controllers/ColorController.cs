@@ -16,9 +16,11 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page =1)
         {
-            IEnumerable<Color> color = _context.Colors.AsEnumerable();
+            ViewBag.TotalPage = Math.Ceiling((double)_context.Brands.Count() / 10);
+            ViewBag.CurrentPage = page;
+            IEnumerable<Color> color = _context.Colors.Skip((page - 1) * 10).Take(10).AsEnumerable();
             return View(color);
         }
 
