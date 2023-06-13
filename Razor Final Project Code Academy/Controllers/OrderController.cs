@@ -102,7 +102,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                 ModelState.AddModelError("Address", "Please write youre Phone Number.");
                 return View();
             }
-            var order = new Order
+            Order order = new Order
             {
                 FullName = model.FullName,
                 Email = model.Email,
@@ -152,7 +152,7 @@ namespace Razor_Final_Project_Code_Academy.Controllers
                         return View(model);
                     }
 
-                    var orderItem = new OrderItem
+                    OrderItem orderItem = new OrderItem
                     {
                         SaleQuantity = basketItem.SaleQuantity,
                         UnitPrice = (decimal)productRamMemory.Product.DiscountPrice,

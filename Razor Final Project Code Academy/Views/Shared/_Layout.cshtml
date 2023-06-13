@@ -112,6 +112,8 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="input">
+                            @*search*@
+
                             <form method="post" action="#" class="searchFormMain">
                                 <input style="padding:5px;" class="searchInputMain" type="search" placeholder="Search the store">
                                 <ul class="searchUlMain">
@@ -226,7 +228,7 @@
                                                     <div class="image">
                                                         <img style="height:65px; width:65px; object-fit:contain;" src="~/assets/images/Product/@product.AccessoryImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt="">
                                                     </div>
-                                                    <div class="about"  style="width: 110px;">
+                                                    <div class="about" style="width: 110px;">
                                                         <div class="name">
                                                             <a asp-controller="Shop" asp-action="DetailPhone" asp-route-id="@product.Id">@product.Name</a>
                                                         </div>
@@ -370,24 +372,24 @@
                     </li>
 
                     <a asp-controller="Wishlist" asp-action="Index" style="text-decoration:none;color:black;">
-                        <li>
-                            Wish List
-                        </li>
+                    <li>
+                        Wish List
+                    </li>
                     </a>
                     <a asp-controller="Page" asp-action="Index" style="text-decoration:none;color:black;">
-                        <li>
-                            Pages
-                        </li>
+                    <li>
+                        Pages
+                    </li>
                     </a>
                     <a asp-controller="Contact" asp-action="Index" style="text-decoration:none;color:black;">
-                        <li>
-                            Contact Us
-                        </li>
+                    <li>
+                        Contact Us
+                    </li>
                     </a>
                     <a asp-controller="Shop" asp-action="Index" style="text-decoration:none;color:black;">
-                        <li>
-                            Shop
-                        </li>
+                    <li>
+                        Shop
+                    </li>
                     </a>
 
                 </ul>
@@ -575,96 +577,95 @@
             </div>
         </div>
     </footer>
-    <script>
-        const searchFormMain = document.querySelector('.searchFormMain');
-        const searchInputMain = searchFormMain.querySelector('.searchInputMain');
-        const searchResultsMain = document.querySelector('.searchUlMain');
 
-        searchFormMain.addEventListener('submit', (e) => {
-            const searchQuery = e.target.value.trim();
-            e.preventDefault();
-            window.location.href = "/Home/Index?search=${searchQuery}";
-        });
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const form = document.querySelector('.searchItem');
+          const input = form.querySelector('.searchInput');
+          const results = form.querySelector('.searchUl');
 
-        let timeoutIdd;
+          const formMain = document.querySelector('.searchFormMain');
+          const inputMain = formMain.querySelector('.searchInputMain');
+          const resultsMain = formMain.querySelector('.searchUlMain');
 
-        searchInputMain.addEventListener('input', (e) => {
-            searchResultsMain.style.display = 'block';
+          form.addEventListener('submit', handleSubmit);
+          input.addEventListener('input', handleInput);
 
-            const searchQuery = e.target.value.trim();
-            if (searchQuery.length < 2) {
-                searchResultsMain.innerHTML = '';
-                return;
-            }
-            clearTimeout(timeoutId);
-            timeoutIdd = setTimeout(() => {
-                fetch(`/Home/Search?search=${searchQuery}`)
-                    .then(response => response.text())
-                    .then(data => {
-                        searchResultsMain.innerHTML = data;
-                    })
-                    .catch(error => console.log(error));
-            }, 500);
-        });
+          formMain.addEventListener('submit', handleSubmitMain);
+          inputMain.addEventListener('input', handleInputMain);
 
-        document.addEventListener('click', (e) => {
-            const searchResultsMain = document.querySelector('.searchUlMain');
-            const targetElement = e.target;
-            const isInsideSearchResults = searchResultsMain.contains(targetElement);
-            const isSearchInput = targetElement.classList.contains('searchInputMain');
+          let timeoutId;
+          let timeoutIdMain;
 
-            if (!isInsideSearchResults && !isSearchInput) {
-                searchResultsMain.style.display = 'none';
-            }
-        });
-    </script>
+          function handleSubmit(e) {
+              e.preventDefault();
+              const searchQuery = input.value.trim();
 
+              if (searchQuery.length < 2) {
+                  results.innerHTML = '';
+                  results.style.display = 'none';
+                  return;
+              }
 
-    <script>
-        const searchForm = document.querySelector('.searchItem');
-        const searchInput = searchForm.querySelector('.searchInput');
-        const searchResults = document.querySelector('.searchUl');
+              fetchSearchResults(searchQuery, results);
+          }
 
-        searchForm.addEventListener('submit', (e) => {
-            const searchQuery = e.target.value.trim();
-            e.preventDefault();
-            window.location.href = "/Home/Index?search=${searchQuery}";
-        });
+          function handleInput() {
+              const searchQuery = input.value.trim();
 
-        let timeoutId;
+              if (searchQuery.length < 2) {
+                  results.innerHTML = '';
+                  results.style.display = 'none';
+                  return;
+              }
 
-        searchInput.addEventListener('input', (e) => {
-            searchResults.style.display = 'block';
+              clearTimeout(timeoutId);
+              timeoutId = setTimeout(() => {
+                  fetchSearchResults(searchQuery, results);
+              }, 500);
+          }
 
-            const searchQuery = e.target.value.trim();
-            if (searchQuery.length < 2) {
-                searchResults.innerHTML = '';
-                return;
-            }
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(() => {
-                fetch(`/Home/Search?search=${searchQuery}`)
-                    .then(response => response.text())
-                    .then(data => {
-                        searchResults.innerHTML = data;
-                    })
-                    .catch(error => console.log(error));
-            }, 500);
-        });
+          function handleSubmitMain(e) {
+              e.preventDefault();
+              const searchQueryMain = inputMain.value.trim();
 
-        document.addEventListener('click', (e) => {
-            const searchResults = document.querySelector('.searchUl');
-            const targetElement = e.target;
-            const isInsideSearchResults = searchResults.contains(targetElement);
-            const isSearchInput = targetElement.classList.contains('searchInput');
+              if (searchQueryMain.length < 2) {
+                  resultsMain.innerHTML = '';
+                  resultsMain.style.display = 'none';
+                  return;
+              }
 
-            if (!isInsideSearchResults && !isSearchInput) {
-                searchResults.style.display = 'none';
-            }
-        });
-    </script>
+              fetchSearchResults(searchQueryMain, resultsMain);
+          }
 
+          function handleInputMain() {
+              const searchQueryMain = inputMain.value.trim();
 
+              if (searchQueryMain.length < 2) {
+                  resultsMain.innerHTML = '';
+                  resultsMain.style.display = 'none';
+                  return;
+              }
+
+              clearTimeout(timeoutIdMain);
+              timeoutIdMain = setTimeout(() => {
+                  fetchSearchResults(searchQueryMain, resultsMain);
+              }, 500);
+          }
+
+          async function fetchSearchResults(searchQuery, resultsContainer) {
+              try {
+                  const response = await fetch(`/Home/Search?search=${searchQuery}`);
+                  const data = await response.text();
+                  resultsContainer.innerHTML = data;
+                  resultsContainer.style.display = 'block';
+              } catch (error) {
+                  console.log(error);
+              }
+          }
+      });
+
+  </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"

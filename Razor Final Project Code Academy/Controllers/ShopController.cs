@@ -121,77 +121,6 @@ namespace Final_Project_Razor.Controllers
             return View(accessory);
         }
 
-
-        //public async Task<IActionResult> Detail(int id)
-        //{
-        //    Accessory? accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.AccessoryComments).Include(x => x.Brand).FirstOrDefault(x => x.Id == id);
-        //    Product? products = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.ProductComments).Include(x => x.Brand).FirstOrDefault(x => x.Id == id);
-        //    DetailVM model = new()
-        //    {
-        //        product = products,
-        //        accessory = accessory
-        //    };
-
-        //    ViewBag.category = _context.Categories.ToList();
-
-        //    ViewBag.Accessory = _context.Accessories.Include(x => x.AccessoryImages).Include(x => x.AccessoryCategories).Include(x => x.Brand).ToList();
-        //    ViewBag.Product = _context.Products.Include(x => x.ProductImages).Include(x => x.productCategories).Include(x => x.Brand).ToList();
-
-        //    if (accessory?.isAccessory == true)
-        //    {
-        //        ViewBag.Color = _context.AccessoryColors
-        //                .Where(ac => ac.AccessoryId == id)
-        //                .Select(ac => ac.Color)
-        //                .Distinct()
-        //                .Select(c => new { c.Id, c.ColorName })
-        //                .ToList();
-
-        //        User? user = new();
-
-        //        if (User.Identity.IsAuthenticated)
-        //        {
-        //            user = await _userManager.FindByNameAsync(User.Identity.Name);
-
-        //            ViewBag.WishList = _context.Wishlists.Include(x => x.Accessory).Include(x => x.User).Where(x => x.UserId == user.Id && x.IsAccessory == true).ToList();
-        //        }
-        //        if (id == 0) return BadRequest();
-        //        return View(model);
-        //    }
-
-        //    if(products?.isAccessory == false)
-        //    {
-
-        //        ViewBag.Ram = _context.ProductRamMemories
-        //                      .Where(prm => prm.ProductId == id)
-        //                      .Select(prm => prm.Ram)
-        //                      .Distinct()
-        //                      .Select(r => new { r.Id, r.RamName })
-        //                      .ToList();
-
-        //        ViewBag.Memory = _context.ProductRamMemories
-        //                         .Where(prm => prm.ProductId == id)
-        //                         .Select(prm => prm.Memory)
-        //                         .Distinct()
-        //                         .Select(m => new { m.Id, m.MemoryName })
-        //                         .ToList();
-
-        //        User? user = new();
-
-        //        if (User.Identity.IsAuthenticated)
-        //        {
-        //            user = await _userManager.FindByNameAsync(User.Identity.Name);
-
-        //            ViewBag.WishList = _context.Wishlists.Include(x => x.Product).Include(x => x.User).Where(x => x.UserId == user.Id && x.IsAccessory == false).ToList();
-        //        }
-        //        if (id == 0) return BadRequest();
-
-        //        return View(model);
-        //    }
-
-
-        //    return View(model);
-        //}
-        //[HttpPost]
         public async Task<IActionResult> AddCommentProduct(Comment comment, int id)
         {
             if (!User.Identity.IsAuthenticated)
@@ -245,92 +174,6 @@ namespace Final_Project_Razor.Controllers
                 return RedirectToAction(nameof(DetailAccessory), new { id });
             }
         }
-
-        //[HttpPost]
-        //public IActionResult Index(int[] CategoryIds, int[] BrandIds, int[] RamIds, int[] MemoryIds, int[] ColorIds, int page = 1)
-        //{
-        //    ViewBag.Ram = _context.Rams.ToList();
-        //    ViewBag.Memory = _context.Memories.ToList();
-        //    ViewBag.Color = _context.Colors.ToList();
-        //    ViewBag.Category = _context.Categories.ToList();
-        //    ViewBag.Brand = _context.Brands.ToList();
-
-        //    int pageSize = 6;
-
-
-        //    IQueryable<Product> products = _context.Products
-        //        .Include(x => x.ProductImages)
-        //        .Include(x => x.productCategories)
-        //        .ThenInclude(x => x.Category)
-        //        .Include(p => p.ProductRamMemories).ThenInclude(x => x.Ram)
-        //        .Include(p => p.ProductRamMemories).ThenInclude(x => x.Memory)
-        //        .Include(x => x.Brand);
-
-        //    IQueryable<Accessory> accessories = _context.Accessories
-        //        .Include(x => x.AccessoryImages)
-        //        .Include(p => p.accessoryColors).ThenInclude(x => x.Color)
-        //        .Include(x => x.AccessoryCategories)
-        //        .Include(x => x.Brand);
-
-        //    ViewBag.TotalPage = Math.Ceiling((double)_context.Products.Count() / 6);
-        //    ViewBag.CurrentPage = page;
-
-
-        //    if (CategoryIds.Length > 0)
-        //    {
-        //        products = products.Where(p => p.productCategories.Any(pc => CategoryIds.Contains(pc.CategoryId)));
-        //        accessories = accessories.Where(p => p.AccessoryCategories.Any(pc => CategoryIds.Contains(pc.CategoryId)));
-        //    }
-        //    if (BrandIds.Length > 0)
-        //    {
-        //        products = products.Where(p => BrandIds.Any(x => x.Equals(p.BrandId)));
-        //        accessories = accessories.Where(p => BrandIds.Any(x => x.Equals(p.BrandId)));
-        //    }
-        //    if (RamIds.Length > 0)
-        //    {
-        //        products = products.Where(p => p.ProductRamMemories.Any(pc => RamIds.Contains(pc.RamId)));
-        //    }
-        //    if (MemoryIds.Length > 0)
-        //    {
-        //        products = products.Where(p => p.ProductRamMemories.Any(pc => MemoryIds.Contains(pc.MemoryId)));
-        //    }
-        //    if (ColorIds.Length > 0)
-        //    {
-        //        accessories = accessories.Where(p => p.accessoryColors.Any(pc => ColorIds.Contains(pc.ColorId)));
-        //    }
-
-        //    //var productList = products.ToList();
-        //    //var accessoryList = accessories.ToList();
-        //    //MyCombineModelsVM all = new()
-        //    //{
-        //    //    Products = productList.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList(),
-        //    //    Accessories = accessoryList.Skip((page - 1) * 6).Take(6).AsEnumerable().ToList()
-
-        //    //};
-
-        //    int totalProductsCount = products.Count() + accessories.Count();
-        //    int totalPages = (int)Math.Ceiling((double)totalProductsCount / pageSize);
-        //    ViewBag.TotalPage = totalPages;
-        //    ViewBag.CurrentPage = page;
-
-        //    List<Product> filteredProducts = products
-        //        .Skip((page - 1) * pageSize)
-        //        .Take(pageSize)
-        //        .ToList();
-
-        //    List<Accessory> filteredAccessories = accessories
-        //        .Skip((page - 1) * pageSize)
-        //        .Take(pageSize)
-        //        .ToList();
-
-        //    MyCombineModelsVM model = new MyCombineModelsVM()
-        //    {
-        //        Products = filteredProducts,
-        //        Accessories = filteredAccessories
-        //    };
-        //    return View(model);
-        //}
-
         [HttpPost]
         public IActionResult Index(int[] CategoryIds, int[] BrandIds, int[] RamIds, int[] MemoryIds, int[] ColorIds, int page = 1)
         {
@@ -389,10 +232,6 @@ namespace Final_Project_Razor.Controllers
 
             return View(model);
         }
-
-
-
-
 
         [HttpPost]
         public IActionResult Sort(string sortOrder)

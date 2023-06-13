@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Razor_Final_Project_Code_Academy.DAL;
 using Razor_Final_Project_Code_Academy.Entities;
 using Razor_Final_Project_Code_Academy.ViewModel;
@@ -28,6 +29,6 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             };
             return View(model);
         }
-	}
+    }
 }
 

@@ -46,8 +46,6 @@ namespace Final_Project_Razor.Controllers
 
                 products = products
             };
-
-
             return PartialView("_SearchPartial", model);
         }
 	}
