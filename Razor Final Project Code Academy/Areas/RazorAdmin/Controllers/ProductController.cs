@@ -362,6 +362,15 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public IActionResult Search(string search)
+        {
+            var searchingProduct = _context.Products.Include(x => x.ProductImages).AsQueryable().Where(x => x.Name.Contains(search));
+
+            List<Product> products = searchingProduct.OrderByDescending(x => x.Id).ToList();
+
+            return PartialView("_adminSearchProductPartial", products);
+        }
+
         private async Task AdjustPlantPhoto(bool? ismain, IFormFile image, Product product)
         {
             var imagefolderPath = Path.Combine(_env.WebRootPath, "assets", "images");

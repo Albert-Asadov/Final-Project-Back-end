@@ -315,6 +315,15 @@ namespace Razor_Final_Project_Code_Academy.Areas.RazorAdmin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public IActionResult Search(string search)
+        {
+            var searchingAccessory = _context.Accessories.Include(x => x.AccessoryImages).AsQueryable().Where(x => x.Name.Contains(search));
+
+            List<Accessory> accessories = searchingAccessory.OrderByDescending(x => x.Id).ToList();
+
+            return PartialView("_adminSearchAccessoryPartial", accessories);
+        }
+
         private AccessoryVM? EditedModel(int id)
         {
             AccessoryVM? model = _context.Accessories.Include(a => a.AccessoryImages).

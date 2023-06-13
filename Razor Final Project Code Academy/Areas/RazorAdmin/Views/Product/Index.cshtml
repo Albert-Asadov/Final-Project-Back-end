@@ -1,8 +1,7 @@
 ﻿@model IEnumerable<Product>
 
 <p style="padding-top:10px;padding-left:10px;">
-    <a
-      style="
+    <a style="
      background-color: gray;
      display: inline-block;
      text-decoration: none;
@@ -13,9 +12,17 @@
      border-radius: 14px;
      padding-top: 4px;"
        asp-action="Create">
-                    Create New
+        Create New
     </a>
 </p>
+
+<form method="post" action="#" class="searchFormMain" style="padding-top: 14px;">
+    <input style="padding: 5px; width: 510px;" class="searchInputMain" type="search" placeholder="Search Product in Admin Panel">
+    <ul style="display: none; border: 1px solid #828282; position: relative; top: -1px; left: 0px; width: 510px; padding: 15px; z-index: 5000; background-color: white;" class="searchUlMain">
+        
+    </ul>
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -128,3 +135,51 @@
         </li>
     </ul>
 </nav>
+
+<script>const form = document.querySelector('.searchFormMain');
+        const input = form.querySelector('.searchInputMain');
+        const results = form.querySelector('.searchUlMain');
+
+        form.addEventListener('submit', handleSubmit);
+        input.addEventListener('input', handleInput);
+
+        let timeoutId;
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            const searchQuery = input.value.trim();
+
+            if (searchQuery.length < 2) {
+                results.innerHTML = '';
+                results.style.display = 'none';
+                return;
+            }
+
+            fetchSearchResults(searchQuery);
+        }
+
+        function handleInput() {
+            const searchQuery = input.value.trim();
+
+            if (searchQuery.length < 2) {
+                results.innerHTML = '';
+                results.style.display = 'none';
+                return;
+            }
+
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                fetchSearchResults(searchQuery);
+            }, 500);
+        }
+
+        async function fetchSearchResults(searchQuery) {
+            try {
+                const response = await fetch(`./Product/Search?search=${searchQuery}`);
+                const data = await response.text();
+                results.innerHTML = data;
+                results.style.display = 'block';
+            } catch (error) {
+                console.log(error);
+            }
+        }</script>

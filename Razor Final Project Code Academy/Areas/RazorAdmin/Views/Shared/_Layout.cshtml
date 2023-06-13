@@ -53,13 +53,6 @@
                 </div>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end" style=" background-color: #232f3f !important;">
-
-                <form method="post" action="#" class="searchFormMain" style="padding-top: 14px;">
-                    <input style="padding: 5px; width: 510px;" class="searchInputMain" type="search" placeholder="Search in Admin Panel">
-                    <ul style="display: none; border: 1px solid #828282; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; position: absolute; top: 123px; left: 361px; width: 490px; padding: 15px; z-index: 5000; background-color: white;" class="searchUlMain">
-                    </ul>
-                </form>
-
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
@@ -171,56 +164,7 @@
     @RenderSection("Scripts", false)
     @RenderSection("Script", false)
     <script src="~/admin/assets/js/jquery.cookie.js" type="text/javascript"></script>
-    <script>
-        const form = document.querySelector('.searchFormMain');
-        const input = form.querySelector('.searchInputMain');
-        const results = form.querySelector('.searchUlMain');
-
-        form.addEventListener('submit', handleSubmit);
-        input.addEventListener('input', handleInput);
-
-        let timeoutId;
-
-        function handleSubmit(e) {
-            e.preventDefault();
-            const searchQuery = input.value.trim();
-
-            if (searchQuery.length < 2) {
-                results.innerHTML = '';
-                results.style.display = 'none';
-                return;
-            }
-
-            fetchSearchResults(searchQuery);
-        }
-
-        function handleInput() {
-            const searchQuery = input.value.trim();
-
-            if (searchQuery.length < 2) {
-                results.innerHTML = '';
-                results.style.display = 'none';
-                return;
-            }
-
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(() => {
-                fetchSearchResults(searchQuery);
-            }, 500);
-        }
-
-        async function fetchSearchResults(searchQuery) {
-            try {
-                const response = await fetch(`/Diagram/Search?search=${searchQuery}`);
-                const data = await response.text();
-                results.innerHTML = data;
-                results.style.display = 'block';
-            } catch (error) {
-                console.log(error);
-            }
-        }
-
-    </script>
+  
 </body>
 </html>
 

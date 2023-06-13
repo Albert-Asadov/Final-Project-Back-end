@@ -272,8 +272,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19BY2Nlc3N1YXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Views/Shared/_adminSearchPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19hZG1pblNlYXJjaFBhcnRpYWwuY3NodG1s
+[/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Views/Shared/_adminSearchAccessoryPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19hZG1pblNlYXJjaEFjY2Vzc29yeVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Views/Shared/_adminSearchProductPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19hZG1pblNlYXJjaFByb2R1Y3RQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/Views/Shared/_BestSellerAccessoryPartial.cshtml]

@@ -1,0 +1,20 @@
+﻿@model List<Product>
+
+@foreach (var item in Model)
+    {
+        <li style="list-style: none;" class="searchPanel">
+            <a style=" text-decoration: none; display: flex; align-items: center; justify-content: space-around;" asp-controller="Product" asp-action="Detail" asp-area="RazorAdmin" asp-route-id="@item.Id">
+                <div class="image">
+                    <img style="object-fit: contain; height: 80px; width: 80px;" src="~/assets/images/Product/@item.ProductImages.FirstOrDefault(ri => ri.IsMain == true)?.Image" alt="@item.Name" class="js-prd-img lazyload fade-up">
+                </div>
+                <div class="other" style="width: 460px; display: flex; flex-direction: column; align-items: center;">
+                    <span style=" color: #666;">
+                        @item.Name
+                    </span>
+                    <span>
+                        $@item.Price
+                    </span>
+                </div>
+            </a>
+        </li>
+    }
