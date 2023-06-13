@@ -10,6 +10,8 @@
 
     List<Comment> comments =  ViewBag.Comments;
 
+    List<Category> categories = ViewBag.Category;
+
 }
 <main>
     <section id="slider">
@@ -531,74 +533,28 @@
                                 </div>
                             </div>
                             <div class="all">
-                                <div class="categSearch col-lg-3">
-                                    <div class="image">
-                                        <img src="~/assets/images/categoryPhoto/collection_1__36865.original.jpg"
-                                             alt="">
+                               
+                                    <div class="categSearch col-lg-12" style="margin:0 auto; text-align:center;">
+                                        <div class="image">
+                                            <img style=" border-radius: 50px; width:50%; object-fit:contain;" src="~/assets/images/categoryPhoto/collection_1__36865.original.jpg"
+                                                 alt="">
+                                        </div>
+                                        <div class="title">
+                                            <h5 style="font-size: 2.25rem;">Category</h5>
+                                        </div>
+                                        <div class="cat">
+                                            <ul style="text-align:center;">
+                                                @foreach (var item in categories)
+                                                {
+                                                    <form style=" margin: 0 auto; width: 95px;" method="post" asp-controller="Shop" asp-action="Index">
+                                                        <input name="CategoryIds" value="@item.Id" type="hidden">
+                                                        <button style="text-align: center !important; width: 100px !important; background-color: white; color: black; padding-left: 0; border: none; text-align: start;" class="btn btn-light w-100" type="submit">@item.Name</button>
+                                                    </form>
+                                                }
+
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="title">
-                                        <h5>Accessories</h5>
-                                    </div>
-                                    <div class="cat">
-                                        <ul>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Jewelry & Watches</a></li>
-                                            <li><a href="">Video Games & Systems</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="categSearch col-lg-3">
-                                    <div class="image">
-                                        <img src="~/assets/images/categoryPhoto/collection_1__36865.original.jpg"
-                                             alt="">
-                                    </div>
-                                    <div class="title">
-                                        <h5>Accessories</h5>
-                                    </div>
-                                    <div class="cat">
-                                        <ul>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Jewelry & Watches</a></li>
-                                            <li><a href="">Video Games & Systems</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="categSearch col-lg-3">
-                                    <div class="image">
-                                        <img src="~/assets/images/categoryPhoto/collection_1__36865.original.jpg"
-                                             alt="">
-                                    </div>
-                                    <div class="title">
-                                        <h5>Accessories</h5>
-                                    </div>
-                                    <div class="cat">
-                                        <ul>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Jewelry & Watches</a></li>
-                                            <li><a href="">Video Games & Systems</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="categSearch col-lg-3">
-                                    <div class="image">
-                                        <img src="~/assets/images/categoryPhoto/collection_1__36865.original.jpg"
-                                             alt="">
-                                    </div>
-                                    <div class="title">
-                                        <h5>Accessories</h5>
-                                    </div>
-                                    <div class="cat">
-                                        <ul>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Jewelry & Watches</a></li>
-                                            <li><a href="">Video Games & Systems</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -615,76 +571,31 @@
                                 </div>
                             </div>
                             <div class="allForMd">
-                                <div class="categSearch">
-                                    <div class="image">
-                                        <img src="~/assets/images/categoryPhoto/collection_1__36865.original.jpg"
-                                             alt="">
-                                    </div>
-                                    <div class="title">
-                                        <h5>Accessories</h5>
-                                    </div>
-                                    <div class="cat">
-                                        <ul>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Jewelry & Watches</a></li>
-                                            <li><a href="">Video Games & Systems</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="categSearch">
-                                    <div class="image">
-                                        <img src="~/assets/images/categoryPhoto/collection_1__36865.original.jpg"
-                                             alt="">
-                                    </div>
-                                    <div class="title">
-                                        <h5>Accessories</h5>
-                                    </div>
-                                    <div class="cat">
-                                        <ul>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Jewelry & Watches</a></li>
-                                            <li><a href="">Video Games & Systems</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="categSearch">
-                                    <div class="image">
-                                        <img src="~/assets/images/categoryPhoto/collection_1__36865.original.jpg"
-                                             alt="">
-                                    </div>
-                                    <div class="title">
-                                        <h5>Accessories</h5>
-                                    </div>
-                                    <div class="cat">
-                                        <ul>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Jewelry & Watches</a></li>
-                                            <li><a href="">Video Games & Systems</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="categSearch">
-                                    <div class="image">
-                                        <img src="~/assets/images/categoryPhoto/collection_1__36865.original.jpg"
-                                             alt="">
-                                    </div>
-                                    <div class="title">
-                                        <h5>Accessories</h5>
-                                    </div>
-                                    <div class="cat">
-                                        <ul>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Cameras & Camcorders</a></li>
-                                            <li><a href="">Jewelry & Watches</a></li>
-                                            <li><a href="">Video Games & Systems</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                                @foreach (var item in categories)
+                                {
+                                    <div class="categSearch">
+                                        <div class="image">
+                                            <img src="~/assets/images/categoryPhoto/collection_1__36865.original.jpg"
+                                                 alt="">
+                                        </div>
+                                        <div class="title">
+                                            <h5>Category</h5>
+                                        </div>
+                                        <div class="cat">
+                                            <ul>
 
+                                                <li>
+                                                <a href="" style="font-size:17px;">@item.Name</a>
+
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                }
+
+
+                            </div>
                         </div>
                     </div>
                 </div>
