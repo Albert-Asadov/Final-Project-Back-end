@@ -3370,7 +3370,7 @@ footer .bottomLine .paymant ul li i {
   padding: 20px;
 }
 #cart table thead tr .item {
-  width: 24%;
+  width: 27%;
 }
 #cart table thead tr .price {
   width: 20%;
@@ -3464,7 +3464,7 @@ footer .bottomLine .paymant ul li i {
   height: 20px;
   position: absolute;
   right: 45px;
-  bottom: 74px;
+  bottom: 34px;
 }
 #cart table tbody tr td .iconDelete a {
   text-decoration: none;
@@ -7247,7 +7247,8 @@ footer .bottomLine .paymant ul li i {
   font-size: 14px;
   margin-bottom: 5px;
 }
-.order .aboutUser .shippingInfo .text .descr .adress, .order .aboutUser .shippingInfo .text .descr .note {
+.order .aboutUser .shippingInfo .text .descr .adress,
+.order .aboutUser .shippingInfo .text .descr .note {
   margin-top: 20px;
 }
 .order .aboutUser .button {
@@ -10860,13 +10861,27 @@ body {
   color: white;
 }
 @media only screen and (max-width: 391px) {
-  #main .rightSide .mainContent .deals ul li .textDeal {
+  #main .rightSide .mainContent .deals ul li {
+    list-style: none;
     display: flex;
     justify-content: center;
-    align-items: start;
-    width: 44%;
+    align-items: center;
     flex-direction: column;
-    font-family: "Rubik", sans-serif;
+    text-align: center;
+  }
+  #main .rightSide .mainContent .deals ul li .textDeal {
+    text-align: center;
+  }
+  #main .rightSide .mainContent .deals ul li .textDeal .title {
+    text-align: center;
+  }
+  #main .rightSide .mainContent .deals ul li .textDeal .textContent {
+    margin: 0 auto;
+  }
+  #main .rightSide .mainContent .deals ul li .textDeal .price ul {
+    margin: 0 auto;
+    width: 118px;
+    text-align: center;
   }
 }
 #main .rightSide .mainContent .productFirst,

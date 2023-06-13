@@ -157,11 +157,11 @@
                         @foreach (var item in Basket.BasketItems.Where(x => x.IsAccessuar == false))
                         {
                             Product product = products.FirstOrDefault(x => x.Id == item.ProductRamMemory.ProductId);
-                            <div class="upper">
+                            <div class="upper" style="padding-top:25px;">
                                 <div class="image">
                                     <img src="~/assets/images/Product/@product.ProductImages.FirstOrDefault(x => x.IsMain == true)?.Image" alt="photo">
                                 </div>
-                                <div class="iconDelete" style="position: relative; bottom: 118px; left: 113px;">
+                                <div class="iconDelete" style="position: relative; bottom: 71px; left: 113px;">
                                     <a asp-controller="Basket" asp-action="DeletBasketItem" asp-route-basketItemId="@item.Id" class="delete">
                                         <i class="fa-solid fa-xmark"></i>
                                     </a>
