@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xtbEZzn+YRRkhGSjKghq4K9HLBr+9oyV0ZUSXTZfmek=",
+  "Hash": "WFJmsCyOUeZnbHQaKTBiRwb+ISlS4tgn8gkiyOhGYgI=",
   "Source": "Razor Final Project Code Academy",
   "BasePath": "_content/Razor Final Project Code Academy",
   "Mode": "Default",
@@ -2737,6 +2737,23 @@
       "OriginalItemSpec": "wwwroot/assets/images/Product/26-26__83504.jpg"
     },
     {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/279landscape-samsung-galaxyzflip4-borapurple-02-900x1200.jpg",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/279landscape-samsung-galaxyzflip4-borapurple-02-900x1200.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/279landscape-samsung-galaxyzflip4-borapurple-02-900x1200.jpg"
+    },
+    {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/290ultra-midnightband1.jpg",
       "SourceId": "Razor Final Project Code Academy",
       "SourceType": "Discovered",
@@ -2805,6 +2822,40 @@
       "OriginalItemSpec": "wwwroot/assets/images/Product/331MQE93_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-ocean-ultra_VW_34FR_WF_CO_GEO_SG.jpeg"
     },
     {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/33777x77q100-sm_f721_zflip4_openfront_graphite_220527.webp",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/33777x77q100-sm_f721_zflip4_openfront_graphite_220527.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/33777x77q100-sm_f721_zflip4_openfront_graphite_220527.webp"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/349samsung-galaxy-flip-4-black-1-800x800.webp",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/349samsung-galaxy-flip-4-black-1-800x800.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/349samsung-galaxy-flip-4-black-1-800x800.webp"
+    },
+    {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/351download.jpeg",
       "SourceId": "Razor Final Project Code Academy",
       "SourceType": "Discovered",
@@ -2839,6 +2890,40 @@
       "OriginalItemSpec": "wwwroot/assets/images/Product/370MQE93_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-ocean-ultra_VW_34FR_WF_CO_GEO_SG.jpeg"
     },
     {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/379IMG_0994-edited-766x1024.jpeg",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/379IMG_0994-edited-766x1024.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/379IMG_0994-edited-766x1024.jpeg"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/3801.jpg",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/3801.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/3801.jpg"
+    },
+    {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/385MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO.jpeg",
       "SourceId": "Razor Final Project Code Academy",
       "SourceType": "Discovered",
@@ -2854,6 +2939,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/images/Product/385MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO.jpeg"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/399images.jpeg",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/399images.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/399images.jpeg"
     },
     {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/39FA-01-I000001BA.jpg",
@@ -3060,6 +3162,23 @@
       "OriginalItemSpec": "wwwroot/assets/images/Product/483bellroy-leather-case-for-galaxy-s23-on-transparent-background.avif"
     },
     {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/48977x77q100-sm_f721_zflip4_openback_graphite_220527.webp",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/48977x77q100-sm_f721_zflip4_openback_graphite_220527.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/48977x77q100-sm_f721_zflip4_openback_graphite_220527.webp"
+    },
+    {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/49081KbgrFcqCL._AC_UF1000,1000_QL80_.jpg",
       "SourceId": "Razor Final Project Code Academy",
       "SourceType": "Discovered",
@@ -3143,6 +3262,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/images/Product/540MQE93_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-ocean-ultra_VW_34FR_WF_CO_GEO_SG.jpeg"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/572450x550q100-telefon_samsung_sm_f721_galaxy_z_flip_4_5g_8gb_256gb_graphite_detail.webp",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/572450x550q100-telefon_samsung_sm_f721_galaxy_z_flip_4_5g_8gb_256gb_graphite_detail.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/572450x550q100-telefon_samsung_sm_f721_galaxy_z_flip_4_5g_8gb_256gb_graphite_detail.webp"
     },
     {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/574DSC04144_processed.jpg",
@@ -3381,6 +3517,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/images/Product/655s23 case.jpeg"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/659450x550q100-telefon_samsung_sm_f721_galaxy_z_flip_4_5g_8gb_256gb_graphite_detail.webp",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/659450x550q100-telefon_samsung_sm_f721_galaxy_z_flip_4_5g_8gb_256gb_graphite_detail.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/659450x550q100-telefon_samsung_sm_f721_galaxy_z_flip_4_5g_8gb_256gb_graphite_detail.webp"
     },
     {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/669FA-01-I000001BA.jpg",
@@ -3689,23 +3842,6 @@
       "OriginalItemSpec": "wwwroot/assets/images/Product/87351Bkaobg6RL.jpg"
     },
     {
-      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/88130017707b.avif",
-      "SourceId": "Razor Final Project Code Academy",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
-      "BasePath": "_content/Razor Final Project Code Academy",
-      "RelativePath": "assets/images/Product/88130017707b.avif",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/images/Product/88130017707b.avif"
-    },
-    {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/887np1-white3.jpg",
       "SourceId": "Razor Final Project Code Academy",
       "SourceType": "Discovered",
@@ -3874,6 +4010,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/images/Product/962MQDY3ref_VW_34FR+watch-49-titanium-ultra_VW_34FR_WF_CO+watch-face-49-alpine-ultra_VW_34FR_WF_CO.jpeg"
+    },
+    {
+      "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/965images (1).jpeg",
+      "SourceId": "Razor Final Project Code Academy",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/",
+      "BasePath": "_content/Razor Final Project Code Academy",
+      "RelativePath": "assets/images/Product/965images (1).jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/images/Product/965images (1).jpeg"
     },
     {
       "Identity": "/Users/albertasadov/Desktop/Razor Final Project Code Academy/Razor Final Project Code Academy/wwwroot/assets/images/Product/97251OwIOZvfnL._AC_UF894,1000_QL80_.jpg",

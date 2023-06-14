@@ -16,8 +16,11 @@
             <ul>
                 <li class="colorChange"><a asp-controller="Order" asp-action="AccountOrders">ORDERS</a></li>
                 <li class="current">WISH LISTS</li>
-                <li class="colorChange"><a asp-controller="Account" asp-action="AccountDetails">ACCOUNT SETTINGS</a></li>
-            </ul>
+                @if (User.Identity.IsAuthenticated)
+                    {
+                    <li class="colorChange"><a asp-controller="Account" asp-action="AccountDetails">ACCOUNT SETTINGS</a></li>
+                    }
+                </ul>
 
             <div class="alertMessage">
                 <div class="alert alert-primary" role="alert">
