@@ -77,7 +77,7 @@ namespace Final_Project_Razor.Controllers
             smtp.UseDefaultCredentials = false;
             smtp.Credentials = new NetworkCredential("razor.familysites@gmail.com", "lrzxazlzxwtshywn");
             smtp.Send(mailMessage);
-            return RedirectToAction("Welcome", "ConfirmRegister");
+            return RedirectToAction("ConfirmRegister", "Welcome");
 
         }
 
